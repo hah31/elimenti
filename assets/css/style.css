@@ -1,0 +1,61 @@
+:root {
+    /* Color */
+    --color-bg: #0c0c0b;
+    --color-surface: #161615;
+    --color-text: #e8e6e0;
+    --color-muted: #65635e;
+    --color-accent: #c9a96e;
+    --color-border: rgba(255, 255, 255, 0.08);
+
+    /* Typography — families */
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Outfit', sans-serif;
+
+    /* Typography — weights */
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Typography — sizes */
+    --size-body: 17px;
+    --size-h1: 72px;
+    --size-h2: 48px;
+    --size-h3: 24px;
+    --size-wordmark: 18px;
+
+    /* Typography — line height & tracking */
+    --line-body: 1.7;
+    --line-display: 1.05;
+    --track-display: -0.03em;
+    --track-wordmark: 0.15em;
+
+    /* Spacing */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 48px;
+    --space-xl: 80px;
+    --space-section: 120px;
+
+    /* Layout */
+    --max-width: 1120px;
+    --gutter: 24px;
+    --nav-height: 72px;
+
+    /* Effects */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --blur-nav: 12px;
+    --grain-opacity: 0.025;
+
+    /* Motion */
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --duration-fast: 200ms;
+    --duration-base: 400ms;
+    --duration-slow: 800ms;
+
+    /* Reveal */
+    --reveal-translate: 24px;
+}
