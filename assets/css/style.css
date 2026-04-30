@@ -303,3 +303,230 @@ p {
     transform: translateY(-4px);
 }
 
+/* ---------- Section shell ---------- */
+
+.services,
+.process,
+.expect,
+.contact {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-section) var(--gutter);
+}
+
+.services > h2,
+.process > h2,
+.expect > h2,
+.contact > h2 {
+    margin-bottom: var(--space-xl);
+}
+
+/* ---------- Services ---------- */
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    align-items: start;
+}
+
+.service-card {
+    padding: var(--space-lg) var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    transition: border-color var(--duration-base) var(--ease),
+                transform var(--duration-base) var(--ease);
+}
+
+.service-card:nth-child(1) {
+    margin-top: 0;
+}
+
+.service-card:nth-child(2) {
+    margin-top: 48px;
+}
+
+.service-card:nth-child(3) {
+    margin-top: 96px;
+}
+
+.service-card:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-4px);
+}
+
+.service-card h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.service-card p {
+    color: var(--color-muted);
+}
+
+/* ---------- Process ---------- */
+
+.process__steps {
+    counter-reset: step;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.process__step {
+    counter-increment: step;
+    position: relative;
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-lg) var(--space-md) 0 0;
+}
+
+.process__step::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    top: calc(var(--space-md) * -1);
+    left: 0;
+    background-color: var(--color-bg);
+    padding-right: var(--space-sm);
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: var(--weight-light);
+    line-height: 1;
+    color: var(--color-muted);
+    transition: color var(--duration-fast) var(--ease);
+}
+
+.process__step:hover::before {
+    color: var(--color-text);
+}
+
+.process__step h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.process__step p {
+    color: var(--color-muted);
+    font-size: 15px;
+}
+
+/* ---------- What to Expect ---------- */
+
+.expect > p {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: var(--weight-light);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    max-width: 36ch;
+    margin-bottom: var(--space-lg);
+}
+
+.expect > p:last-child {
+    margin-top: var(--space-xl);
+    margin-bottom: 0;
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+    font-style: italic;
+    font-size: 24px;
+    color: var(--color-muted);
+    max-width: 52ch;
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+    text-align: center;
+}
+
+.contact > h2 {
+    font-size: clamp(48px, 7vw, 96px);
+    margin-bottom: var(--space-lg);
+}
+
+.contact .btn {
+    padding: 18px 40px;
+    font-size: 15px;
+    margin-bottom: var(--space-md);
+}
+
+.contact__email {
+    color: var(--color-muted);
+    font-size: 15px;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    :root {
+        --size-h1: 56px;
+        --size-h2: 36px;
+        --space-section: 80px;
+    }
+
+    .nav {
+        padding: 0 var(--space-md);
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        padding-top: calc(var(--nav-height) + var(--space-xl));
+        min-height: auto;
+    }
+
+    .hero__visual {
+        justify-content: flex-start;
+        order: -1;
+    }
+
+    .hero__visual img {
+        max-width: 200px;
+    }
+
+    .services__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .service-card:nth-child(1),
+    .service-card:nth-child(2),
+    .service-card:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .process__steps {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .process__step {
+        padding-right: 0;
+    }
+
+    .expect > p {
+        font-size: 24px;
+    }
+
+    .expect > p:last-child {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    :root {
+        --size-h1: 44px;
+        --size-h2: 32px;
+        --gutter: 20px;
+    }
+
+    .nav__cta {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-size: 13px;
+    }
+}
+
