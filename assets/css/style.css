@@ -200,6 +200,29 @@ p {
     border-bottom: 1px solid var(--color-border);
 }
 
+/* ---------- Nav links (center) ---------- */
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.nav__link {
+    font-family: var(--font-body);
+    font-size: var(--size-meta);
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    transition: color var(--duration-fast) var(--ease);
+}
+
+.nav__link:hover,
+.nav__link.is-current {
+    color: var(--color-text);
+}
+
 .nav__wordmark {
     font-family: var(--font-display);
     font-weight: var(--weight-regular);
@@ -609,6 +632,10 @@ p {
     }
 
     .nav__cta {
+        display: none;
+    }
+
+    .nav__links {
         display: none;
     }
 

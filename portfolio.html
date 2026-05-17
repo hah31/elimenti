@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Work — Elimenti</title>
+    <meta name="description" content="Selected projects by Elimenti — premium web design for businesses that compete on quality.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Work — Elimenti">
+    <meta property="og:description" content="Selected projects by Elimenti — premium web design for businesses that compete on quality.">
+    <meta property="og:image" content="assets/img/logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Work — Elimenti">
+    <meta name="twitter:description" content="Selected projects by Elimenti — premium web design for businesses that compete on quality.">
+    <meta name="twitter:image" content="assets/img/logo.png">
+
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* ---- Portfolio hero ---- */
+
+        .portfolio-hero {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: calc(var(--nav-height) + var(--space-section)) var(--gutter) var(--space-xl);
+        }
+
+        .portfolio-hero__eyebrow {
+            display: block;
+            font-family: var(--font-body);
+            font-size: var(--size-meta);
+            font-weight: var(--weight-medium);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-md);
+        }
+
+        .portfolio-hero h1 {
+            font-weight: var(--weight-light);
+            font-size: clamp(52px, 7vw, var(--size-h1));
+            max-width: 14ch;
+            margin-bottom: var(--space-md);
+        }
+
+        .portfolio-hero p {
+            font-family: var(--font-display);
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: var(--weight-light);
+            line-height: 1.4;
+            color: var(--color-muted);
+            max-width: 44ch;
+        }
+
+        /* ---- Portfolio grid section ---- */
+
+        .portfolio-section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--gutter) var(--space-section);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        /* ---- Portfolio card ---- */
+
+        .portfolio-card {
+            display: block;
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition:
+                transform var(--duration-base) var(--ease),
+                border-color var(--duration-base) var(--ease),
+                box-shadow var(--duration-base) var(--ease);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--color-accent);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ---- Iframe preview ---- */
+
+        .card__preview-wrap {
+            position: relative;
+            width: 100%;
+            height: 325px;
+            overflow: hidden;
+            background-color: var(--color-bg);
+        }
+
+        /*
+         * iframe is 1440px wide, scaled down to fill the card column (~520px).
+         * scale = 520 / 1440 ≈ 0.361
+         * container height = 900px * 0.361 ≈ 325px
+         */
+        .card__preview-wrap iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1440px;
+            height: 900px;
+            transform: scale(0.361);
+            transform-origin: top left;
+            pointer-events: none;
+            border: none;
+            opacity: 0;
+            transition: opacity var(--duration-base) var(--ease);
+        }
+
+        .card__preview-wrap.iframe-loaded iframe {
+            opacity: 1;
+        }
+
+        .card__preview-wrap.iframe-failed iframe {
+            opacity: 0;
+        }
+
+        /* ---- Fallback ---- */
+
+        .card__fallback {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            background-color: var(--color-surface);
+            opacity: 1;
+            transition: opacity var(--duration-base) var(--ease);
+            pointer-events: none;
+        }
+
+        .card__preview-wrap.iframe-loaded .card__fallback {
+            opacity: 0;
+        }
+
+        .card__fallback-name {
+            font-family: var(--font-display);
+            font-size: var(--size-h3);
+            font-weight: var(--weight-light);
+            letter-spacing: var(--track-display);
+            color: var(--color-text);
+        }
+
+        .card__fallback-cta {
+            font-family: var(--font-body);
+            font-size: var(--size-meta);
+            font-weight: var(--weight-medium);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-muted);
+        }
+
+        /* Dim overlay that appears on card hover for depth */
+        .card__preview-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            background: linear-gradient(to bottom, transparent 60%, rgba(12, 12, 11, 0.5) 100%);
+            pointer-events: none;
+        }
+
+        /* Brighten iframe slightly on card hover */
+        .portfolio-card:hover .card__preview-wrap iframe {
+            filter: brightness(1.06);
+        }
+
+        /* ---- Card body ---- */
+
+        .card__body {
+            padding: var(--space-md);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .card__tag {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 11px;
+            font-weight: var(--weight-medium);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-muted);
+            margin-bottom: var(--space-xs);
+        }
+
+        .card__name {
+            font-family: var(--font-display);
+            font-size: var(--size-h3);
+            font-weight: var(--weight-regular);
+            line-height: var(--line-display);
+            letter-spacing: var(--track-display);
+            color: var(--color-text);
+            display: block;
+            margin-bottom: var(--space-xs);
+            transition: color var(--duration-fast) var(--ease);
+        }
+
+        .portfolio-card:hover .card__name {
+            color: var(--color-accent);
+        }
+
+        .card__desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--color-muted);
+            margin: 0;
+        }
+
+        /* ---- Responsive ---- */
+
+        @media (max-width: 768px) {
+            .portfolio-hero {
+                padding-top: calc(var(--nav-height) + var(--space-xl));
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+
+            /*
+             * Mobile: card fills ~350px, scale = 350/1440 ≈ 0.243
+             * container height = 900 * 0.243 ≈ 219px
+             */
+            .card__preview-wrap {
+                height: 219px;
+            }
+
+            .card__preview-wrap iframe {
+                transform: scale(0.243);
+            }
+        }
+
+        @media (max-width: 540px) {
+            .portfolio-hero h1 {
+                font-size: 40px;
+            }
+
+            .portfolio-hero p {
+                font-size: 18px;
+            }
+
+            /*
+             * Small mobile: card ~310px, scale = 310/1440 ≈ 0.215
+             * height = 900 * 0.215 ≈ 194px
+             */
+            .card__preview-wrap {
+                height: 194px;
+            }
+
+            .card__preview-wrap iframe {
+                transform: scale(0.215);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="index.html" class="nav__wordmark">ELIMENTI</a>
+        <div class="nav__links">
+            <a href="portfolio.html" class="nav__link is-current">Work</a>
+        </div>
+        <a href="index.html#contact" class="nav__cta">Start a Project</a>
+    </nav>
+
+    <section class="portfolio-hero fade-in">
+        <span class="portfolio-hero__eyebrow">Selected Work</span>
+        <h1>Our Work</h1>
+        <p>Every site built from the ground up for the business it represents.</p>
+    </section>
+
+    <section class="portfolio-section">
+        <div class="portfolio-grid">
+
+            <!-- Card 1: 1 of 1 Car Club -->
+            <a class="portfolio-card fade-in" href="https://1of1carclub.pages.dev" target="_blank" rel="noopener">
+                <div class="card__preview-wrap" data-src="https://1of1carclub.pages.dev">
+                    <div class="card__fallback">
+                        <span class="card__fallback-name">1 of 1 Car Club</span>
+                        <span class="card__fallback-cta">Visit Site →</span>
+                    </div>
+                    <iframe src="https://1of1carclub.pages.dev" title="1 of 1 Car Club" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+                </div>
+                <div class="card__body">
+                    <span class="card__tag">Automotive</span>
+                    <span class="card__name">1 of 1 Car Club</span>
+                    <p class="card__desc">A digital flagship for a Porsche-exclusive car club.</p>
+                </div>
+            </a>
+
+            <!-- Card 2: Aamineez Art -->
+            <a class="portfolio-card fade-in" href="https://aamineez.art" target="_blank" rel="noopener">
+                <div class="card__preview-wrap" data-src="https://aamineez.art">
+                    <div class="card__fallback">
+                        <span class="card__fallback-name">Aamineez Art</span>
+                        <span class="card__fallback-cta">Visit Site →</span>
+                    </div>
+                    <iframe src="https://aamineez.art" title="Aamineez Art" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+                </div>
+                <div class="card__body">
+                    <span class="card__tag">Art &amp; Calligraphy</span>
+                    <span class="card__name">Aamineez Art</span>
+                    <p class="card__desc">An exquisite calligraphy portfolio page.</p>
+                </div>
+            </a>
+
+            <!-- PLACEHOLDER -->
+            <a class="portfolio-card fade-in" href="https://example.com" target="_blank" rel="noopener">
+                <div class="card__preview-wrap" data-src="https://example.com">
+                    <div class="card__fallback">
+                        <span class="card__fallback-name">Maison Verdure</span>
+                        <span class="card__fallback-cta">Visit Site →</span>
+                    </div>
+                    <iframe src="https://example.com" title="Maison Verdure" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+                </div>
+                <div class="card__body">
+                    <span class="card__tag">Fine Dining</span>
+                    <span class="card__name">Maison Verdure</span>
+                    <p class="card__desc">A reservation-first experience built around the ritual of the meal.</p>
+                </div>
+            </a>
+
+            <!-- PLACEHOLDER -->
+            <a class="portfolio-card fade-in" href="https://example.com" target="_blank" rel="noopener">
+                <div class="card__preview-wrap" data-src="https://example.com">
+                    <div class="card__fallback">
+                        <span class="card__fallback-name">Arcform Studio</span>
+                        <span class="card__fallback-cta">Visit Site →</span>
+                    </div>
+                    <iframe src="https://example.com" title="Arcform Studio" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+                </div>
+                <div class="card__body">
+                    <span class="card__tag">Architecture</span>
+                    <span class="card__name">Arcform Studio</span>
+                    <p class="card__desc">Portfolio site for a boutique firm designing spaces that outlast trends.</p>
+                </div>
+            </a>
+
+            <!-- PLACEHOLDER -->
+            <a class="portfolio-card fade-in" href="https://example.com" target="_blank" rel="noopener">
+                <div class="card__preview-wrap" data-src="https://example.com">
+                    <div class="card__fallback">
+                        <span class="card__fallback-name">Vela &amp; Co.</span>
+                        <span class="card__fallback-cta">Visit Site →</span>
+                    </div>
+                    <iframe src="https://example.com" title="Vela &amp; Co." loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+                </div>
+                <div class="card__body">
+                    <span class="card__tag">Luxury Retail</span>
+                    <span class="card__name">Vela &amp; Co.</span>
+                    <p class="card__desc">A digital flagship for a curated accessories brand.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="fade-in">Let's build something.</h2>
+        <a href="mailto:hello@elimenti.com" class="btn btn--primary fade-in">Start a Project</a>
+        <p class="contact__email fade-in">hello@elimenti.com</p>
+    </section>
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* ---------- Iframe embed detection ---------- */
+        /*
+         * When a site sets X-Frame-Options / CSP frame-ancestors, the browser
+         * loads about:blank instead of the target URL. about:blank is same-origin
+         * so contentDocument is accessible — that signals a block. If the site
+         * actually loads cross-origin, accessing contentDocument throws a
+         * SecurityError — that signals success.
+         */
+        document.querySelectorAll('.card__preview-wrap').forEach(function (wrap) {
+            var iframe = wrap.querySelector('iframe');
+            if (!iframe) return;
+
+            iframe.addEventListener('load', function () {
+                try {
+                    /* Accessing contentDocument on a successfully-loaded cross-origin
+                       frame throws SecurityError. If we get here without throwing,
+                       the frame either loaded same-origin content or was blocked
+                       (resulting in about:blank). */
+                    var doc = iframe.contentDocument || iframe.contentWindow.document;
+                    /* about:blank body is empty — treat as blocked */
+                    if (!doc || !doc.body || doc.body.innerHTML.trim() === '') {
+                        wrap.classList.add('iframe-failed');
+                    } else {
+                        /* Same-origin content loaded (e.g. 1of1carclub.pages.dev may
+                           be same-origin in some deployments) */
+                        wrap.classList.add('iframe-loaded');
+                    }
+                } catch (e) {
+                    /* SecurityError: cross-origin frame loaded successfully */
+                    wrap.classList.add('iframe-loaded');
+                }
+            });
+
+            /* Safety net: if load never fires within 8s, show fallback */
+            var timer = setTimeout(function () {
+                if (!wrap.classList.contains('iframe-loaded')) {
+                    wrap.classList.add('iframe-failed');
+                }
+            }, 8000);
+
+            iframe.addEventListener('load', function () {
+                clearTimeout(timer);
+            });
+        });
+
+        /* ---------- Scroll fade-in ---------- */
+
+        var fadeTargets = document.querySelectorAll('.fade-in');
+
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+
+            fadeTargets.forEach(function (el) { observer.observe(el); });
+        } else {
+            fadeTargets.forEach(function (el) { el.classList.add('visible'); });
+        }
+
+        /* Stagger portfolio cards */
+        document.querySelectorAll('.portfolio-card.fade-in').forEach(function (card, i) {
+            card.style.transitionDelay = (i * 80) + 'ms';
+        });
+
+        /* ---------- Mobile hamburger nav ---------- */
+
+        var nav = document.querySelector('.nav');
+        if (!nav) return;
+
+        var hamburger = document.createElement('button');
+        hamburger.className = 'nav__hamburger';
+        hamburger.type = 'button';
+        hamburger.setAttribute('aria-label', 'Open menu');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.innerHTML = '<span></span><span></span>';
+        nav.appendChild(hamburger);
+
+        var overlay = document.createElement('div');
+        overlay.className = 'nav__overlay';
+        overlay.setAttribute('aria-hidden', 'true');
+        overlay.innerHTML = [
+            '<a href="portfolio.html">Work</a>',
+            '<a href="index.html#services">Services</a>',
+            '<a href="index.html#process">Process</a>',
+            '<a href="index.html#expect">What to Expect</a>',
+            '<a href="index.html#contact">Start a Project</a>'
+        ].join('');
+        document.body.appendChild(overlay);
+
+        var setOpen = function (open) {
+            overlay.classList.toggle('is-open', open);
+            hamburger.classList.toggle('is-active', open);
+            hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            overlay.setAttribute('aria-hidden', open ? 'false' : 'true');
+            document.body.style.overflow = open ? 'hidden' : '';
+        };
+
+        hamburger.addEventListener('click', function () {
+            setOpen(!overlay.classList.contains('is-open'));
+        });
+
+        overlay.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () { setOpen(false); });
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+                setOpen(false);
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

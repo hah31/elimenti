@@ -55,6 +55,7 @@
     overlay.className = 'nav__overlay';
     overlay.setAttribute('aria-hidden', 'true');
     overlay.innerHTML = [
+        '<a href="portfolio.html">Work</a>',
         '<a href="#services">Services</a>',
         '<a href="#process">Process</a>',
         '<a href="#expect">What to Expect</a>',
