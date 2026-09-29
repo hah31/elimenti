@@ -326,10 +326,12 @@
         <section class="section contact" id="contact" aria-labelledby="contact-title">
             <h2 id="contact-title">Tell us about your business.</h2>
             <p>A few lines is enough: what you do, where you are and what the site needs to do. We'll reply to set up a call.</p>
-            <form class="form" action="https://formsubmit.co/hello@elimenti.com" method="POST">
-                <input type="hidden" name="_subject" value="New project inquiry from elimenti.com">
-                <input type="hidden" name="_template" value="table">
-                <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off">
+            <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="01f2d5d5-d316-431d-bc81-cbce829f98b8">
+                <input type="hidden" name="subject" value="New project inquiry from elimenti.com">
+                <input type="hidden" name="from_name" value="Elimenti Website">
+                <input type="hidden" name="redirect" value="https://elimenti.com/thanks.html">
+                <input type="checkbox" name="botcheck" class="form__honey" tabindex="-1" autocomplete="off">
                 <div class="form__field">
                     <label for="f-name">Name</label>
                     <input id="f-name" type="text" name="name" autocomplete="name" required>
