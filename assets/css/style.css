@@ -348,9 +348,12 @@ strong {
     transition: color var(--duration-fast) var(--ease);
 }
 
-.nav__link:hover,
 .nav__link[aria-current="page"] {
     color: var(--color-text);
+}
+
+.nav__link:hover {
+    color: var(--color-accent);
 }
 
 .nav__cta {
