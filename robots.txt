@@ -1,0 +1,5 @@
+# All crawlers, including AI search and assistant crawlers, are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://elimenti.com/sitemap.xml
