@@ -29,15 +29,19 @@
 
 :root {
     /* Color */
-    --color-bg: #0c0c0b;
-    --color-surface: #161615;
-    --color-text: #e8e6e0;
-    --color-muted: #8a877f;          /* was #65635e; lightened for WCAG AA contrast */
-    --color-faint: #65635e;          /* decorative only (numerals, rules) */
-    --color-accent: #c9a96e;
-    --color-border: rgba(255, 255, 255, 0.08);
-    --color-border-strong: rgba(255, 255, 255, 0.18);
-    --color-nav-bg: rgba(12, 12, 11, 0.6);
+    --color-bg: #FFFFFF;
+    --color-surface: #F8F5F5;        /* cards, inputs, alternating sections */
+    --color-text: #171315;
+    --color-muted: #6A6266;          /* 5.9:1 on bg, 5.5:1 on surface (WCAG AA) */
+    --color-faint: #A89FA3;          /* decorative only (numerals, breadcrumb slashes) */
+    --color-accent: #6D1A36;
+    --color-accent-hover: #551429;
+    --color-accent-tint: #F5E8ED;    /* ::selection, subtle highlights */
+    --color-on-accent: #FFFFFF;      /* text on accent fills */
+    --color-border: #E8E2E4;
+    --color-border-strong: #CFC6CA;
+    --color-border-input: #91888C;   /* 3.2:1 on surface (WCAG 1.4.11) */
+    --color-nav-bg: rgba(255, 255, 255, 0.85);
 
     /* Typography — families */
     --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -83,7 +87,6 @@
     --radius-sm: 4px;
     --radius-md: 8px;
     --blur-nav: 12px;
-    --grain-opacity: 0.025;
 
     /* Motion */
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -186,8 +189,8 @@ strong {
 }
 
 ::selection {
-    background-color: var(--color-accent);
-    color: var(--color-bg);
+    background-color: var(--color-accent-tint);
+    color: var(--color-text);
 }
 
 :focus-visible {
@@ -202,7 +205,7 @@ strong {
     z-index: 200;
     padding: 10px 16px;
     background-color: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-on-accent);
     font-size: var(--size-label);
     border-radius: var(--radius-sm);
 }
@@ -252,7 +255,7 @@ strong {
 
 .btn--primary {
     background-color: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-on-accent);
 }
 
 .btn--primary:hover {
@@ -413,15 +416,6 @@ strong {
     overflow: hidden;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    opacity: var(--grain-opacity);
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-}
 
 .hero__text,
 .hero__visual {
@@ -513,7 +507,7 @@ strong {
 .statement > p {
     font-family: var(--font-display);
     font-size: 32px;
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-regular);
     line-height: 1.3;
     letter-spacing: -0.01em;
     color: var(--color-text);
@@ -556,7 +550,7 @@ strong {
     padding-right: var(--space-sm);
     font-family: var(--font-display);
     font-size: 28px;
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-regular);
     line-height: 1;
     color: var(--color-faint);
 }
@@ -584,7 +578,7 @@ strong {
 .pricing p:first-child {
     font-family: var(--font-display);
     font-size: clamp(26px, 3.4vw, 36px);
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-regular);
     line-height: 1.25;
     color: var(--color-text);
     margin-bottom: var(--space-sm);
@@ -672,7 +666,7 @@ strong {
     font-family: var(--font-display);
     font-style: italic;
     font-size: clamp(22px, 2.6vw, 28px);
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-regular);
     line-height: 1.4;
     color: var(--color-text);
 }
@@ -709,7 +703,7 @@ strong {
     margin: var(--space-md) 0;
     font-family: var(--font-display);
     font-size: clamp(24px, 3vw, 32px);
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-regular);
     line-height: 1.3;
     color: var(--color-text);
 }
@@ -774,7 +768,7 @@ strong {
     font-size: 16px;
     color: var(--color-text);
     background-color: var(--color-surface);
-    border: 1px solid var(--color-border-strong);
+    border: 1px solid var(--color-border-input);
     border-radius: var(--radius-sm);
     padding: 12px 14px;
     transition: border-color var(--duration-fast) var(--ease);
@@ -841,7 +835,7 @@ strong {
 .page-hero .lede {
     font-family: var(--font-display);
     font-size: clamp(20px, 2.4vw, 26px);
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-regular);
     line-height: 1.45;
     color: var(--color-text);
     max-width: 52ch;
@@ -1105,7 +1099,7 @@ strong {
         padding-bottom: 0;
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
-        background-color: rgba(12, 12, 11, 0.94);
+        background-color: var(--color-bg);
     }
 
     .js .nav__toggle {
@@ -1139,7 +1133,7 @@ strong {
     .js .nav__link {
         font-family: var(--font-display);
         font-size: 40px;
-        font-weight: var(--weight-light);
+        font-weight: var(--weight-regular);
         letter-spacing: -0.01em;
         text-transform: none;
         color: var(--color-text);
