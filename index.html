@@ -2,103 +2,394 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Elimenti — Premium Web Design</title>
-    <meta name="description" content="Elimenti designs websites for high-end businesses that compete on quality.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom-Coded Web Design in Hinsdale, IL | Elimenti</title>
+    <meta name="description" content="Elimenti designs custom-coded websites for independent businesses in Hinsdale, Oak Brook and the western suburbs. No templates. Projects start at $3,000.">
+    <link rel="canonical" href="https://elimenti.com/">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Elimenti — Premium Web Design">
-    <meta property="og:description" content="Elimenti designs websites for high-end businesses that compete on quality.">
-    <meta property="og:image" content="assets/img/logo.png">
-
+    <meta property="og:site_name" content="Elimenti">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://elimenti.com/">
+    <meta property="og:title" content="Custom-Coded Web Design in Hinsdale, IL | Elimenti">
+    <meta property="og:description" content="Elimenti designs custom-coded websites for independent businesses in Hinsdale, Oak Brook and the western suburbs. No templates. Projects start at $3,000.">
+    <meta property="og:image" content="https://elimenti.com/assets/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The Elimenti logo mark on a dark background">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Elimenti — Premium Web Design">
-    <meta name="twitter:description" content="Elimenti designs websites for high-end businesses that compete on quality.">
-    <meta name="twitter:image" content="assets/img/logo.png">
+    <meta name="twitter:title" content="Custom-Coded Web Design in Hinsdale, IL | Elimenti">
+    <meta name="twitter:description" content="Elimenti designs custom-coded websites for independent businesses in Hinsdale, Oak Brook and the western suburbs. No templates. Projects start at $3,000.">
+    <meta name="twitter:image" content="https://elimenti.com/assets/img/og-image.png">
+    <meta name="twitter:image:alt" content="The Elimenti logo mark on a dark background">
 
-    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <meta name="theme-color" content="#0c0c0b">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="/assets/img/logo-720.webp" imagesrcset="/assets/img/logo-400.webp 400w, /assets/img/logo-720.webp 720w" imagesizes="(max-width: 768px) 180px, 360px" fetchpriority="high">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="/assets/js/main.js" defer></script>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- TODO sameAs: add the Google Business Profile URL (and LinkedIn / Instagram once they exist) as "sameAs" on the ProfessionalService node below. Left out on purpose until the profiles are live. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://elimenti.com/#business",
+          "name": "Elimenti",
+          "url": "https://elimenti.com/",
+          "logo": "https://elimenti.com/assets/img/logo.png",
+          "image": "https://elimenti.com/assets/img/logo.png",
+          "telephone": "+1-630-509-8822",
+          "email": "hello@elimenti.com",
+          "description": "Custom-coded website design for independent businesses in Hinsdale, Oak Brook and the western suburbs of Chicago.",
+          "founder": {
+            "@type": "Person",
+            "name": "Hashim H.",
+            "jobTitle": "Founder",
+            "url": "https://elimenti.com/about/"
+          },
+          "priceRange": "From $3,000",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hinsdale",
+            "addressRegion": "IL",
+            "postalCode": "60523",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Hinsdale, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Oak Brook, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Western Springs, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Clarendon Hills, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Burr Ridge, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Glen Ellyn, IL"
+            },
+            {
+              "@type": "Country",
+              "name": "United States"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://elimenti.com/#website",
+          "url": "https://elimenti.com/",
+          "name": "Elimenti",
+          "publisher": {
+            "@id": "https://elimenti.com/#business"
+          },
+          "inLanguage": "en-US"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://elimenti.com/#custom-websites",
+          "name": "Custom websites",
+          "serviceType": "Web design",
+          "description": "Designed from scratch and custom-coded in HTML, CSS and JavaScript. We write the copy, set up the basic SEO and give you up to three rounds of revisions. After the final payment, the site is yours.",
+          "provider": {
+            "@id": "https://elimenti.com/#business"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Hinsdale, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Oak Brook, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Western Springs, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Clarendon Hills, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Burr Ridge, IL"
+            },
+            {
+              "@type": "City",
+              "name": "Glen Ellyn, IL"
+            },
+            {
+              "@type": "Country",
+              "name": "United States"
+            }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "description": "Projects start at $3,000.",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 3000,
+              "priceCurrency": "USD"
+            }
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav class="nav">
-        <a href="#" class="nav__wordmark">ELIMENTI</a>
-        <div class="nav__links">
-            <a href="portfolio.html" class="nav__link">Portfolio</a>
+    <header>
+        <nav class="nav" aria-label="Main">
+            <a href="/" class="nav__wordmark">Elimenti</a>
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+                <span class="visually-hidden">Menu</span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__links">
+                <li><a href="/work/" class="nav__link">Work</a></li>
+                <li><a href="/about/" class="nav__link">About</a></li>
+                <li><a href="/faq/" class="nav__link">FAQ</a></li>
+                </ul>
+                <a href="/contact/" class="nav__cta">Start a project</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="hero__text">
+                <h1>Custom-coded websites for Hinsdale and the western suburbs.</h1>
+                <p>Elimenti designs custom websites for high-end independent businesses in Hinsdale, Oak Brook and the western suburbs of Chicago. Every site is designed from scratch and custom-coded, with no templates or page builders.</p>
+                <div class="actions">
+                    <a href="#contact" class="btn btn--primary">Start a project</a>
+                    <a href="/work/" class="btn btn--ghost">See the work</a>
+                </div>
+                <p class="hero__contact"><a href="tel:+16305098822">(630) 509-8822</a> · <a href="mailto:hello@elimenti.com">hello@elimenti.com</a></p>
+            </div>
+            <div class="hero__visual">
+                <img src="/assets/img/logo-720.webp" srcset="/assets/img/logo-400.webp 400w, /assets/img/logo-720.webp 720w" sizes="(max-width: 768px) 180px, 360px" width="720" height="720" alt="The Elimenti logo mark: four sculpted white petals on black" fetchpriority="high">
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="services-title">
+            <h2 id="services-title">What we do</h2>
+            <div class="services__grid" data-reveal>
+                <article class="service-card">
+                    <h3>Custom websites</h3>
+                    <p>Designed from scratch and custom-coded in HTML, CSS and JavaScript. We write the copy, set up the basic SEO and give you up to three rounds of revisions. After the final payment, the site is yours.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Redesigns</h3>
+                    <p>For businesses moving off Wix, Squarespace or an aging WordPress theme. We rebuild the site from scratch in custom code. Your domain and your content come with you.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Visual identity</h3>
+                    <p>Your logo, typefaces and color system, built so the website, the storefront and everything you print look like one business. Quoted per project.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Site Care</h3>
+                    <p>Changes after launch, with a five-business-day turnaround. The $175 monthly plan is the one we recommend. One-off edits are $85 an hour. We also care for existing WordPress sites.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Photography (add-on)</h3>
+                    <p>Photos of your space, your product and your work, shot for the site. $85 an hour.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section statement" aria-labelledby="fit-title" data-reveal>
+            <h2 id="fit-title">Built for businesses that compete on quality.</h2>
+            <p>Boutiques, builders, restaurants, car clubs, artists and professional firms. If your customers judge you by the quality of what you make, they judge your website the same way. A theme that a thousand other businesses use won't hold up to that.</p>
+            <p>We're not the right fit if you want to edit the site yourself every week or need a full online store. We'll tell you that on the first call.</p>
+        </section>
+
+        <section class="section" aria-labelledby="process-title">
+            <h2 id="process-title">How a project runs</h2>
+            <ol class="process__steps" data-reveal>
+                <li class="process__step">
+                    <h3>Call.</h3>
+                    <p>A video call about your business, your customers and what the site has to do.</p>
+                </li>
+                <li class="process__step">
+                    <h3>Proposal.</h3>
+                    <p>Scope, price and timeline in writing, before any work starts.</p>
+                </li>
+                <li class="process__step">
+                    <h3>Design and copy.</h3>
+                    <p>We write every page and design the full site. You get up to three rounds of revisions.</p>
+                </li>
+                <li class="process__step">
+                    <h3>Launch.</h3>
+                    <p>Custom-coded, tested on phones and desktops, and launched on your domain with basic SEO in place.</p>
+                </li>
+                <li class="process__step">
+                    <h3>Site Care.</h3>
+                    <p>Updates after launch, turned around in five business days.</p>
+                </li>
+            </ol>
+        </section>
+
+        <div class="pricing">
+            <p>Everything is scoped to the project, and projects start at $3,000.</p>
+            <p><a class="text-link" href="/faq/">Questions about cost?</a></p>
         </div>
-        <a href="mailto:hello@elimenti.com?subject=New%20Project%20Inquiry&body=Hi%20Elimenti%2C%0A%0AMy%20name%20is%20%5BYour%20Name%5D%20and%20I%27m%20reaching%20out%20because%20I%27m%20interested%20in%20working%20together%20on%20a%20new%20website.%0A%0AHere%27s%20a%20bit%20about%20what%20I%27m%20looking%20for%3A%0A%5BDescribe%20your%20project%20briefly%5D%0A%0AMy%20website%20or%20business%3A%0A%5BOptional%3A%20link%20or%20description%5D%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="nav__cta">Start a Project</a>
-    </nav>
 
-    <section class="hero" id="hero">
-        <div class="hero__text">
-            <h1>Built for businesses that compete on quality.</h1>
-            <p>We design websites for the brands that set the standard in their industry.</p>
-            <a href="mailto:hello@elimenti.com?subject=New%20Project%20Inquiry&body=Hi%20Elimenti%2C%0A%0AMy%20name%20is%20%5BYour%20Name%5D%20and%20I%27m%20reaching%20out%20because%20I%27m%20interested%20in%20working%20together%20on%20a%20new%20website.%0A%0AHere%27s%20a%20bit%20about%20what%20I%27m%20looking%20for%3A%0A%5BDescribe%20your%20project%20briefly%5D%0A%0AMy%20website%20or%20business%3A%0A%5BOptional%3A%20link%20or%20description%5D%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="btn btn--primary">Start a Project</a>
+        <section class="section" aria-labelledby="work-title">
+            <h2 id="work-title">Selected work</h2>
+            <div class="work-grid" data-reveal>
+                <article class="work-card">
+                    <img src="/assets/img/work/1-of-1-car-club-desktop-600.webp" srcset="/assets/img/work/1-of-1-car-club-desktop-600.webp 600w, /assets/img/work/1-of-1-car-club-desktop-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 520px" width="600" height="375" alt="Homepage of the 1 of 1 Car Club website on a desktop screen" loading="lazy" decoding="async">
+                    <div class="work-card__body">
+                        <span class="work-card__scope">Full build</span>
+                        <h3><a class="work-card__link" href="/work/1-of-1-car-club/">1 of 1 Car Club</a></h3>
+                        <p>Website for a private Porsche club based in Chicago and Dallas.</p>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <img src="/assets/img/work/aamineez-art-desktop-600.webp" srcset="/assets/img/work/aamineez-art-desktop-600.webp 600w, /assets/img/work/aamineez-art-desktop-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 520px" width="600" height="375" alt="The calligraphy gallery on aamineez.art on a desktop screen" loading="lazy" decoding="async">
+                    <div class="work-card__body">
+                        <span class="work-card__scope">Portfolio site, pro bono</span>
+                        <h3><a class="work-card__link" href="/work/aamineez-art/">Aamineez Art</a></h3>
+                        <p>Portfolio and commission inquiries for an Arabic calligraphy artist.</p>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <img src="/assets/img/work/burdi-clothing-desktop-600.webp" srcset="/assets/img/work/burdi-clothing-desktop-600.webp 600w, /assets/img/work/burdi-clothing-desktop-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 520px" width="600" height="375" alt="Burdi Clothing&#x27;s Father&#x27;s Day Functional Art Car Show 2026 event page on a desktop screen" loading="lazy" decoding="async">
+                    <div class="work-card__body">
+                        <span class="work-card__scope">Edits to an existing WordPress site</span>
+                        <h3><a class="work-card__link" href="/work/burdi-clothing/">Burdi Clothing</a></h3>
+                        <p>Event pages for a Hinsdale menswear boutique.</p>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <img src="/assets/img/work/abn-construction-group-desktop-600.webp" srcset="/assets/img/work/abn-construction-group-desktop-600.webp 600w, /assets/img/work/abn-construction-group-desktop-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 520px" width="600" height="375" alt="Project portfolio section of ABN Construction Group&#x27;s WordPress site on a desktop screen" loading="lazy" decoding="async">
+                    <div class="work-card__body">
+                        <span class="work-card__scope">Ongoing site care</span>
+                        <h3><a class="work-card__link" href="/work/abn-construction-group/">ABN Construction Group</a></h3>
+                        <p>Care and new sections for a Glen Ellyn general contractor&#x27;s WordPress site.</p>
+                    </div>
+                </article>
+            </div>
+            <figure class="quote">
+                <blockquote>
+                    <p>"Hashim cold-emailed me with a list of things wrong with our website, starting with a phone number at the top of every page that wasn't actually clickable. He didn't ask for anything first; he just did the work, and that tells you more about somebody than a portfolio does. I am very impressed with this business approach and recommend him highly."</p>
+                </blockquote>
+                <figcaption><a href="https://cmiteamwork.com/">Bruce Hodes, CMI Teamwork</a></figcaption>
+            </figure>
+        </section>
+
+        <section class="section areas" aria-labelledby="areas-title">
+            <h2 id="areas-title">Areas we serve</h2>
+            <p>Based in Hinsdale. We build websites for independent businesses in:</p>
+            <ul class="areas__list">
+                <li><a href="/hinsdale-web-design/">Hinsdale</a></li>
+                <li>Oak Brook</li>
+                <li>Western Springs</li>
+                <li>Clarendon Hills</li>
+                <li>Burr Ridge</li>
+                <li><a href="/glen-ellyn-web-design/">Glen Ellyn</a></li>
+            </ul>
+            <p>and across the western suburbs of Chicago. We also take projects anywhere in the US. Every project runs on video calls, so distance doesn't change the process.</p>
+        </section>
+
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Tell us about your business.</h2>
+            <p>A few lines is enough: what you do, where you are and what the site needs to do. We'll reply to set up a call.</p>
+            <form class="form" action="https://formsubmit.co/hello@elimenti.com" method="POST">
+                <input type="hidden" name="_subject" value="New project inquiry from elimenti.com">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off">
+                <div class="form__field">
+                    <label for="f-name">Name</label>
+                    <input id="f-name" type="text" name="name" autocomplete="name" required>
+                </div>
+                <div class="form__field">
+                    <label for="f-email">Email</label>
+                    <input id="f-email" type="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form__field">
+                    <label for="f-business">Business name</label>
+                    <input id="f-business" type="text" name="business" autocomplete="organization">
+                </div>
+                <div class="form__field">
+                    <label for="f-website">Website (optional)</label>
+                    <input id="f-website" type="text" name="website" inputmode="url" autocomplete="url">
+                </div>
+                <div class="form__field">
+                    <label for="f-budget">Budget (optional)</label>
+                    <input id="f-budget" type="text" name="budget">
+                </div>
+                <div class="form__field">
+                    <label for="f-source">How did you find us?</label>
+                    <select id="f-source" name="how_did_you_find_us" required>
+                        <option value="" selected disabled>Choose one</option>
+                        <option>Google search</option>
+                        <option>Google Maps</option>
+                        <option>Bing</option>
+                        <option>ChatGPT or another AI</option>
+                        <option>Instagram</option>
+                        <option>Referral</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form__field form__field--full">
+                    <label for="f-message">What do you need?</label>
+                    <textarea id="f-message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary form__submit">Send</button>
+            </form>
+            <p class="contact__alt">Or call <a href="tel:+16305098822">(630) 509-8822</a> · <a href="mailto:hello@elimenti.com">hello@elimenti.com</a></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__nap">Elimenti · Web design in Hinsdale, IL · <a href="tel:+16305098822">(630) 509-8822</a> · <a href="mailto:hello@elimenti.com">hello@elimenti.com</a></p>
+            <p class="footer__serving">Serving Hinsdale, Oak Brook and the western suburbs</p>
+            <nav aria-label="Footer">
+                <ul class="footer__links">
+                    <li><a href="/work/">Work</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/faq/">FAQ</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/hinsdale-web-design/">Hinsdale</a></li>
+                    <li><a href="/glen-ellyn-web-design/">Glen Ellyn</a></li>
+                    <li><a href="/boutique-websites/">Boutique websites</a></li>
+                    <li><a href="/car-club-websites/">Car club websites</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="hero__visual">
-            <img src="assets/img/logo.png" alt="Elimenti logo mark">
-        </div>
-    </section>
-
-    <section class="services" id="services">
-        <h2>Services</h2>
-        <div class="services__grid">
-            <article class="service-card">
-                <h3>Web Design</h3>
-                <p>A site that reflects the standard of your business. Designed from scratch, built to last.</p>
-            </article>
-            <article class="service-card">
-                <h3>Visual Identity</h3>
-                <p>Marks, type, and color systems for brands that want to be remembered.</p>
-            </article>
-            <article class="service-card">
-                <h3>Site Care</h3>
-                <p>Ongoing updates, performance, and support. Your site stays current — so you don't have to think about it.</p>
-            </article>
-        </div>
-    </section>
-
-    <section class="process" id="process">
-        <h2>Process</h2>
-        <ol class="process__steps">
-            <li class="process__step">
-                <h3>Discover</h3>
-                <p>We learn your business, your customers, and what sets you apart.</p>
-            </li>
-            <li class="process__step">
-                <h3>Design</h3>
-                <p>Every element considered. Nothing arbitrary, nothing generic.</p>
-            </li>
-            <li class="process__step">
-                <h3>Build</h3>
-                <p>Clean code, fast load times, and a site that works on every device.</p>
-            </li>
-            <li class="process__step">
-                <h3>Launch</h3>
-                <p>We handle the details so your launch is seamless.</p>
-            </li>
-        </ol>
-    </section>
-
-    <section class="expect" id="expect">
-        <h2>What to Expect</h2>
-        <p>No templates. Every site we build is designed from the ground up for the business it represents.</p>
-        <p>Scoped to your project. We don't sell packages. Every engagement is built around what you actually need.</p>
-        <p>Every engagement is scoped to the project — get in touch to start the conversation.</p>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2>Let's build something.</h2>
-        <a href="mailto:hello@elimenti.com?subject=New%20Project%20Inquiry&body=Hi%20Elimenti%2C%0A%0AMy%20name%20is%20%5BYour%20Name%5D%20and%20I%27m%20reaching%20out%20because%20I%27m%20interested%20in%20working%20together%20on%20a%20new%20website.%0A%0AHere%27s%20a%20bit%20about%20what%20I%27m%20looking%20for%3A%0A%5BDescribe%20your%20project%20briefly%5D%0A%0AMy%20website%20or%20business%3A%0A%5BOptional%3A%20link%20or%20description%5D%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="btn btn--primary">Start a Project</a>
-        <p class="contact__email">hello@elimenti.com</p>
-    </section>
-
-    <script src="assets/js/main.js"></script>
+    </footer>
 </body>
 </html>
