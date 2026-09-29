@@ -1097,10 +1097,15 @@ strong {
     }
 
     /* With JS: hamburger + full-screen overlay */
+    /* backdrop-filter would make .nav the containing block for the fixed
+       overlay and trap it inside the bar, so drop the blur here. */
     .js .nav {
         flex-wrap: nowrap;
         padding-top: 0;
         padding-bottom: 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(12, 12, 11, 0.94);
     }
 
     .js .nav__toggle {
