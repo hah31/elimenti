@@ -1,0 +1,7 @@
+# GitHub Pages (Jekyll) build settings.
+# Internal working docs must never be published. Jekyll renders every .md
+# file it finds into a public page, so list them here.
+exclude:
+  - SEO-AUDIT.md
+  - content/
+  - "*.md"
