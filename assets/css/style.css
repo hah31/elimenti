@@ -35,7 +35,6 @@
     --color-muted: #6A6266;          /* 5.9:1 on bg, 5.5:1 on surface (WCAG AA) */
     --color-faint: #A89FA3;          /* decorative only (numerals, breadcrumb slashes) */
     --color-accent: #6D1A36;
-    --color-accent-hover: #551429;
     --color-accent-tint: #F5E8ED;    /* ::selection, subtle highlights */
     --color-on-accent: #FFFFFF;      /* text on accent fills */
     --color-border: #E8E2E4;
@@ -1000,12 +999,13 @@ strong {
 }
 
 .footer__nap {
-    color: var(--color-text);
+    color: var(--color-accent);
     font-size: 15px;
 }
 
 .footer__nap a:hover {
-    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .footer__serving {
