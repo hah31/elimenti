@@ -428,6 +428,7 @@ strong {
 .hero__text h1 {
     font-weight: var(--weight-light);
     margin-bottom: var(--space-md);
+    text-wrap: balance;
 }
 
 .hero__text > p {
