@@ -196,12 +196,18 @@
                     <input id="f-website" type="text" name="website" inputmode="url" autocomplete="url">
                 </div>
                 <div class="form__field">
-                    <label for="f-budget">Budget (optional)</label>
-                    <input id="f-budget" type="text" name="budget">
+                    <label for="f-budget">Budget</label>
+                    <select id="f-budget" name="budget" required>
+                        <option value="" selected disabled>Choose one</option>
+                        <option>$3–5k</option>
+                        <option>$5–10k</option>
+                        <option>$10k+</option>
+                        <option>Not sure</option>
+                    </select>
                 </div>
                 <div class="form__field">
-                    <label for="f-source">How did you find us?</label>
-                    <select id="f-source" name="how_did_you_find_us" required>
+                    <label for="f-source">How did you find us? (optional)</label>
+                    <select id="f-source" name="how_did_you_find_us">
                         <option value="" selected disabled>Choose one</option>
                         <option>Google search</option>
                         <option>Google Maps</option>
