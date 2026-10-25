@@ -2,7 +2,7 @@
 
 Branch: `claude/adoring-goldberg-ufkmyy` (cut from `main` at `4c97942`). Nothing is merged to `main`.
 
-This file is a working doc. It is **not published**: `_config.yml` excludes `"*.md"` (plus `SEO-AUDIT.md` and `content/` by name), and GitHub Pages runs Jekyll because there is no `.nojekyll`, so the exclude applies. Verified in Phase 5 by checking that `/PLAN.md` is absent from the built output rules (Jekyll `exclude` matches root-level `*.md`).
+This file is a working doc. It is **not published**: `_config.yml` excludes `"*.md"` (plus `SEO-AUDIT.md` and `content/` by name), and GitHub Pages runs Jekyll because there is no `.nojekyll`, so the exclude applies. Verified: the live site already returns 404 for `/SEO-AUDIT.md` under the same rule, so `/PLAN.md` will not be published.
 
 ---
 
@@ -191,11 +191,34 @@ No breadcrumb level for `/guides/` because there's no guides index; a breadcrumb
 ## Phase 5: wiring
 
 - Footer nav (every page, including 404 and thanks): add the four niche pages and "Website cost guide" after "Car club websites". Main nav stays Work / About / FAQ.
-- Homepage: a "Websites by industry" line under the services grid's statement section linking all six niche pages, and a link to the cost guide next to "Questions about cost?".
-- FAQ: link the cost guide from the first answer's section (visible text and JSON-LD stay identical).
-- Case studies: ABN → builder page; Burdi → nothing new (boutique already); Hinsdale page → builder/landscape/interior links in "What we build for Hinsdale businesses".
+- Homepage: a "Websites by industry" section (same `.areas` component as "Where we work") placed just before it, linking all six industry pages and the cost guide; a cost guide link next to "Questions about cost?"; Elmhurst and Naperville added to the towns list.
+- FAQ: the cost answer now ends with a pointer to the cost guide, and a new question, "What kinds of businesses do you build websites for?", links the industry pages and says plainly which industries are client work and which are concepts. JSON-LD updated to match word for word.
+- Case studies and town pages: ABN → home builder page; Aamineez → interior designer page; Glen Ellyn → home builder page; Hinsdale → med spa, home builder, interior designer and landscape links plus the cost guide. Burdi and 1 of 1 already link to their industry pages.
 - `sitemap.xml`: add 5 URLs, bump lastmod on edited pages.
 
 ## Verification plan
 
 Local server that mimics GitHub Pages (directory → `index.html`, `/dir` → 301 `/dir/`, unknown → `404.html` with status 404, `.md` not served). Then: status codes for every URL, one H1 each, unique titles (≤60) and descriptions (≤155), canonical correct, lede present in raw HTML, all JSON-LD parses, FAQPage text equals visible text, concept pages noindex and absent from sitemap, sitemap equals the set of indexable pages, no broken internal links, Playwright before/after screenshots of every pre-existing page at 1440 and 390 wide with pixel diff, Lighthouse on home, one niche page, the guide and one concept page (fix anything under 95), banned-phrase grep.
+
+## What was built and verified (2026-10-25)
+
+**Commits on this branch:** plan → concept sites → industry pages → cost guide → site-wide links → Lighthouse fixes.
+
+**Decisions made along the way**
+
+- Industry pages use the site's standard `og-image.png`, not a concept screenshot, because WebP previews aren't read by every social platform.
+- Concept pages carry no JSON-LD and no canonical. Publishing `LocalBusiness` data for a fictional business would put a fake entity into Google's and AI tools' data.
+- Concept providers are named by role and credential only (no invented people), prices and hours are labeled as examples in each footer, phone numbers are in the reserved 555-01xx range, and forms submit nowhere (each says so next to the button).
+- The med spa concept's results gallery is a consent-gated empty frame, not stock "before and after" photos, so nothing on the page can be read as a result.
+- Industry FAQ answers and FAQPage JSON-LD are generated from one content list (build script kept outside the repo), so they can't drift apart.
+
+**Verification (local GitHub-Pages-style server)**
+
+- 35 HTML files; all return 200. 20 indexable pages, and the sitemap lists exactly those 20. 12 concept pages: `noindex, follow`, banner present, not in the sitemap.
+- Every indexable page has the correct absolute canonical, one H1, a unique title and description, and its opening paragraph in the raw HTML. New pages: titles 53–57 chars, descriptions 146–154.
+- All JSON-LD parses. Every FAQPage question and answer matches the visible text exactly (industry pages, FAQ). No Review or AggregateRating markup.
+- 151 internal URLs (pages, images, fonts, CSS `url()`s) and 92 `#fragment` links resolve. `/PLAN.md`, `/SEO-AUDIT.md`, `/_config.yml` are not served. Robots allows all.
+- Visual regression on all 17 pre-existing pages at 1440 and 390 wide: pages with only the footer change are pixel-identical above the footer; the rest differ only where content was intentionally added. Contact, privacy and terms showed a 2-pixel, 1-of-255 anti-aliasing difference on the blurred nav button, which is rendering noise.
+- Lighthouse (mobile): home 99/100/100/100, med spa page 100/100/100/100, cost guide 100/100/100/100. Concepts: 96–99 performance, 100 accessibility and best practices; SEO 66 only because of the required `noindex`. Desktop: 100 across the board except that same SEO item.
+- With JavaScript disabled, nothing in `<main>` is hidden and the nav is usable on every page checked.
+- Banned phrases: none. ("elevat" matched only "elevation".)
