@@ -35,6 +35,7 @@
     --olive: #3E4B3A;
     --olive-ink: #E9E6DA;
     --brass: #9A7B4F;
+    --brass-text: #7A5E36;
     --rule: #D6CEC1;
     --display: 'Libre Caslon Display', 'Big Caslon', Georgia, serif;
     --italic: 'Libre Caslon Text', Georgia, serif;
@@ -203,7 +204,7 @@ em { font-family: var(--italic); font-style: italic; }
 .phases { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); }
 .phases li { padding: 28px 28px 0 0; }
 .phases li + li { padding-left: 28px; border-left: 1px solid var(--rule); }
-.phases__num { font-family: var(--italic); font-style: italic; font-size: 18px; color: var(--brass); }
+.phases__num { font-family: var(--italic); font-style: italic; font-size: 18px; color: var(--brass-text); }
 .phases h3 { font-size: 30px; margin: 10px 0 12px; }
 .phases p { color: var(--muted); font-size: 16px; }
 .phases__time { margin-top: 14px; font-size: 13px !important; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink) !important; }
