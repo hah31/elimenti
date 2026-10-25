@@ -1,0 +1,43 @@
+/* Shared by every concept site. The banner is part of the page, not a
+   dismissible overlay, so it is always visible and always in screenshots. */
+
+.concept-banner {
+    position: relative;
+    z-index: 1000;
+    margin: 0;
+    padding: 10px 16px;
+    background-color: #171315;
+    color: #FAF8F5;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.concept-banner strong {
+    font-weight: 700;
+    color: inherit;
+}
+
+.concept-banner a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    white-space: nowrap;
+}
+
+.concept-banner a:hover {
+    color: #F5E8ED;
+}
+
+.concept-banner a:focus-visible {
+    outline: 2px solid #FAF8F5;
+    outline-offset: 2px;
+}
+
+.concept-note {
+    font-size: 14px;
+    opacity: 0.85;
+}
