@@ -848,6 +848,10 @@ strong {
     margin-top: var(--space-lg);
 }
 
+.page-hero .lede + .legal-date {
+    margin-top: var(--space-md);
+}
+
 /* ---------- Prose (subpage body) ---------- */
 
 .prose {
