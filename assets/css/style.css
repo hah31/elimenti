@@ -985,6 +985,14 @@ strong {
     background-color: var(--color-surface);
 }
 
+/* Label under a concept screenshot pair (industry pages) */
+.shots__caption {
+    grid-column: 1 / -1;
+    max-width: var(--prose-width);
+    font-size: var(--size-label);
+    color: var(--color-muted);
+}
+
 /* ---------- FAQ ---------- */
 
 .faq-list {
@@ -999,6 +1007,15 @@ strong {
 .faq-item h2 {
     font-size: clamp(26px, 3vw, 34px);
     margin-bottom: var(--space-sm);
+}
+
+/* FAQ blocks inside a page section, where questions sit under an h2 */
+.faq-item h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.prose .faq-list + p {
+    margin-top: var(--space-md);
 }
 
 /* ---------- Breadcrumb ---------- */
