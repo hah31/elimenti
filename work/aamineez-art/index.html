@@ -120,6 +120,14 @@
             "Search engine optimization",
             "WordPress maintenance"
           ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "telephone": "+1-630-509-8822",
+            "email": "hello@elimenti.com",
+            "areaServed": "US",
+            "availableLanguage": "en"
+          },
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Elimenti services",
@@ -233,12 +241,13 @@
     <main id="main">
         <section class="page-hero">
             <h1>Aamineez Art: portfolio website</h1>
-            <p class="lede">Elimenti designed and custom-coded <a class="text-link" href="https://aamineez.art/">aamineez.art</a>, a portfolio website for Aamineez, an Arabic calligraphy artist. It was a pro bono project, built to turn a link shared in a local group chat into commission inquiries.</p>
+            <p class="lede">Elimenti designed and custom-coded <a class="text-link" href="https://aamineez.art/">aamineez.art</a>, a one-page portfolio for Aamineez, an artist who works in Arabic calligraphy and alcohol ink. It was a pro bono project with one goal: turn a link shared in a local group chat into commission inquiries.</p>
         </section>
 
         <div class="shots">
-            <img src="/assets/img/work/aamineez-art-desktop-600.webp" srcset="/assets/img/work/aamineez-art-desktop-600.webp 600w, /assets/img/work/aamineez-art-desktop-1200.webp 1200w" sizes="(max-width: 768px) 62vw, 832px" width="600" height="375" alt="The calligraphy gallery on aamineez.art on a desktop screen" fetchpriority="high" decoding="async">
-            <img src="/assets/img/work/aamineez-art-phone.webp" width="480" height="1039" alt="The aamineez.art gallery and Inquire on WhatsApp button on a phone" loading="lazy" decoding="async">
+            <img src="/assets/img/work/aamineez-art-desktop-600.webp" srcset="/assets/img/work/aamineez-art-desktop-600.webp 600w, /assets/img/work/aamineez-art-desktop-1200.webp 1200w" sizes="(max-width: 768px) 62vw, 832px" width="600" height="375" alt="The aamineez.art homepage on a desktop screen: the Calligraphy heading, three framed pieces marked Sold and the Inquire on WhatsApp button" fetchpriority="high" decoding="async">
+            <img src="/assets/img/work/aamineez-art-phone.webp" width="480" height="1039" alt="The aamineez.art homepage on a phone, with the first piece and the Inquire on WhatsApp button" loading="lazy" decoding="async">
+            <p class="shots__caption">The live site, captured November 4, 2026.</p>
         </div>
 
         <div class="prose">
@@ -250,27 +259,45 @@
                     <dt>Scope</dt>
                     <dd>Full build of a one-page portfolio: gallery, about and inquiries. Pro bono.</dd>
                     <dt>Built with</dt>
-                    <dd>HTML, CSS and JavaScript</dd>
+                    <dd>HTML, CSS and JavaScript, hosted on GitHub Pages</dd>
                     <dt>Status</dt>
                     <dd>Live at <a class="text-link" href="https://aamineez.art/">aamineez.art</a></dd>
                 </dl>
             </section>
             <section>
-                <h2>The brief</h2>
-                <p>The launch was a single message in a large local group chat. People would tap the link on their phones and decide in a few seconds whether the work was worth asking about. The site had to load fast, show the work first and make asking about a commission effortless.</p>
+                <h2>The artist and the audience</h2>
+                <p>Aamineez began studying Arabic calligraphy in 2020, with lessons in the Thuluth script, and pairs it with alcohol ink painting. The pieces are made to hang in homes, and the site was built to share the work with the artist&#x27;s own local community.</p>
+                <p>Someone in that community who likes a piece doesn&#x27;t need persuading. They need to see the work clearly and know how to ask about it.</p>
             </section>
             <section>
-                <h2>What we did</h2>
+                <h2>The problem</h2>
+                <p>The launch was a single message in a large local group chat. People would tap the link on their phones, between other messages, and decide in a few seconds whether the work was worth asking about. Anything that slowed that down, like a loading screen, a menu to figure out or a contact form to fill in, would cost an inquiry.</p>
+            </section>
+            <section>
+                <h2>What we did, and why</h2>
                 <ul>
-                    <li><strong>Put the work first.</strong> An image-led gallery with a full-screen viewer, so each piece can be seen up close on a phone.</li>
+                    <li><strong>Put the work first.</strong> The page opens on the gallery, not on an introduction. Each piece shows its title, year and medium, with a Sold label where it applies, so a visitor can see what&#x27;s available without asking.</li>
+                    <li><strong>Made every piece readable up close.</strong> Tapping a piece opens a full-screen viewer with more photos of it, its size and, where the piece carries text, an English translation. A buyer who doesn&#x27;t read Arabic can see what the piece says before asking about it.</li>
                     <li><strong>Kept the words short.</strong> An about section in the artist&#x27;s own voice: how the practice started and what the work combines.</li>
-                    <li><strong>Removed the friction.</strong> One &quot;Inquire on WhatsApp&quot; button with a message already written, so asking about a commission takes one tap.</li>
-                    <li><strong>Stayed quiet.</strong> A minimal layout that lets the calligraphy carry the page.</li>
+                    <li><strong>Removed the friction.</strong> One &quot;Inquire on WhatsApp&quot; button, always on screen, that opens a chat with a first line already written. Asking about a commission takes one tap.</li>
+                    <li><strong>Stayed quiet.</strong> A minimal layout in neutral colors that lets the calligraphy carry the page.</li>
+                </ul>
+            </section>
+            <div class="shots shots--single">
+                <img src="/assets/img/work/aamineez-art-phone-viewer.webp" width="480" height="1039" alt="The full-screen viewer on aamineez.art on a phone: a piece titled Haza Min Fazl e Rabbi with its medium, size and English translation" loading="lazy" decoding="async">
+                <p class="shots__caption">The viewer on a phone: photo, medium, size and translation, with arrows to the next image.</p>
+            </div>
+            <section>
+                <h2>What you can check</h2>
+                <ul>
+                    <li><strong>Speed and quality.</strong> {{AAM_LH}}</li>
+                    <li><strong>Security.</strong> The site loads over HTTPS, and the plain-HTTP address redirects to it.</li>
+                    <li><strong>Credit.</strong> The footer reads &quot;Web Design by Elimenti&quot; and links here.</li>
                 </ul>
             </section>
             <section>
                 <h2>The takeaway</h2>
-                <p>When a site&#x27;s whole job is turning a quick look into a conversation, fewer features win. One gallery, a short about section in the artist&#x27;s voice and one button that starts the conversation did more than a full site would have.</p>
+                <p>When a site&#x27;s whole job is turning a quick look into a conversation, fewer features win. One gallery, a short about section in the artist&#x27;s voice and one button that starts the conversation did more than a full site would have. The translation in the viewer is the detail that matters most: it answers the question a buyer would otherwise have to ask.</p>
             </section>
             <section>
                 <h2>Next step</h2>
@@ -319,7 +346,6 @@
                         <li><a href="/chicago-suburbs-web-design/">Chicago suburbs</a></li>
                         <li><a href="/hinsdale-web-design/">Hinsdale</a></li>
                         <li><a href="/oak-brook-web-design/">Oak Brook</a></li>
-                        <li><a href="/glen-ellyn-web-design/">Glen Ellyn</a></li>
                     </ul>
                 </div>
                 <div class="footer__group">

@@ -1040,6 +1040,169 @@ strong {
     border-bottom: none;
 }
 
+/* ---------- Work index: jump links by kind of project ---------- */
+
+.work-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-top: var(--space-lg);
+}
+
+.work-filter a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    min-height: 44px;
+    padding: 8px 16px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    font-size: var(--size-meta);
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    transition: border-color var(--duration-fast) var(--ease), color var(--duration-fast) var(--ease);
+}
+
+.work-filter a:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.work-filter span {
+    color: var(--color-accent);
+}
+
+.work-group .work-grid {
+    margin-top: var(--space-md);
+}
+
+.prose > section.work-group {
+    max-width: none;
+}
+
+/* A single screenshot inside a case study's prose */
+.prose .shots {
+    padding: var(--space-xl) 0 0;
+}
+
+.prose .shots--single {
+    grid-template-columns: minmax(0, 300px);
+}
+
+.prose .shots--wide {
+    grid-template-columns: 1fr;
+    max-width: 832px;
+    margin: 0;
+}
+
+/* ---------- Guide components ---------- */
+
+/* A message template the reader can copy */
+.template {
+    margin-top: var(--space-sm);
+    padding: var(--space-md);
+    background-color: var(--color-surface);
+    border-left: 2px solid var(--color-accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.template p {
+    color: var(--color-text);
+    font-size: 16px;
+}
+
+/* Checklist: open boxes instead of the dash markers */
+.prose ul.checklist li {
+    padding-left: 32px;
+}
+
+.prose ul.checklist li::before {
+    top: 0.45em;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    border-radius: 2px;
+}
+
+/* Direct answer / key figure callout */
+.answer {
+    max-width: var(--prose-width);
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+}
+
+.answer p {
+    color: var(--color-text);
+}
+
+/* Guides hub: questions as an index */
+.guide-index {
+    display: grid;
+    gap: var(--space-xs);
+    margin-top: var(--space-lg);
+    max-width: var(--prose-width);
+}
+
+.guide-index a {
+    display: inline-block;
+    padding: 6px 0;
+    font-family: var(--font-display);
+    font-size: clamp(20px, 2.2vw, 24px);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border-strong);
+    transition: color var(--duration-fast) var(--ease), border-color var(--duration-fast) var(--ease);
+}
+
+.guide-index a:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+/* Tables that stack into labeled blocks on phones */
+@media (max-width: 540px) {
+    .table--stack thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .table--stack tr {
+        display: block;
+        padding: var(--space-sm) 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .table--stack tr:last-child {
+        border-bottom: none;
+    }
+
+    .table--stack th,
+    .table--stack td {
+        display: block;
+        padding: 0 0 var(--space-xs);
+        border-bottom: none;
+    }
+
+    .table--stack td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 12px;
+        font-weight: var(--weight-medium);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+    }
+}
+
 /* ---------- FAQ ---------- */
 
 .faq-list {
