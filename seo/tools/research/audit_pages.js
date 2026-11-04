@@ -183,11 +183,15 @@ function httpChecks(url) {
     Object.assign(result, httpChecks(site.url));
     const host = new URL(site.url).host;
     result.testedUrl = `https://${host}/`;
-    if (result.httpsCode >= 200 && result.httpsCode < 400) {
+    // curl's answer can be a firewall refusing curl itself, so a browser still loads the page
+    // unless HTTPS is plainly broken (TLS handshake or certificate failures).
+    const tlsBroken = [35, 51, 58, 60].includes(result.httpsExit) || result.httpsCode === 525 || result.httpsCode === 526;
+    if (!tlsBroken) {
       Object.assign(result, await checkPage(context, result.testedUrl));
+      if (result.finalUrl && result.finalUrl.startsWith('http://')) result.downgradesToHttp = true;
     } else {
       result.loaded = false;
-      result.error = 'HTTPS unavailable; not measured';
+      result.error = 'HTTPS broken; not measured';
     }
     await context.close();
     fs.appendFileSync(outPath, JSON.stringify(result) + '\n');

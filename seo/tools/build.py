@@ -161,7 +161,41 @@ def article(path, headline, description, published, modified=None):
 
 TOWN = {n: city(n, w) for n, w in TOWNS}
 
-RESEARCH_SCHEMA = []  # set below, after article() and the study summary are available
+RESEARCH_PATH = '/research/western-suburbs-website-report-2026/'
+RESEARCH_SCHEMA = [
+    article(RESEARCH_PATH, 'The western suburbs website report, 2026',
+            'Lighthouse mobile tests and page checks of 150 independent business websites from the Hinsdale and Oak Brook chambers of commerce: speed, phone links, HTTPS, structured data and platforms.',
+            TODAY),
+    {
+        '@type': 'Dataset',
+        '@id': f'{SITE}{RESEARCH_PATH}#dataset',
+        'name': 'Western suburbs small business website study, 2026',
+        'description': ('Aggregate measurements of the public websites of 150 independent businesses listed in the online member '
+                        'directories of the Hinsdale Chamber of Commerce and the Greater Oak Brook Chamber of Commerce in Illinois, '
+                        'collected on November 4, 2026. Each homepage was tested with Lighthouse 13.6.0 on mobile settings (median of '
+                        'three runs) and checked as a phone for tappable phone numbers, contact links, copyright year, structured data, '
+                        'HTTPS and platform. Businesses are not named; the download contains aggregate figures only.'),
+        'url': f'{SITE}{RESEARCH_PATH}',
+        'creator': PROVIDER,
+        'publisher': PROVIDER,
+        'license': 'https://creativecommons.org/licenses/by/4.0/',
+        'isAccessibleForFree': True,
+        'datePublished': TODAY,
+        'temporalCoverage': '2026-11-04',
+        'spatialCoverage': {'@type': 'Place', 'name': 'Hinsdale, Oak Brook and neighboring suburbs, Illinois',
+                            'containedInPlace': {'@type': 'AdministrativeArea', 'name': 'DuPage County, Illinois'}},
+        'keywords': ['small business websites', 'website performance', 'Lighthouse', 'Hinsdale', 'Oak Brook', 'Illinois'],
+        'measurementTechnique': 'Lighthouse 13.6.0, mobile, median of three runs; scripted page checks in a 390 by 844 phone viewport',
+        'variableMeasured': ['Lighthouse mobile performance score', 'Lighthouse accessibility score', 'Lighthouse SEO score',
+                             'Largest contentful paint (lab)', 'Page weight', 'Phone number tappable', 'Contact link loads',
+                             'Copyright year', 'Local business structured data', 'HTTPS', 'Platform'],
+        'distribution': [{'@type': 'DataDownload', 'encodingFormat': 'text/csv',
+                          'contentUrl': f'{SITE}{RESEARCH_PATH}western-suburbs-2026-findings.csv'}],
+        'isPartOf': {'@id': f'{SITE}/#website'},
+    },
+]
+
+
 
 # ---------------------------------------------------------------------------
 # Page registry
@@ -418,9 +452,9 @@ PAGES = [
          title='Web Design FAQ: Cost, Timing, Ownership | Elimenti',
          description='What a custom website costs, how long it takes, who owns it and how updates work. Straight answers from Elimenti, a Hinsdale and Oak Brook web studio.',
          crumbs=[('FAQ', '/faq/')], schema=[]),
-    dict(path='/contact/', file='contact/index.html', lastmod='2026-09-29',
+    dict(path='/contact/', file='contact/index.html', lastmod=TODAY,
          title='Start a Project | Elimenti',
-         description='A few lines is enough: what you do, where you are and what the site needs to do. We\'ll reply to set up a call.',
+         description='Start a project with Elimenti: send a few lines about your business, see what happens next, and where we work. Or call (630) 509-8822.',
          crumbs=[('Contact', '/contact/')],
          schema=[{'@type': 'ContactPage', '@id': f'{SITE}/contact/#webpage', 'url': f'{SITE}/contact/', 'name': 'Start a project',
                   'about': PROVIDER, 'isPartOf': {'@id': f'{SITE}/#website'}}]),
@@ -455,7 +489,8 @@ FOOTER_GROUPS = [
                     ('/boutique-websites/', 'Boutiques'), ('/car-club-websites/', 'Car clubs')]),
     ('Areas', [('/chicago-suburbs-web-design/', 'Chicago suburbs'), ('/hinsdale-web-design/', 'Hinsdale'),
                ('/oak-brook-web-design/', 'Oak Brook')]),
-    ('Studio', [('/about/', 'About'), ('/faq/', 'FAQ'), ('/guides/', 'Guides'), ('/contact/', 'Contact')]),
+    ('Studio', [('/about/', 'About'), ('/faq/', 'FAQ'), ('/guides/', 'Guides'),
+                ('/research/western-suburbs-website-report-2026/', 'Website report 2026'), ('/contact/', 'Contact')]),
 ]
 
 # ---------------------------------------------------------------------------

@@ -5,7 +5,8 @@ Usage:
     python3 seo/tools/check.py http://127.0.0.1:8001
 
 Serve the Jekyll output (or the repo, for a rough check) at that address first.
-Checks: every internal link and asset resolves; every sitemap URL is reachable,
+Checks: every internal link and asset resolves; no indexable page has fewer than two
+other pages linking to it; no unfilled {{token}} remains; every sitemap URL is reachable,
 indexable and canonical; every indexable page is in the sitemap; titles,
 descriptions and H1s are present, unique and within length; JSON-LD parses, uses
 no Review/AggregateRating, and FAQPage text matches the visible text; visible copy
@@ -73,9 +74,10 @@ def crawl(start):
                 refs += [c.strip().split(' ')[0] for c in t['imagesrcset'].split(',')]
             for r in refs:
                 lp = local(r)
+                if lp and lp != path:
+                    referrers[lp].add(path)  # every referring page, for the orphan check
                 if lp and lp not in seen:
                     queue.append(lp)
-                    referrers[lp].add(path)
         elif path.endswith('.css'):
             for u in re.findall(r'url\([\'"]?([^\'")]+)', body.decode('utf-8')):
                 lp = local(u)
@@ -137,6 +139,8 @@ for path, html in pages.items():
         for prop in ('og:title', 'og:description', 'og:image', 'og:url'):
             if not soup.find('meta', property=prop):
                 failures.append(f'{path}: missing {prop}')
+    if '{{' in html or '}}' in html:
+        failures.append(f'{path}: unfilled {{{{token}}}} in HTML')
     # alt text
     for img in soup.find_all('img'):
         if img.get('alt') is None:
@@ -181,6 +185,14 @@ for p in indexable - sm:
     failures.append(f'indexable page missing from sitemap: {p}')
 for p in sm - indexable:
     failures.append(f'sitemap URL is not an indexable page: {p}')
+
+# Orphans: every indexable page needs at least two other pages linking to it
+for p in sorted(indexable):
+    refs = {r for r in referrers.get(p, set()) if r != p}
+    if p != '/' and len(refs) < 2:
+        failures.append(f'orphan: {p} has {len(refs)} referring page(s): {sorted(refs)}')
+inbound = sorted((len({r for r in referrers.get(p, set()) if r != p}), p) for p in indexable if p != '/')
+notes.append('fewest inbound links: ' + ', '.join(f'{p} ({n})' for n, p in inbound[:5]))
 
 print(f'Crawled {len(seen)} URLs ({len(pages)} HTML pages, {len(indexable)} indexable, {len(sitemap)} in sitemap).')
 for n in notes:

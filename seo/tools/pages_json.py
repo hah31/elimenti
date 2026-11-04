@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from build import PAGES, ROOT, slug_for  # noqa: E402
 
 KICKERS = [
-    ('/work/', 'Case study'), ('/guides/', 'Guide'), ('-web-design/', 'Where we work'),
+    ('/work/', 'Case study'), ('/guides/', 'Guide'), ('/research/', 'Research'), ('-web-design/', 'Where we work'),
     ('-websites/', 'Websites by industry'),
 ]
 

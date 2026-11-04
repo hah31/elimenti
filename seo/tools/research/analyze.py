@@ -85,6 +85,19 @@ def platform(pg):
     return 'No builder detected'
 
 
+def https_status(pg, loaded, challenge):
+    """works / broken / downgrades / unknown, for the site's https:// address."""
+    if pg.get('httpsExit') in (35, 51, 58, 60) or pg.get('httpsCode') in (525, 526):
+        return 'broken'  # TLS handshake or certificate failure
+    if pg.get('downgradesToHttp') or (pg.get('status') == 405 and str(pg.get('finalUrl', '')).startswith('http://')):
+        return 'downgrades'  # https sends visitors back to plain http
+    if loaded:
+        return 'works'
+    if pg.get('httpsCode') is not None and 200 <= pg['httpsCode'] < 400 and not challenge:
+        return 'works'
+    return 'unknown'  # bot check, no response or a server error
+
+
 def pct(n, d):
     return round(100 * n / d, 1) if d else None
 
@@ -120,6 +133,7 @@ def main(private_dir):
             'blocked_by_bot_check': challenge,
             'platform': platform(pg) if loaded else '',
             'lh_runs_ok': l.get('okRuns', 0) if lh_valid else 0,
+            'lh_benchmark_index': round(l['benchmarkIndex']) if lh_valid and l.get('benchmarkIndex') else '',
             'lh_performance': round(100 * med['performance']) if med.get('performance') is not None else '',
             'lh_accessibility': round(100 * med['accessibility']) if med.get('accessibility') is not None else '',
             'lh_best_practices': round(100 * med['bestPractices']) if med.get('bestPractices') is not None else '',
@@ -131,8 +145,7 @@ def main(private_dir):
             'page_weight_kb': round(med['total-byte-weight'] / 1024) if med.get('total-byte-weight') else '',
             'tap_targets_ok': (l.get('checks') or {}).get('target-size') == 1 if lh_valid else '',
             'meta_description_ok': (l.get('checks') or {}).get('meta-description') == 1 if lh_valid else '',
-            'https_ok': pg.get('httpsCode') is not None and 200 <= (pg.get('httpsCode') or 0) < 400,
-            'https_cert_error': pg.get('httpsExit') in (35, 51, 58, 60),
+            'https_status': https_status(pg, loaded, challenge),
             'viewport_tag': bool(pg.get('viewportMeta')) if loaded else '',
             'scrolls_sideways': (pg.get('scrollWidth', 0) > pg.get('innerWidth', 0) + 1) if loaded else '',
             'small_text_share': round(pg['smallTextShare'], 3) if loaded and pg.get('smallTextShare') is not None else '',
@@ -164,6 +177,8 @@ def main(private_dir):
     S['blocked_by_bot_check'] = sum(1 for r in rows if r['blocked_by_bot_check'])
     S['lighthouse_measured'] = len(lhok)
     S['lighthouse_failed'] = len(rows) - len(lhok)
+    bi = [r['lh_benchmark_index'] for r in lhok if r['lh_benchmark_index'] != '']
+    S['benchmark_index'] = {'min': min(bi) if bi else None, 'median': st.median(bi) if bi else None, 'max': max(bi) if bi else None}
 
     def summary_scores(rs, key):
         v = [r[key] for r in rs if r[key] != '']
@@ -197,10 +212,12 @@ def main(private_dir):
                                                   'good_90_plus': pct(sum(1 for x in v if x >= 90), len(v))}
 
     n = len(loaded)
-    S['https'] = {'n': len(rows),
-                  'https_works': pct(sum(1 for r in rows if r['https_ok']), len(rows)),
-                  'certificate_error': pct(sum(1 for r in rows if r['https_cert_error']), len(rows)),
-                  'https_works_count': sum(1 for r in rows if r['https_ok'])}
+    known = [r for r in rows if r['https_status'] != 'unknown']
+    S['https'] = {'n_known': len(known), 'unknown': sum(1 for r in rows if r['https_status'] == 'unknown'),
+                  'works': pct(sum(1 for r in known if r['https_status'] == 'works'), len(known)),
+                  'broken': pct(sum(1 for r in known if r['https_status'] == 'broken'), len(known)),
+                  'downgrades': pct(sum(1 for r in known if r['https_status'] == 'downgrades'), len(known)),
+                  'problem_count': sum(1 for r in known if r['https_status'] in ('broken', 'downgrades'))}
     S['mobile'] = {'n': n,
                    'no_viewport_tag': pct(sum(1 for r in loaded if r['viewport_tag'] is False), n),
                    'scrolls_sideways': pct(sum(1 for r in loaded if r['scrolls_sideways'] is True), n),
@@ -272,7 +289,8 @@ def main(private_dir):
               ['Phone shown but not tappable', S['phone']['not_tappable_of_shown'], S['phone']['phone_shown_count'], 'percent of sites showing a phone'],
               ['Contact link that fails to load', S['contact']['contact_link_broken_of_linked'], '', 'percent of sites with a contact link'],
               ['Copyright year two or more years old', S['copyright']['two_plus_years_old_of_found'], S['copyright']['year_found_count'], 'percent of sites showing a year'],
-              ['HTTPS works', S['https']['https_works'], S['https']['n'], 'percent'],
+              ['HTTPS works', S['https']['works'], S['https']['n_known'], 'percent of sites that could be checked'],
+              ['HTTPS broken or downgraded to HTTP', round(S['https']['broken'] + S['https']['downgrades'], 1), S['https']['n_known'], 'percent of sites that could be checked'],
               ['Any mobile usability issue', S['mobile']['any_mobile_issue'], S['mobile']['n'], 'percent'],
               ['LocalBusiness structured data', S['structured_data']['local_business'], S['structured_data']['n'], 'percent']]
     for name, v in S['platforms'].items():

@@ -1,0 +1,241 @@
+{
+ "sample_size": 150,
+ "collected": "2026-11-04",
+ "loaded": 122,
+ "blocked_by_bot_check": 10,
+ "lighthouse_measured": 88,
+ "lighthouse_failed": 62,
+ "benchmark_index": {
+  "min": 1952,
+  "median": 2547.0,
+  "max": 2834
+ },
+ "lh_performance": {
+  "n": 88,
+  "median": 46.0,
+  "good_90_plus": 2.3,
+  "needs_improvement_50_89": 45.5,
+  "poor_under_50": 52.3
+ },
+ "lh_accessibility": {
+  "n": 88,
+  "median": 89.0,
+  "good_90_plus": 48.9,
+  "needs_improvement_50_89": 51.1,
+  "poor_under_50": 0.0
+ },
+ "lh_best_practices": {
+  "n": 88,
+  "median": 59.0,
+  "good_90_plus": 6.8,
+  "needs_improvement_50_89": 83.0,
+  "poor_under_50": 10.2
+ },
+ "lh_seo": {
+  "n": 88,
+  "median": 92.0,
+  "good_90_plus": 76.1,
+  "needs_improvement_50_89": 23.9,
+  "poor_under_50": 0.0
+ },
+ "lcp": {
+  "n": 88,
+  "median_s": 8.2,
+  "within_2_5s": 4.5,
+  "over_4s": 86.4
+ },
+ "page_weight": {
+  "n": 88,
+  "median_kb": 2939.5,
+  "over_3mb": 46.6
+ },
+ "tap_targets_fail": {
+  "n": 88,
+  "pct": 29.5
+ },
+ "meta_description_missing": {
+  "n": 88,
+  "pct": 14.8
+ },
+ "platforms": {
+  "WordPress": {
+   "n": 60,
+   "pct": 49.2
+  },
+  "No builder detected": {
+   "n": 21,
+   "pct": 17.2
+  },
+  "Squarespace": {
+   "n": 10,
+   "pct": 8.2
+  },
+  "Shopify": {
+   "n": 8,
+   "pct": 6.6
+  },
+  "Wix": {
+   "n": 6,
+   "pct": 4.9
+  },
+  "GoDaddy Website Builder": {
+   "n": 5,
+   "pct": 4.1
+  },
+  "Weebly": {
+   "n": 3,
+   "pct": 2.5
+  },
+  "Duda": {
+   "n": 3,
+   "pct": 2.5
+  },
+  "Showit": {
+   "n": 2,
+   "pct": 1.6
+  },
+  "Webflow": {
+   "n": 2,
+   "pct": 1.6
+  },
+  "Hibu or other hosted builder": {
+   "n": 1,
+   "pct": 0.8
+  },
+  "HubSpot CMS": {
+   "n": 1,
+   "pct": 0.8
+  }
+ },
+ "performance_by_platform": {
+  "WordPress": {
+   "n": 46,
+   "median": 48.0,
+   "good_90_plus": 2.2
+  },
+  "No builder detected": {
+   "n": 14,
+   "median": 42.0,
+   "good_90_plus": 7.1
+  }
+ },
+ "https": {
+  "n_known": 135,
+  "unknown": 15,
+  "works": 92.6,
+  "broken": 4.4,
+  "downgrades": 3.0,
+  "problem_count": 10
+ },
+ "mobile": {
+  "n": 122,
+  "no_viewport_tag": 0.0,
+  "scrolls_sideways": 0.8,
+  "over_25pct_small_text": 4.1,
+  "any_mobile_issue": 24.6
+ },
+ "phone": {
+  "n": 122,
+  "phone_shown": 73.0,
+  "phone_shown_count": 89,
+  "not_tappable_of_shown": 19.1,
+  "not_tappable_count": 17,
+  "partly_tappable_of_shown": 19.1,
+  "malformed_tel_link": 8.2,
+  "malformed_tel_link_count": 10
+ },
+ "contact": {
+  "n": 122,
+  "contact_link": 84.4,
+  "contact_link_broken_of_linked": 3.9,
+  "contact_link_broken_count": 4,
+  "email_link": 44.3,
+  "no_way_to_reach_on_homepage": 2.5
+ },
+ "copyright": {
+  "n": 122,
+  "year_found": 69.7,
+  "year_found_count": 85,
+  "current_year_of_found": 82.4,
+  "last_year_of_found": 9.4,
+  "two_plus_years_old_of_found": 8.2,
+  "two_plus_years_old_count": 7,
+  "five_plus_years_old_of_found": 3.5,
+  "oldest": 2018,
+  "by_year": {
+   "2018": 1,
+   "2020": 2,
+   "2023": 1,
+   "2024": 3,
+   "2025": 8,
+   "2026": 70
+  }
+ },
+ "structured_data": {
+  "n": 122,
+  "any": 82.0,
+  "local_business": 37.7
+ },
+ "by_area": {
+  "Hinsdale": {
+   "sites": 68,
+   "loaded": 58,
+   "lighthouse_measured": 39,
+   "median_performance": 46,
+   "performance_90_plus": 2.6,
+   "phone_not_tappable_of_shown": 19.0,
+   "copyright_two_plus_years_old_of_found": 7.0,
+   "wordpress_share": 44.8
+  },
+  "Oak Brook and Oakbrook Terrace": {
+   "sites": 62,
+   "loaded": 48,
+   "lighthouse_measured": 39,
+   "median_performance": 44,
+   "performance_90_plus": 0.0,
+   "phone_not_tappable_of_shown": 18.9,
+   "copyright_two_plus_years_old_of_found": 6.7,
+   "wordpress_share": 52.1
+  },
+  "Neighboring suburbs": {
+   "sites": 20,
+   "loaded": 16,
+   "lighthouse_measured": 10,
+   "median_performance": 68.5,
+   "performance_90_plus": 10.0,
+   "phone_not_tappable_of_shown": 20.0,
+   "copyright_two_plus_years_old_of_found": 16.7,
+   "wordpress_share": 56.2
+  }
+ },
+ "by_sector": {
+  "Events, travel and leisure": {
+   "sites": 7,
+   "median_performance": 44
+  },
+  "Food and drink": {
+   "sites": 12,
+   "median_performance": 38.0
+  },
+  "Health, wellness and beauty": {
+   "sites": 53,
+   "median_performance": 52.5
+  },
+  "Home and building": {
+   "sites": 8,
+   "median_performance": 37.0
+  },
+  "Other": {
+   "sites": 1,
+   "median_performance": null
+  },
+  "Professional services": {
+   "sites": 50,
+   "median_performance": 46
+  },
+  "Shops and showrooms": {
+   "sites": 19,
+   "median_performance": 39.0
+  }
+ }
+}

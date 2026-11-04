@@ -1,0 +1,32 @@
+measure,value,base,unit
+Sites in sample,150,,sites
+Sites measured with Lighthouse,88,150,sites
+Median mobile performance score,46.0,88,score 0-100
+Mobile performance 90 or higher,2.3,88,percent
+Mobile performance under 50,52.3,88,percent
+Median accessibility score,89.0,88,score 0-100
+Median SEO score,92.0,88,score 0-100
+"Median largest contentful paint (lab, mobile)",8.2,88,seconds
+Largest contentful paint within 2.5 s,4.5,88,percent
+Phone number shown on homepage,73.0,122,percent
+Phone shown but not tappable,19.1,89,percent of sites showing a phone
+Contact link that fails to load,3.9,,percent of sites with a contact link
+Copyright year two or more years old,8.2,85,percent of sites showing a year
+HTTPS works,92.6,135,percent of sites that could be checked
+HTTPS broken or downgraded to HTTP,7.4,135,percent of sites that could be checked
+Any mobile usability issue,24.6,122,percent
+LocalBusiness structured data,37.7,122,percent
+Platform: WordPress,49.2,122,percent of sites that loaded
+Platform: No builder detected,17.2,122,percent of sites that loaded
+Platform: Squarespace,8.2,122,percent of sites that loaded
+Platform: Shopify,6.6,122,percent of sites that loaded
+Platform: Wix,4.9,122,percent of sites that loaded
+Platform: GoDaddy Website Builder,4.1,122,percent of sites that loaded
+Platform: Weebly,2.5,122,percent of sites that loaded
+Platform: Duda,2.5,122,percent of sites that loaded
+Platform: Showit,1.6,122,percent of sites that loaded
+Platform: Webflow,1.6,122,percent of sites that loaded
+Platform: Hibu or other hosted builder,0.8,122,percent of sites that loaded
+Platform: HubSpot CMS,0.8,122,percent of sites that loaded
+Median performance: WordPress,48.0,46,score 0-100
+Median performance: No builder detected,42.0,14,score 0-100

@@ -1203,6 +1203,218 @@ strong {
     }
 }
 
+.table-note {
+    margin-top: var(--space-sm);
+    font-size: var(--size-label);
+}
+
+/* ---------- Research report: figures and charts ---------- */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.stat {
+    padding: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+}
+
+.stat__figure {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: var(--weight-light);
+    font-size: clamp(44px, 6vw, 56px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    font-variant-numeric: tabular-nums;
+}
+
+.stat__label {
+    display: block;
+    margin-top: var(--space-sm);
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-muted);
+}
+
+.chart {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    max-width: 760px;
+}
+
+.stats + p {
+    margin-top: var(--space-md);
+}
+
+.chart__title {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(22px, 2.6vw, 26px);
+    line-height: 1.25;
+    color: var(--color-text);
+}
+
+.chart__note {
+    display: block;
+    margin-top: var(--space-xs);
+    font-size: var(--size-label);
+    color: var(--color-muted);
+}
+
+/* Horizontal bars: label | baseline + bar | value at the tip */
+.bars {
+    display: grid;
+    gap: 12px;
+    margin-top: var(--space-md);
+}
+
+.bars li {
+    display: grid;
+    grid-template-columns: minmax(130px, 32%) 1fr 72px;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.bars__label {
+    font-size: 15px;
+    line-height: 1.35;
+    color: var(--color-text);
+}
+
+.bars__label small {
+    font-size: 13px;
+    color: var(--color-muted);
+}
+
+.bars__track {
+    display: block;
+    height: 20px;
+    border-left: 1px solid var(--color-border-strong);
+}
+
+.bars__bar {
+    display: block;
+    height: 100%;
+    min-width: 2px;
+    background-color: var(--color-accent);
+    border-radius: 0 4px 4px 0;
+}
+
+.bars li:hover .bars__bar {
+    background-color: var(--color-text);
+}
+
+.bars__value {
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text);
+}
+
+/* Column histogram with band brackets under the axis */
+.cols {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: end;
+    gap: 4px;
+    height: 220px;
+    margin-top: var(--space-md);
+    border-bottom: 1px solid var(--color-border-strong);
+}
+
+.cols__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.cols__val {
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text);
+}
+
+.cols__bar {
+    width: 100%;
+    max-width: 24px;
+    min-height: 1px;
+    background-color: var(--color-accent);
+    border-radius: 4px 4px 0 0;
+}
+
+.cols__col:hover .cols__bar {
+    background-color: var(--color-text);
+}
+
+.cols__axis,
+.cols__bands {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 4px;
+    font-size: 12px;
+    color: var(--color-muted);
+    text-align: center;
+}
+
+.cols__axis {
+    margin-top: 6px;
+    font-variant-numeric: tabular-nums;
+}
+
+.cols__bands {
+    margin-top: var(--space-xs);
+}
+
+.cols__bands span {
+    padding-top: 6px;
+    border-top: 1px solid var(--color-border-strong);
+    color: var(--color-text);
+}
+
+.chart details {
+    margin-top: var(--space-sm);
+    font-size: var(--size-label);
+}
+
+.chart summary {
+    cursor: pointer;
+    color: var(--color-muted);
+}
+
+.chart summary:hover {
+    color: var(--color-accent);
+}
+
+.chart details .table {
+    margin-top: var(--space-xs);
+}
+
+@media (max-width: 540px) {
+    .bars li {
+        grid-template-columns: 1fr 64px;
+        row-gap: 4px;
+    }
+
+    .bars__label {
+        grid-column: 1 / -1;
+    }
+
+    .cols__val,
+    .cols__axis,
+    .cols__bands {
+        font-size: 11px;
+    }
+}
+
 /* ---------- FAQ ---------- */
 
 .faq-list {
