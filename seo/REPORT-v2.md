@@ -14,7 +14,7 @@ New pages (target query):
 - `/guides/med-spa-website-cost/` (med spa website cost)
 - `/guides/local-seo-for-boutiques/` (local SEO for boutiques)
 
-Rebuilt: four case studies, `/work/`, `/guides/`, About, Contact; study data on the Hinsdale and Oak Brook pages; a direct answer opens every service, industry, town and guide page.
+Rebuilt: case studies, `/work/`, `/guides/`, About, Contact; study data on Hinsdale and Oak Brook pages; direct answers open every service, industry, town and guide page.
 
 **Corrections:** ABN's own site says Lombard, not Glen Ellyn, so the Glen Ellyn page now redirects to the suburbs page. 1of1carclub.com now hosts a different site; the case study no longer calls it live.
 
@@ -30,7 +30,7 @@ All 35 pages: Lighthouse mobile 100/100/100/100 (median of three runs). Schema: 
 
 ## Merge and IndexNow
 
-MERGE_LINE
+`seo-v2` fast-forwarded into `main` (`d06ba83`) on November 4, 2026; live on elimenti.com within minutes, all new URLs returning 200. IndexNow: 36 URLs, including the retired Glen Ellyn one, accepted with HTTP 200.
 
 ## Top 5 off-site actions
 
