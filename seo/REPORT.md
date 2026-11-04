@@ -84,7 +84,8 @@ All passed (`seo/tools/check.py`, `seo/tools/validate_schema.py`):
 
 ## Deploy and IndexNow
 
-@@DEPLOY@@
+- **Merged and deployed.** `seo-overhaul` fast-forwarded into `main` at 01:32 UTC on 2026-11-04; GitHub Pages had it live about 60 seconds later. Verified on the live domain: all 28 sitemap URLs serve, unknown URLs return 404, `/seo/` and `_headers` aren't published, and `elimenti.pages.dev` now sends `X-Robots-Tag: noindex`.
+- **IndexNow:** all 28 URLs POSTed to `https://api.indexnow.org/indexnow` → **HTTP 202** (accepted, key pending). A follow-up submission returned **HTTP 200**, so the key is validated. Bing, Yandex, Seznam, Naver and the other participants now have every URL. Google doesn't use IndexNow; submit the sitemap in Search Console (kit §4). Re-run `python3 seo/tools/indexnow.py` after future deploys.
 
 ## Off-site actions, ranked by expected impact
 
