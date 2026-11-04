@@ -38,7 +38,7 @@ h1 { position: absolute; top: 200px; left: 80px; width: 760px; font-family: 'Cor
 <div class="word">Elimenti</div>
 <div class="kicker">${esc(kicker)}</div>
 <h1>${nobreak(title)}</h1>
-<div class="foot">Custom-coded websites · Hinsdale and Oak Brook, IL · elimenti.com</div>
+<div class="foot">WordPress and custom-coded websites · Hinsdale and Oak Brook, IL · elimenti.com</div>
 <img class="mark" src="${logo}" alt="">
 </body></html>`;
 

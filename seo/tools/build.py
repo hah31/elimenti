@@ -71,19 +71,20 @@ BUSINESS = {
     'image': f'{SITE}/assets/img/og/home.png',
     'telephone': '+1-630-509-8822',
     'email': EMAIL,
-    'description': 'Custom-coded website design for high-end independent businesses. Based in Hinsdale and Oak Brook, Illinois, serving Chicago\'s western suburbs and clients anywhere in the US.',
+    'description': 'Website design for high-end independent businesses, built on WordPress or custom-coded. Based in Hinsdale and Oak Brook, Illinois, serving Chicago\'s western suburbs and clients anywhere in the US.',
     'founder': {'@type': 'Person', '@id': f'{SITE}/about/#founder', 'name': 'Hashim H.', 'jobTitle': 'Founder', 'url': f'{SITE}/about/'},
-    'priceRange': 'From $3,000',
+    'priceRange': 'From $4,000',
     'currenciesAccepted': 'USD',
     'address': {'@type': 'PostalAddress', 'addressLocality': 'Hinsdale', 'addressRegion': 'IL', 'addressCountry': 'US'},
     'areaServed': AREA_SERVED,
-    'knowsAbout': ['Web design', 'Website development', 'Copywriting', 'Search engine optimization', 'WordPress maintenance'],
+    'knowsAbout': ['Web design', 'Website development', 'WordPress', 'Elementor', 'Copywriting', 'Search engine optimization', 'WordPress maintenance'],
     'contactPoint': {'@type': 'ContactPoint', 'contactType': 'sales', 'telephone': '+1-630-509-8822', 'email': EMAIL,
                      'areaServed': 'US', 'availableLanguage': 'en'},
     'hasOfferCatalog': {
         '@type': 'OfferCatalog',
         'name': 'Elimenti services',
         'itemListElement': [
+            {'@type': 'Offer', 'itemOffered': {'@id': f'{SITE}/wordpress-websites/#service'}},
             {'@type': 'Offer', 'itemOffered': {'@id': f'{SITE}/custom-websites/#service'}},
             {'@type': 'Offer', 'itemOffered': {'@id': f'{SITE}/site-care/#service'}},
         ],
@@ -100,14 +101,14 @@ WEBSITE = {
 }
 
 PROVIDER = {'@id': f'{SITE}/#business'}
-PRICE_FROM_3000 = {
+PRICE_FROM_4000 = {
     '@type': 'Offer',
-    'description': 'Projects start at $3,000.',
-    'priceSpecification': {'@type': 'PriceSpecification', 'minPrice': 3000, 'priceCurrency': 'USD'},
+    'description': 'WordPress and custom-coded projects start at $4,000, scoped per project with a written proposal.',
+    'priceSpecification': {'@type': 'PriceSpecification', 'minPrice': 4000, 'priceCurrency': 'USD'},
 }
 
 
-def service(path, name, description, area=None, service_type='Web design', offers=PRICE_FROM_3000, audience=None):
+def service(path, name, description, area=None, service_type='Web design', offers=PRICE_FROM_4000, audience=None):
     node = {
         '@type': 'Service',
         '@id': f'{SITE}{path}#service',
@@ -208,7 +209,7 @@ IND = '/custom-websites/'
 PAGES = [
     dict(path='/', file='index.html', lastmod=TODAY,
          title='High-End Web Design in the Chicago Suburbs | Elimenti',
-         description='Custom-coded websites for high-end independent businesses in Hinsdale, Oak Brook and Chicago\'s western suburbs. No templates. Projects from $3,000.',
+         description='Websites for high-end businesses in Hinsdale, Oak Brook and Chicago\'s western suburbs, on WordPress you can edit or custom-coded. From $4,000.',
          crumbs=None,
          extra_head='<link rel="preload" as="image" href="/assets/img/logo-720.webp" imagesrcset="/assets/img/logo-400.webp 400w, /assets/img/logo-720.webp 720w" imagesizes="(max-width: 768px) 180px, 360px" fetchpriority="high">',
          schema=[]),
@@ -216,16 +217,22 @@ PAGES = [
     # Services
     dict(path='/custom-websites/', file='custom-websites/index.html', lastmod=TODAY,
          title='Custom Website Design for Chicago Businesses | Elimenti',
-         description='Custom-coded websites for high-end businesses in Chicago and the western suburbs: designed from scratch, copy included, three revision rounds. From $3,000.',
+         description='Custom-designed websites for high-end businesses in Chicago and the suburbs, built on WordPress or custom-coded. Copywriting included. From $4,000.',
          crumbs=[('Custom websites', '/custom-websites/')],
          schema=[service('/custom-websites/', 'Custom website design and build',
-                         'Websites designed from scratch and custom-coded in HTML, CSS and JavaScript, with copywriting, a basic SEO setup and up to three rounds of revisions. The client owns the site after final payment.')]),
+                         'Websites designed for one business and built one of two ways: on WordPress, so the client can edit it, or custom-coded in HTML, CSS and JavaScript. Copywriting, a basic SEO setup and up to three rounds of revisions are included. The client owns the site after final payment.')]),
+    dict(path='/wordpress-websites/', file='wordpress-websites/index.html', lastmod=TODAY,
+         title='WordPress Website Design for Chicago Businesses | Elimenti',
+         description='Custom-designed WordPress websites for high-end businesses in Chicago and the suburbs: your own login, updates and backups through Site Care. From $4,000.',
+         crumbs=[('WordPress websites', '/wordpress-websites/')],
+         schema=[service('/wordpress-websites/', 'WordPress website design and build',
+                         'Custom-designed WordPress websites with copywriting, a basic SEO setup, up to three rounds of revisions, the client\'s own login and a walkthrough of how to edit the site at launch. The client owns the WordPress install, theme, content and plugins after final payment.')]),
     dict(path='/site-care/', file='site-care/index.html', lastmod=TODAY,
          title='Website Care and Maintenance, Chicago Suburbs | Elimenti',
-         description='Site Care keeps your website current: $175 a month or $85 an hour, with a five-business-day turnaround. For sites we build and existing WordPress sites.',
+         description='Site Care keeps your website current: $175 a month or $85 an hour, five-business-day turnaround, with WordPress updates and backups on the monthly plan.',
          crumbs=[('Site Care', '/site-care/')],
          schema=[service('/site-care/', 'Site Care: website care and maintenance',
-                         'Updates and changes to a live website, turned around in five business days. Covers custom-coded sites built by Elimenti and existing WordPress sites.',
+                         'Updates and changes to a live website, turned around in five business days. Covers WordPress and custom-coded sites built by Elimenti and existing WordPress sites. On WordPress sites, the monthly plan also covers WordPress core, theme and plugin updates and backups.',
                          service_type='Website maintenance',
                          offers=[
                              {'@type': 'Offer', 'name': 'Site Care monthly plan', 'priceSpecification': {
@@ -234,70 +241,77 @@ PAGES = [
                                  '@type': 'UnitPriceSpecification', 'price': 85, 'priceCurrency': 'USD', 'unitCode': 'HUR', 'unitText': 'hour'}},
                          ])]),
     dict(path='/pricing/', file='pricing/index.html', lastmod=TODAY, nav='pricing',
-         title='Web Design Pricing: Projects From $3,000 | Elimenti',
-         description='What Elimenti costs and how a project runs: custom websites from $3,000, what\'s included, the steps from first call to launch, and Site Care after.',
+         title='Web Design Pricing: Projects From $4,000 | Elimenti',
+         description='What Elimenti costs and how a project runs: WordPress and custom-coded websites from $4,000, what\'s included, the steps to launch, and Site Care after.',
          crumbs=[('Pricing and process', '/pricing/')],
          schema=[{'@type': 'WebPage', '@id': f'{SITE}/pricing/#webpage', 'url': f'{SITE}/pricing/', 'name': 'Pricing and process',
-                  'about': [{'@id': f'{SITE}/custom-websites/#service'}, {'@id': f'{SITE}/site-care/#service'}],
+                  'about': [{'@id': f'{SITE}/wordpress-websites/#service'}, {'@id': f'{SITE}/custom-websites/#service'}, {'@id': f'{SITE}/site-care/#service'}],
                   'isPartOf': {'@id': f'{SITE}/#website'}}]),
 
     # Locations
     dict(path='/chicago-suburbs-web-design/', file='chicago-suburbs-web-design/index.html', lastmod=TODAY,
          title='Web Design for Chicago\'s Western Suburbs | Elimenti',
-         description='Custom-coded websites for high-end businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville. From $3,000.',
+         description='WordPress and custom-coded sites for high-end businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville. From $4,000.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/')],
          schema=[service('/chicago-suburbs-web-design/', 'Web design for Chicago\'s western suburbs',
-                         'Custom-coded websites for high-end independent businesses across Chicago\'s western suburbs.')]),
+                         'Websites for high-end independent businesses across Chicago\'s western suburbs, built on WordPress or custom-coded.')]),
     dict(path='/hinsdale-web-design/', file='hinsdale-web-design/index.html', lastmod=TODAY,
-         title='Web Design in Hinsdale, IL | Custom-Coded Sites | Elimenti',
-         description='Custom-coded websites for Hinsdale boutiques, clinics, builders and firms, from a studio with real Hinsdale work. Projects start at $3,000.',
+         title='Web Design in Hinsdale, IL | WordPress & Custom | Elimenti',
+         description='Websites for Hinsdale boutiques, clinics, builders and firms, on WordPress or custom-coded, from a studio with real Hinsdale work. From $4,000.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/'), ('Hinsdale', '/hinsdale-web-design/')],
          schema=[service('/hinsdale-web-design/', 'Web design in Hinsdale, IL',
-                         'Custom-coded websites for Hinsdale boutiques, clinics, builders and professional firms. Projects start at $3,000.', area=[TOWN['Hinsdale']])]),
+                         'Websites for Hinsdale boutiques, clinics, builders and professional firms, built on WordPress or custom-coded. Projects start at $4,000.', area=[TOWN['Hinsdale']])]),
     dict(path='/oak-brook-web-design/', file='oak-brook-web-design/index.html', lastmod=TODAY,
          title='Web Designer in Oak Brook, IL | Elimenti',
-         description='Custom-coded websites for Oak Brook firms, clinics and shops, from a studio based in Hinsdale and Oak Brook. Built for clients who check you out first.',
+         description='Websites for Oak Brook firms, clinics and shops, on WordPress or custom-coded, from a studio based in Hinsdale and Oak Brook. From $4,000.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/'), ('Oak Brook', '/oak-brook-web-design/')],
          schema=[service('/oak-brook-web-design/', 'Web design in Oak Brook, IL',
-                         'Custom-coded websites for Oak Brook professional firms, clinics and independent shops. Projects start at $3,000.', area=[TOWN['Oak Brook']])]),
+                         'Websites for Oak Brook professional firms, clinics and independent shops, built on WordPress or custom-coded. Projects start at $4,000.', area=[TOWN['Oak Brook']])]),
     # Industries
     dict(path='/med-spa-websites/', file='med-spa-websites/index.html', lastmod=TODAY,
          title='Med Spa Website Design in Hinsdale & Oak Brook | Elimenti',
-         description='Custom-coded med spa websites for Hinsdale, Oak Brook and the western suburbs: treatment pages, booking links and consent-based galleries. From $3,000.',
+         description='Med spa websites for Hinsdale, Oak Brook and the western suburbs: treatment pages, booking links and consent-based galleries. From $4,000.',
          crumbs=[('Custom websites', IND), ('Med spa websites', '/med-spa-websites/')],
          schema=[service('/med-spa-websites/', 'Med spa website design',
-                         'Custom-coded websites for med spas: a page per treatment, booking links on every page, provider credentials and consent-based galleries.', audience='Med spas')]),
+                         'Websites for med spas, built on WordPress or custom-coded: a page per treatment, booking links on every page, provider credentials and consent-based galleries.', audience='Med spas')]),
     dict(path='/interior-designer-websites/', file='interior-designer-websites/index.html', lastmod=TODAY,
          title='Interior Designer Website Design, Hinsdale | Elimenti',
-         description='Custom-coded websites for interior designers in Hinsdale, Western Springs and the western suburbs: project pages, process and qualified inquiries.',
+         description='Websites for interior designers in Hinsdale, Western Springs and the western suburbs: project pages, process and qualified inquiries. From $4,000.',
          crumbs=[('Custom websites', IND), ('Interior designer websites', '/interior-designer-websites/')],
          schema=[service('/interior-designer-websites/', 'Interior designer website design',
-                         'Custom-coded websites for interior designers: project pages, a clear process and an inquiry form that qualifies.', audience='Interior designers')]),
+                         'Websites for interior designers, built on WordPress or custom-coded: project pages, a clear process and an inquiry form that qualifies.', audience='Interior designers')]),
     dict(path='/custom-home-builder-websites/', file='custom-home-builder-websites/index.html', lastmod=TODAY,
          title='Custom Home Builder Website Design, Hinsdale | Elimenti',
-         description='Custom-coded websites for home builders in Hinsdale, Western Springs and the western suburbs: project galleries, process and service area. From $3,000.',
+         description='Websites for custom home builders in Hinsdale, Western Springs and the western suburbs: project galleries, process and service area. From $4,000.',
          crumbs=[('Custom websites', IND), ('Home builder websites', '/custom-home-builder-websites/')],
          schema=[service('/custom-home-builder-websites/', 'Custom home builder website design',
-                         'Custom-coded websites for custom home builders: galleries split by type of work, a process page and a clear service area.', audience='Custom home builders')]),
+                         'Websites for custom home builders, built on WordPress or custom-coded: galleries split by type of work, a process page and a clear service area.', audience='Custom home builders')]),
     dict(path='/landscape-design-websites/', file='landscape-design-websites/index.html', lastmod=TODAY,
          title='Websites for Landscape Design Firms, Hinsdale | Elimenti',
-         description='Custom-coded websites for landscape design-build firms in Hinsdale, Burr Ridge and the western suburbs: projects, process and service area. From $3,000.',
+         description='Websites for landscape design-build firms in Hinsdale, Burr Ridge and the western suburbs: projects, process and service area. From $4,000.',
          crumbs=[('Custom websites', IND), ('Landscape design websites', '/landscape-design-websites/')],
          schema=[service('/landscape-design-websites/', 'Landscape design website design',
-                         'Custom-coded websites for landscape design-build firms: project pages by problem solved, design-build kept separate from maintenance.', audience='Landscape design firms')]),
+                         'Websites for landscape design-build firms, built on WordPress or custom-coded: project pages by problem solved, design-build kept separate from maintenance.', audience='Landscape design firms')]),
     dict(path='/boutique-websites/', file='boutique-websites/index.html', lastmod=TODAY,
          title='Boutique Website Design for Independent Shops | Elimenti',
-         description='Custom-coded websites for independent boutiques and showrooms in the Chicago suburbs: photo-led, fast on phones and linked to your store. From $3,000.',
+         description='Websites for independent boutiques and showrooms in the Chicago suburbs: photo-led, fast on phones and linked to your store. From $4,000.',
          crumbs=[('Custom websites', IND), ('Boutique websites', '/boutique-websites/')],
          schema=[service('/boutique-websites/', 'Boutique website design',
-                         'Custom-coded websites for independent boutiques, showrooms and specialty shops.', audience='Independent boutiques and showrooms')]),
+                         'Websites for independent boutiques, showrooms and specialty shops, built on WordPress or custom-coded.', audience='Independent boutiques and showrooms')]),
     dict(path='/car-club-websites/', file='car-club-websites/index.html', lastmod=TODAY,
          title='Car Club Website Design | Elimenti',
-         description='Custom websites for car clubs and automotive groups, from the studio behind 1 of 1 Car Club\'s site. Based in Hinsdale and Oak Brook, IL, working US-wide.',
+         description='Websites for private car clubs and automotive groups, from the studio behind 1 of 1 Car Club\'s site. Based in Hinsdale and Oak Brook, IL, working US-wide.',
          crumbs=[('Custom websites', IND), ('Car club websites', '/car-club-websites/')],
          schema=[service('/car-club-websites/', 'Car club website design',
-                         'Custom-coded websites for car clubs and automotive groups: collection pages that grow, member applications and privacy where it matters.',
+                         'Websites for private car clubs and automotive groups, built on WordPress or custom-coded: collection pages that grow, member applications and privacy where it matters.',
                          area=[{'@type': 'Country', 'name': 'United States'}], audience='Car clubs')]),
+    dict(path='/classic-car-club-websites/', file='classic-car-club-websites/index.html', lastmod=TODAY,
+         title='Classic and Marque Car Club Websites | Elimenti',
+         description='Website redesigns for national and regional classic and marque car clubs: members-only areas, renewals, events, chapters and a tech library, on WordPress.',
+         crumbs=[('Custom websites', IND), ('Classic car club websites', '/classic-car-club-websites/')],
+         schema=[service('/classic-car-club-websites/', 'Classic and marque car club website design',
+                         'Websites for established national and regional car clubs devoted to one make or a family of makes, usually built on WordPress: members-only areas, join and renewal with the club\'s membership system, event calendars, chapter pages, a technical library and a newsletter archive.',
+                         area=[{'@type': 'Country', 'name': 'United States'}], audience='Classic and marque car clubs')]),
 
     # Guides
     dict(path='/guides/', file='guides/index.html', lastmod=TODAY,
@@ -320,11 +334,11 @@ PAGES = [
                          'What a custom website costs a high-end business in Chicago and the western suburbs, what each price level gets you and what to ask before you hire.',
                          '2026-10-25', TODAY)]),
     dict(path='/guides/squarespace-vs-custom-website/', file='guides/squarespace-vs-custom-website/index.html', lastmod=TODAY, og_type='article',
-         title='Squarespace vs Custom Website: Which Fits? | Elimenti',
-         description='An honest comparison for high-end businesses: what Squarespace does well, where a custom-coded site pulls ahead, three-year costs and how to choose.',
-         crumbs=[('Guides', '/guides/'), ('Squarespace vs custom', '/guides/squarespace-vs-custom-website/')],
-         schema=[article('/guides/squarespace-vs-custom-website/', 'Squarespace or a custom website: which one fits a high-end business',
-                         'An honest comparison for high-end businesses: what Squarespace does well, where a custom-coded site pulls ahead, three-year costs and how to choose.',
+         title='Squarespace vs WordPress vs Custom Website | Elimenti',
+         description='An honest comparison for high-end businesses: what Squarespace does well, when WordPress or custom code fits better, three-year costs and how to choose.',
+         crumbs=[('Guides', '/guides/'), ('Squarespace, WordPress or custom', '/guides/squarespace-vs-custom-website/')],
+         schema=[article('/guides/squarespace-vs-custom-website/', 'Squarespace, WordPress or a custom-coded website: which one fits a high-end business',
+                         'An honest comparison for high-end businesses: what Squarespace does well, when WordPress or custom code fits better, three-year costs and how to choose.',
                          TODAY)]),
     dict(path='/guides/what-makes-a-website-look-high-end/', file='guides/what-makes-a-website-look-high-end/index.html', lastmod=TODAY, og_type='article',
          title='What Makes a Website Look High-End | Elimenti',
@@ -438,19 +452,19 @@ PAGES = [
     # Studio
     dict(path='/about/', file='about/index.html', lastmod=TODAY, nav='about',
          title='About Elimenti | Hinsdale Web Design Studio',
-         description='Elimenti is a Hinsdale web design studio run by Hashim H., an engineering student at Illinois who builds custom-coded sites for high-end businesses.',
+         description='Elimenti is a Hinsdale web design studio run by Hashim H., an Illinois engineering student. WordPress and custom-coded sites for high-end businesses.',
          crumbs=[('About', '/about/')],
          schema=[{'@type': 'AboutPage', '@id': f'{SITE}/about/#webpage', 'url': f'{SITE}/about/', 'name': 'About Elimenti',
                   'about': PROVIDER, 'mainEntity': {'@id': f'{SITE}/about/#founder'}, 'isPartOf': {'@id': f'{SITE}/#website'}},
                  {'@type': 'Person', '@id': f'{SITE}/about/#founder', 'name': 'Hashim H.', 'jobTitle': 'Founder',
                   'url': f'{SITE}/about/', 'worksFor': PROVIDER,
-                  'description': 'Founder of Elimenti. Designs and custom-codes websites for high-end independent businesses. Engineering student at the University of Illinois.',
+                  'description': 'Founder of Elimenti. Designs websites for high-end independent businesses, built on WordPress or custom-coded. Engineering student at the University of Illinois.',
                   'affiliation': {'@type': 'CollegeOrUniversity', 'name': 'University of Illinois Urbana-Champaign',
                                   'sameAs': 'https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign'},
-                  'knowsAbout': ['Web design', 'Copywriting', 'Website performance']}]),
+                  'knowsAbout': ['Web design', 'WordPress', 'Copywriting', 'Website performance']}]),
     dict(path='/faq/', file='faq/index.html', lastmod=TODAY, nav='faq',
          title='Web Design FAQ: Cost, Timing, Ownership | Elimenti',
-         description='What a custom website costs, how long it takes, who owns it and how updates work. Straight answers from Elimenti, a Hinsdale and Oak Brook web studio.',
+         description='What a website costs, WordPress or custom-coded, who owns it and how updates work. Straight answers from Elimenti, a Hinsdale and Oak Brook web studio.',
          crumbs=[('FAQ', '/faq/')], schema=[]),
     dict(path='/contact/', file='contact/index.html', lastmod=TODAY,
          title='Start a Project | Elimenti',
@@ -458,7 +472,7 @@ PAGES = [
          crumbs=[('Contact', '/contact/')],
          schema=[{'@type': 'ContactPage', '@id': f'{SITE}/contact/#webpage', 'url': f'{SITE}/contact/', 'name': 'Start a project',
                   'about': PROVIDER, 'isPartOf': {'@id': f'{SITE}/#website'}}]),
-    dict(path='/privacy/', file='privacy/index.html', lastmod='2026-10-03',
+    dict(path='/privacy/', file='privacy/index.html', lastmod=TODAY,
          title='Privacy Policy | Elimenti',
          description='How Elimenti, a Hinsdale web design studio, handles information from elimenti.com: what we collect, how we use it, who we share it with and your choices.',
          crumbs=[('Privacy Policy', '/privacy/')],
@@ -472,7 +486,7 @@ PAGES = [
     # Not indexed
     dict(path='/404.html', file='404.html', robots='noindex', sitemap=False, canonical=False, og_image='home',
          title='Page Not Found | Elimenti',
-         description='This page doesn\'t exist or has moved. Find custom websites, Site Care, pricing and our work from here.',
+         description='This page doesn\'t exist or has moved. Find WordPress and custom websites, Site Care, pricing and our work from here.',
          crumbs=None, schema=[]),
     dict(path='/thanks.html', file='thanks.html', robots='noindex', sitemap=False, canonical=False, og_image='home',
          title='Thanks | Elimenti',
@@ -483,10 +497,12 @@ PAGES = [
 NAV_ITEMS = [('work', '/work/', 'Work'), ('pricing', '/pricing/', 'Pricing'), ('about', '/about/', 'About'), ('faq', '/faq/', 'FAQ')]
 
 FOOTER_GROUPS = [
-    ('Services', [('/custom-websites/', 'Custom websites'), ('/site-care/', 'Site Care'), ('/pricing/', 'Pricing and process'), ('/work/', 'Work')]),
+    ('Services', [('/wordpress-websites/', 'WordPress websites'), ('/custom-websites/', 'Custom websites'), ('/site-care/', 'Site Care'),
+                  ('/pricing/', 'Pricing and process'), ('/work/', 'Work')]),
     ('Industries', [('/med-spa-websites/', 'Med spas'), ('/interior-designer-websites/', 'Interior designers'),
                     ('/custom-home-builder-websites/', 'Home builders'), ('/landscape-design-websites/', 'Landscape firms'),
-                    ('/boutique-websites/', 'Boutiques'), ('/car-club-websites/', 'Car clubs')]),
+                    ('/boutique-websites/', 'Boutiques'), ('/car-club-websites/', 'Car clubs'),
+                    ('/classic-car-club-websites/', 'Classic and marque clubs')]),
     ('Areas', [('/chicago-suburbs-web-design/', 'Chicago suburbs'), ('/hinsdale-web-design/', 'Hinsdale'),
                ('/oak-brook-web-design/', 'Oak Brook')]),
     ('Studio', [('/about/', 'About'), ('/faq/', 'FAQ'), ('/guides/', 'Guides'),
@@ -573,7 +589,7 @@ def footer_html():
                 </div>''')
     return f'''    <footer class="footer">
         <div class="footer__inner">
-            <p class="footer__nap">Elimenti · Custom-coded websites · Hinsdale and Oak Brook, IL · <a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+            <p class="footer__nap">Elimenti · WordPress and custom-coded websites · Hinsdale and Oak Brook, IL · <a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a></p>
             <p class="footer__serving">Serving Chicago&#x27;s western suburbs, and businesses anywhere in the US.</p>
             <nav class="footer__nav" aria-label="Footer">
 {chr(10).join(groups)}
@@ -590,7 +606,7 @@ def head_html(p, main_html):
     url = f"{SITE}{p['path']}"
     title, desc = p['title'], p['description']
     og_img = f"{SITE}/assets/img/og/{p.get('og_image') or slug_for(p['path'])}.png"
-    og_alt = f"{title.split(' | ')[0]}. Elimenti, custom-coded websites."
+    og_alt = f"{title.split(' | ')[0]}. Elimenti, WordPress and custom-coded websites."
     lines = [
         '<!DOCTYPE html>',
         '<html lang="en">',
@@ -638,6 +654,7 @@ def head_html(p, main_html):
         '    <link rel="stylesheet" href="/assets/css/style.css">',
         '    <script>document.documentElement.classList.add(\'js\');</script>',
         '    <script src="/assets/js/main.js" defer></script>',
+        '    <script src="/assets/js/attribution.js" defer></script>',
         '',
         ld({'@context': 'https://schema.org', '@graph': [BUSINESS, WEBSITE]}),
     ]
