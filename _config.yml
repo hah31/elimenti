@@ -1,7 +1,9 @@
 # GitHub Pages (Jekyll) build settings.
-# Internal working docs must never be published. Jekyll renders every .md
-# file it finds into a public page, so list them here.
+# Internal working docs and tooling must never be published. Jekyll renders every
+# .md file it finds into a public page, so list them here. Files starting with "_"
+# (_headers, _redirects for Cloudflare Pages) are skipped by Jekyll automatically.
 exclude:
   - SEO-AUDIT.md
   - content/
+  - seo/
   - "*.md"

@@ -1,0 +1,3 @@
+# Cloudflare Pages only (see _headers). The old portfolio page moved to /work/.
+/portfolio.html /work/ 301
+/portfolio /work/ 301
