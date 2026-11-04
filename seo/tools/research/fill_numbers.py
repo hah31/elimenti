@@ -72,7 +72,8 @@ if len(sys.argv) > 1 and os.path.exists(sys.argv[1]):
         T['AAM_LH'] = (f'Measured with Lighthouse 13.6 on mobile, median of five runs on November 4, 2026: '
                        f'{round(100 * a["performance"])} for performance, {round(100 * a["accessibility"])} for accessibility, '
                        f'{round(100 * a["bestPractices"])} for best practices and {round(100 * a["seo"])} for SEO, out of 100. '
-                       f'Check it yourself at <a class="text-link" href="https://pagespeed.web.dev/">pagespeed.web.dev</a>.')
+                       f'For comparison, the median local business site in <a class="text-link" href="/research/western-suburbs-website-report-2026/">our 2026 study</a> '
+                       f'scored {g(S["lh_performance"]["median"])} for performance. Check it yourself at <a class="text-link" href="https://pagespeed.web.dev/">pagespeed.web.dev</a>.')
 
 files = [f for f in glob.glob(os.path.join(ROOT, '**', 'index.html'), recursive=True) if '/concepts/' not in f]
 files += [os.path.join(ROOT, 'seo', n) for n in ('off-site-kit-v2.md', 'REPORT-v2.md') if os.path.exists(os.path.join(ROOT, 'seo', n))]

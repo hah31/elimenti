@@ -3,59 +3,59 @@
  "collected": "2026-11-04",
  "loaded": 122,
  "blocked_by_bot_check": 10,
- "lighthouse_measured": 88,
- "lighthouse_failed": 62,
+ "lighthouse_measured": 137,
+ "lighthouse_failed": 13,
  "benchmark_index": {
   "min": 1952,
-  "median": 2547.0,
+  "median": 2560,
   "max": 2834
  },
  "lh_performance": {
-  "n": 88,
-  "median": 46.0,
-  "good_90_plus": 2.3,
-  "needs_improvement_50_89": 45.5,
-  "poor_under_50": 52.3
+  "n": 137,
+  "median": 46,
+  "good_90_plus": 1.5,
+  "needs_improvement_50_89": 46.0,
+  "poor_under_50": 52.6
  },
  "lh_accessibility": {
-  "n": 88,
-  "median": 89.0,
-  "good_90_plus": 48.9,
-  "needs_improvement_50_89": 51.1,
+  "n": 137,
+  "median": 89,
+  "good_90_plus": 48.2,
+  "needs_improvement_50_89": 51.8,
   "poor_under_50": 0.0
  },
  "lh_best_practices": {
-  "n": 88,
-  "median": 59.0,
-  "good_90_plus": 6.8,
-  "needs_improvement_50_89": 83.0,
-  "poor_under_50": 10.2
+  "n": 137,
+  "median": 59,
+  "good_90_plus": 8.8,
+  "needs_improvement_50_89": 82.5,
+  "poor_under_50": 8.8
  },
  "lh_seo": {
-  "n": 88,
-  "median": 92.0,
-  "good_90_plus": 76.1,
-  "needs_improvement_50_89": 23.9,
+  "n": 137,
+  "median": 92,
+  "good_90_plus": 76.6,
+  "needs_improvement_50_89": 23.4,
   "poor_under_50": 0.0
  },
  "lcp": {
-  "n": 88,
-  "median_s": 8.2,
-  "within_2_5s": 4.5,
-  "over_4s": 86.4
+  "n": 137,
+  "median_s": 8.5,
+  "within_2_5s": 4.4,
+  "over_4s": 86.9
  },
  "page_weight": {
-  "n": 88,
-  "median_kb": 2939.5,
-  "over_3mb": 46.6
+  "n": 137,
+  "median_kb": 3278,
+  "over_3mb": 51.8
  },
  "tap_targets_fail": {
-  "n": 88,
-  "pct": 29.5
+  "n": 137,
+  "pct": 29.2
  },
  "meta_description_missing": {
-  "n": 88,
-  "pct": 14.8
+  "n": 137,
+  "pct": 16.8
  },
  "platforms": {
   "WordPress": {
@@ -109,14 +109,24 @@
  },
  "performance_by_platform": {
   "WordPress": {
-   "n": 46,
-   "median": 48.0,
-   "good_90_plus": 2.2
+   "n": 60,
+   "median": 46.0,
+   "good_90_plus": 1.7
   },
   "No builder detected": {
-   "n": 14,
-   "median": 42.0,
-   "good_90_plus": 7.1
+   "n": 21,
+   "median": 46,
+   "good_90_plus": 4.8
+  },
+  "Squarespace": {
+   "n": 10,
+   "median": 39.5,
+   "good_90_plus": 0.0
+  },
+  "Shopify": {
+   "n": 8,
+   "median": 35.5,
+   "good_90_plus": 0.0
   }
  },
  "https": {
@@ -132,7 +142,7 @@
   "no_viewport_tag": 0.0,
   "scrolls_sideways": 0.8,
   "over_25pct_small_text": 4.1,
-  "any_mobile_issue": 24.6
+  "any_mobile_issue": 34.4
  },
  "phone": {
   "n": 122,
@@ -180,9 +190,9 @@
   "Hinsdale": {
    "sites": 68,
    "loaded": 58,
-   "lighthouse_measured": 39,
-   "median_performance": 46,
-   "performance_90_plus": 2.6,
+   "lighthouse_measured": 64,
+   "median_performance": 43.0,
+   "performance_90_plus": 1.6,
    "phone_not_tappable_of_shown": 19.0,
    "copyright_two_plus_years_old_of_found": 7.0,
    "wordpress_share": 44.8
@@ -190,8 +200,8 @@
   "Oak Brook and Oakbrook Terrace": {
    "sites": 62,
    "loaded": 48,
-   "lighthouse_measured": 39,
-   "median_performance": 44,
+   "lighthouse_measured": 55,
+   "median_performance": 46,
    "performance_90_plus": 0.0,
    "phone_not_tappable_of_shown": 18.9,
    "copyright_two_plus_years_old_of_found": 6.7,
@@ -200,9 +210,9 @@
   "Neighboring suburbs": {
    "sites": 20,
    "loaded": 16,
-   "lighthouse_measured": 10,
-   "median_performance": 68.5,
-   "performance_90_plus": 10.0,
+   "lighthouse_measured": 18,
+   "median_performance": 62.5,
+   "performance_90_plus": 5.6,
    "phone_not_tappable_of_shown": 20.0,
    "copyright_two_plus_years_old_of_found": 16.7,
    "wordpress_share": 56.2
@@ -215,15 +225,15 @@
   },
   "Food and drink": {
    "sites": 12,
-   "median_performance": 38.0
+   "median_performance": 33.5
   },
   "Health, wellness and beauty": {
    "sites": 53,
-   "median_performance": 52.5
+   "median_performance": 53.5
   },
   "Home and building": {
    "sites": 8,
-   "median_performance": 37.0
+   "median_performance": 44
   },
   "Other": {
    "sites": 1,
@@ -231,11 +241,11 @@
   },
   "Professional services": {
    "sites": 50,
-   "median_performance": 46
+   "median_performance": 48.5
   },
   "Shops and showrooms": {
    "sites": 19,
-   "median_performance": 39.0
+   "median_performance": 38
   }
  }
 }

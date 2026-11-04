@@ -269,7 +269,7 @@ main = f'''<main id="main">
                     <dt>Who</dt>
                     <dd>Businesses listed in the public online member directories of the <a class="text-link" href="https://business.hinsdalechamber.com/list">Hinsdale Chamber of Commerce</a> and the <a class="text-link" href="https://business.obchamber.com/list">Greater Oak Brook Chamber of Commerce</a>, read on November 4, 2026: {n0(steps["directory_listings"])} listings.</dd>
                     <dt>Which ones</dt>
-                    <dd>Listed address in Hinsdale, Oak Brook or a neighboring suburb ({n0(steps["listed_address_in_study_area"])}); not a bank, school, church, nonprofit, government office, hospital system or utility ({n0(steps["after_category_exclusions"])}); a website listed ({n0(steps["with_a_listed_website"])}); the business&#x27;s own domain rather than a page on a national brand&#x27;s site ({n0(steps["own_domain_not_a_national_brand"])}); not a chain, franchise, brand-managed hotel, large regional or national company or web agency, checked by name ({n0(steps["after_name_review"])}); one entry per website ({n0(steps["unique_websites"])}). From those, a random sample of {steps["sample"]} with a fixed seed.</dd>
+                    <dd>Listed address in Hinsdale, Oak Brook or a neighboring suburb ({n0(steps["listed_address_in_study_area"])}); not in a directory category that is never an independent business, such as banks, schools, churches, nonprofits, government, hospital systems, utilities and manufacturers ({n0(steps["after_category_exclusions"])}); a website listed ({n0(steps["with_a_listed_website"])}); the business&#x27;s own domain rather than a page on a national brand&#x27;s site ({n0(steps["own_domain_not_a_national_brand"])}); not a chain, franchise, brand-managed hotel, large regional or national company or web agency, checked by name ({n0(steps["after_name_review"])}); one entry per website ({n0(steps["unique_websites"])}). From those, a random sample of {steps["sample"]} with a fixed seed.</dd>
                     <dt>Speed and quality</dt>
                     <dd>Lighthouse 13.6.0 with its mobile settings: an emulated mid-range phone, simulated slow 4G and a 4x CPU slowdown. Three runs per site; we report the median. A result counted only if the page came back with a success status.</dd>
                     <dt>Page checks</dt>
@@ -281,7 +281,7 @@ main = f'''<main id="main">
                     <dt>Privacy</dt>
                     <dd>No business is named here. The site-level data is stored under random IDs, with no names or addresses.</dd>
                     <dt>Reproduce it</dt>
-                    <dd>The scripts and the anonymized site-level data are in <a class="text-link" href="{REPO}">our public repository</a>.</dd>
+                    <dd>The scripts and the site-level data, with every business replaced by a random ID, are in <a class="text-link" href="{REPO}">our public repository</a>.</dd>
                 </dl>
             </section>
 

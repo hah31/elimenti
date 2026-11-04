@@ -53,27 +53,27 @@ s67f0390f,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Health, we
 s68375af5,Elmhurst,Neighboring suburbs,Greater Oak Brook,"Health, wellness and beauty",True,False,WordPress,3,2572,84,100,78,100,3.6,2.58,0,0,429,True,True,works,True,False,0,False,0,False,False,False,False,True,False,False,,True,True
 s68f88b3b,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,False,True,,3,2516,68,96,59,100,1.66,1.66,2525,0.064,1402,True,True,unknown,,,,,,,,,,,,,,,
 s6b0ec5b6,Hinsdale,Hinsdale,Hinsdale,Shops and showrooms,True,False,Squarespace,3,2486,42,92,78,92,7.5,4.24,971,0,3662,True,False,works,True,False,0,True,0,True,False,False,False,True,False,True,,True,True
-s6b54882d,Hinsdale,Hinsdale,Hinsdale,"Events, travel and leisure",True,False,Shopify,0,,,,,,,,,,,,,works,True,False,0.025,True,1,False,False,False,True,True,False,True,2026,True,False
-s6bd28316,Villa Park,Neighboring suburbs,Greater Oak Brook,Shops and showrooms,True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0,False,0,False,False,False,False,False,,False,2026,True,False
-s6bf7c5fc,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,GoDaddy Website Builder,0,,,,,,,,,,,,,works,True,False,0,True,0,True,False,False,False,True,False,False,,True,False
-s6c744ffb,Downers Grove,Neighboring suburbs,Greater Oak Brook,Professional services,True,False,HubSpot CMS,0,,,,,,,,,,,,,works,True,False,0,False,0,False,False,False,False,True,False,False,2026,True,False
-s6fd256ae,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,Squarespace,0,,,,,,,,,,,,,works,True,False,0.006,True,0,True,False,False,False,True,False,True,2025,True,False
+s6b54882d,Hinsdale,Hinsdale,Hinsdale,"Events, travel and leisure",True,False,Shopify,3,2426,27,87,73,85,7.41,1.55,5500,0.046,5748,True,True,works,True,False,0.025,True,1,False,False,False,True,True,False,True,2026,True,False
+s6bd28316,Villa Park,Neighboring suburbs,Greater Oak Brook,Shops and showrooms,True,False,WordPress,3,2619,29,88,81,92,31.04,3.67,615,0.277,6110,False,True,works,True,False,0,False,0,False,False,False,False,False,,False,2026,True,False
+s6bf7c5fc,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,GoDaddy Website Builder,3,2560,47,86,69,85,9.3,3.34,554,0,2642,True,False,works,True,False,0,True,0,True,False,False,False,True,False,False,,True,False
+s6c744ffb,Downers Grove,Neighboring suburbs,Greater Oak Brook,Professional services,True,False,HubSpot CMS,3,2562,53,92,56,100,3.61,3.41,1690,0,2252,False,True,works,True,False,0,False,0,False,False,False,False,True,False,False,2026,True,False
+s6fd256ae,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,Squarespace,3,2484,37,96,78,92,14.33,7.19,878,0.0,2858,True,False,works,True,False,0.006,True,0,True,False,False,False,True,False,True,2025,True,False
 s7094e32b,Lisle,Neighboring suburbs,Greater Oak Brook,"Health, wellness and beauty",False,False,,0,,,,,,,,,,,,,broken,,,,,,,,,,,,,,,
-s7276ebf4,Hinsdale,Hinsdale,Hinsdale,Food and drink,False,True,,0,,,,,,,,,,,,,unknown,,,,,,,,,,,,,,,
-s72f46a54,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Health, wellness and beauty",True,False,No builder detected,0,,,,,,,,,,,,,works,True,False,0.001,True,2,False,False,False,False,True,False,False,,False,False
-s736cfc68,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,False,False,,0,,,,,,,,,,,,,works,,,,,,,,,,,,,,,
+s7276ebf4,Hinsdale,Hinsdale,Hinsdale,Food and drink,False,True,,3,2232,21,78,56,92,7.48,7.48,2774,0.144,22730,False,True,unknown,,,,,,,,,,,,,,,
+s72f46a54,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Health, wellness and beauty",True,False,No builder detected,3,2606,76,82,100,92,2.16,2.16,532,0.175,966,True,True,works,True,False,0.001,True,2,False,False,False,False,True,False,False,,False,False
+s736cfc68,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,False,False,,3,2428,28,94,56,92,19.7,9.75,1787,0.031,76071,True,False,works,,,,,,,,,,,,,,,
 s754cb87d,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Health, wellness and beauty",False,True,,0,,,,,,,,,,,,,unknown,,,,,,,,,,,,,,,
-s756d9382,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0,True,1,False,True,False,False,True,False,True,2026,True,True
-s76a29eed,Lombard,Neighboring suburbs,Hinsdale,"Events, travel and leisure",True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0,True,1,False,True,True,True,True,False,False,2026,False,False
+s756d9382,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,WordPress,3,2482,38,92,59,100,17.37,2.8,2813,0,2092,False,True,works,True,False,0,True,1,False,True,False,False,True,False,True,2026,True,True
+s76a29eed,Lombard,Neighboring suburbs,Hinsdale,"Events, travel and leisure",True,False,WordPress,3,2287,65,93,56,85,10.7,2.98,44,0.11,3097,True,False,works,True,False,0,True,1,False,True,True,True,True,False,False,2026,False,False
 s7b2f8c48,Hinsdale,Hinsdale,Hinsdale,Other,False,True,,0,,,,,,,,,,,,,unknown,,,,,,,,,,,,,,,
-s823515ba,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,No builder detected,0,,,,,,,,,,,,,works,True,False,0.001,True,2,False,False,False,True,True,False,True,2026,False,False
-s825dda0b,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,Squarespace,0,,,,,,,,,,,,,works,True,False,0,True,0,True,False,False,False,True,False,False,2026,True,False
-s82a40cc8,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,No builder detected,0,,,,,,,,,,,,,works,True,False,0,True,0,True,False,False,False,True,True,False,2026,True,False
+s823515ba,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,No builder detected,3,2656,34,95,59,92,19.56,4.01,1593,0,35874,True,True,works,True,False,0.001,True,2,False,False,False,True,True,False,True,2026,False,False
+s825dda0b,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,Squarespace,3,2512,71,89,81,92,3.58,3.58,356,0,1437,True,False,works,True,False,0,True,0,True,False,False,False,True,False,False,2026,True,False
+s82a40cc8,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,No builder detected,3,2561,52,93,56,92,5.77,4.07,77,0.321,1537,True,True,works,True,False,0,True,0,True,False,False,False,True,True,False,2026,True,False
 s84ffef9b,Hinsdale,Hinsdale,Hinsdale,Food and drink,False,False,,0,,,,,,,,,,,,,broken,,,,,,,,,,,,,,,
-s8551e063,Lisle,Neighboring suburbs,Greater Oak Brook,Professional services,True,False,No builder detected,0,,,,,,,,,,,,,works,True,False,0.002,True,2,False,False,False,True,True,False,True,2026,False,False
-s8a0dfae3,Burr Ridge,Neighboring suburbs,Hinsdale,Home and building,True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0.001,True,5,False,False,True,True,True,False,True,2024,True,False
-s8b2b70c1,Hinsdale,Hinsdale,Hinsdale,Food and drink,False,True,,0,,,,,,,,,,,,,unknown,,,,,,,,,,,,,,,
-s8b30bafa,Hinsdale,Hinsdale,Hinsdale,Shops and showrooms,True,False,Shopify,0,,,,,,,,,,,,,works,True,False,0,True,1,False,False,False,False,True,False,True,2026,False,False
+s8551e063,Lisle,Neighboring suburbs,Greater Oak Brook,Professional services,True,False,No builder detected,3,2709,31,88,77,92,24.08,4.93,2107,0.027,19179,False,True,works,True,False,0.002,True,2,False,False,False,True,True,False,True,2026,False,False
+s8a0dfae3,Burr Ridge,Neighboring suburbs,Hinsdale,Home and building,True,False,WordPress,3,2686,2,84,52,100,23.87,9.08,4883,0.672,34178,False,True,works,True,False,0.001,True,5,False,False,True,True,True,False,True,2024,True,False
+s8b2b70c1,Hinsdale,Hinsdale,Hinsdale,Food and drink,False,True,,3,2670,71,100,100,100,15.2,2.5,33,0,2347,True,True,unknown,,,,,,,,,,,,,,,
+s8b30bafa,Hinsdale,Hinsdale,Hinsdale,Shops and showrooms,True,False,Shopify,3,2592,32,92,56,92,29.4,2.62,2436,0.002,4510,True,True,works,True,False,0,True,1,False,False,False,False,True,False,True,2026,False,False
 s8bd9231a,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,WordPress,3,2491,51,86,56,85,7.08,5.14,342,0,4141,False,True,works,True,False,0,True,1,False,False,False,True,True,False,True,2025,True,True
 s8bdc051e,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,WordPress,3,2788,31,90,56,92,17.42,6.83,1322,0.004,16716,False,True,works,True,False,0,True,5,False,False,False,True,False,,False,,True,False
 s8c8ab7fe,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Health, wellness and beauty",True,False,No builder detected,3,2716,64,92,78,91,5.26,5.26,217,0.017,1005,False,False,works,True,False,0.081,True,1,False,False,False,True,True,False,True,2026,False,False
@@ -114,38 +114,38 @@ sbf958c6d,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Hea
 sbfeff52c,Willowbrook,Neighboring suburbs,Greater Oak Brook,Professional services,True,False,WordPress,3,2362,32,94,59,92,10.22,5.09,1596,0.049,4983,True,True,works,True,False,0.002,True,2,False,False,False,True,True,False,True,2026,True,False
 sc4749cfc,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,WordPress,3,2731,71,90,81,92,4.05,3.1,288,0.0,1348,True,True,works,True,False,0.007,False,0,False,False,False,False,False,,True,,True,False
 sc618c50a,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Shops and showrooms,True,False,WordPress,3,2359,28,81,78,100,8.52,7.53,1165,0.106,8688,False,True,works,True,False,0,True,2,False,False,False,True,False,,False,2026,True,False
-sc6c3fa84,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,No builder detected,0,,,,,,,,,,,,,works,True,False,0.002,True,1,False,False,False,False,True,False,False,2026,True,True
-sc72dbe4c,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,Squarespace,0,,,,,,,,,,,,,works,True,False,0,False,0,False,False,False,True,True,False,False,2026,True,True
-sc797b27c,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Hinsdale,Shops and showrooms,True,False,Duda,0,,,,,,,,,,,,,works,True,False,0.037,True,0,True,False,False,False,True,False,True,2026,True,True
-scaa34537,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,Webflow,0,,,,,,,,,,,,,works,True,False,0.032,True,0,True,False,False,True,True,False,True,2026,True,True
-scaeed6c4,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,Weebly,0,,,,,,,,,,,,,works,True,False,0.004,True,3,False,False,False,True,True,False,False,,True,False
-sd2a393b9,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0,True,0,True,False,False,False,True,False,False,,True,False
+sc6c3fa84,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,No builder detected,3,2568,59,97,96,92,4.94,3.86,464,0.003,6295,True,True,works,True,False,0.002,True,1,False,False,False,False,True,False,False,2026,True,True
+sc72dbe4c,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,Squarespace,3,2630,30,88,59,100,21.0,5.58,1888,0,4094,False,True,works,True,False,0,False,0,False,False,False,True,True,False,False,2026,True,True
+sc797b27c,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Hinsdale,Shops and showrooms,True,False,Duda,3,2616,45,89,69,85,6.93,1.63,3243,0.01,5162,True,True,works,True,False,0.037,True,0,True,False,False,False,True,False,True,2026,True,True
+scaa34537,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,Webflow,3,2632,58,91,59,92,7.49,2.43,647,0.0,3543,True,True,works,True,False,0.032,True,0,True,False,False,True,True,False,True,2026,True,True
+scaeed6c4,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,Weebly,3,2662,15,86,41,92,8.21,5.47,958,0.508,4940,True,True,works,True,False,0.004,True,3,False,False,False,True,True,False,False,,True,False
+sd2a393b9,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,WordPress,3,2390,62,90,92,100,5.89,2.04,568,0.035,5543,True,True,works,True,False,0,True,0,True,False,False,False,True,False,False,,True,False
 sd346c8f4,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,False,False,,0,,,,,,,,,,,,,unknown,,,,,,,,,,,,,,,
-sd57a5b5b,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0.037,False,0,False,False,False,False,True,False,False,,True,False
-sd60f0a7c,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Health, wellness and beauty",True,False,Webflow,0,,,,,,,,,,,,,works,True,False,0,True,3,False,False,True,False,False,,False,,True,True
-sd9cc557a,Hinsdale,Hinsdale,Hinsdale,Shops and showrooms,True,False,Squarespace,0,,,,,,,,,,,,,works,True,False,0,False,0,False,False,False,False,True,False,True,,True,True
-sda147152,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0,True,5,False,False,False,False,True,False,False,2026,True,False
-sdab4519e,Elmhurst,Neighboring suburbs,Greater Oak Brook,Professional services,True,False,Wix,0,,,,,,,,,,,,,works,True,False,0,True,1,False,False,False,True,True,False,False,,True,False
-sdc251b85,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0,False,0,False,False,False,False,True,False,True,2020,False,False
+sd57a5b5b,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,WordPress,2,2518,33,93,37,92,14.5,5.77,1110,0,3769,True,True,works,True,False,0.037,False,0,False,False,False,False,True,False,False,,True,False
+sd60f0a7c,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Health, wellness and beauty",True,False,Webflow,3,2602,31,91,59,100,21.7,5.18,1493,0,7759,True,True,works,True,False,0,True,3,False,False,True,False,False,,False,,True,True
+sd9cc557a,Hinsdale,Hinsdale,Hinsdale,Shops and showrooms,True,False,Squarespace,3,2467,34,95,59,85,15.9,4.61,1542,0,5276,True,False,works,True,False,0,False,0,False,False,False,False,True,False,True,,True,True
+sda147152,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,WordPress,3,2496,38,92,59,100,12.96,3.17,1877,0,2323,True,True,works,True,False,0,True,5,False,False,False,False,True,False,False,2026,True,False
+sdab4519e,Elmhurst,Neighboring suburbs,Greater Oak Brook,Professional services,True,False,Wix,3,2562,68,100,59,69,6.02,2.51,313,0.005,2300,True,True,works,True,False,0,True,1,False,False,False,True,True,False,False,,True,False
+sdc251b85,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,WordPress,3,2473,51,83,78,85,6.53,4.65,87,0.279,1075,True,False,works,True,False,0,False,0,False,False,False,False,True,False,True,2020,False,False
 se37ef303,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Health, wellness and beauty",True,False,Wix,3,2106,41,95,59,100,6.91,2.63,2252,0.009,2312,True,True,works,True,False,0.039,True,1,False,False,False,True,True,False,True,2023,True,True
 se38972d4,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,WordPress,3,2232,74,85,59,92,5.08,2.74,126,0,601,True,True,works,True,False,0.014,True,2,False,False,False,False,True,False,True,,True,True
-se509bba1,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,GoDaddy Website Builder,0,,,,,,,,,,,,,works,True,False,0,True,1,False,False,False,True,True,False,False,2025,False,False
-se7369f60,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",False,False,,0,,,,,,,,,,,,,downgrades,,,,,,,,,,,,,,,
-se7437ca0,Hinsdale,Hinsdale,Hinsdale,Shops and showrooms,True,False,Squarespace,0,,,,,,,,,,,,,works,True,False,0,True,1,False,False,False,False,True,False,False,2020,True,True
-seb3c4e55,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0,True,3,False,False,True,True,True,False,False,,True,True
-sec44cd9e,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,No builder detected,0,,,,,,,,,,,,,works,True,False,0.345,True,0,True,False,False,False,True,False,False,2026,False,False
-secb15878,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,False,True,,0,,,,,,,,,,,,,unknown,,,,,,,,,,,,,,,
-sed40826a,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Home and building,True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0.121,True,1,False,False,False,True,True,False,True,,True,False
-see0589bd,Clarendon Hills,Neighboring suburbs,Hinsdale,"Health, wellness and beauty",True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0,False,0,False,False,False,False,True,False,True,2026,True,False
-sf02ad199,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0,True,1,False,False,False,True,True,False,True,2026,True,False
-sf0828905,Hinsdale,Hinsdale,Hinsdale,Food and drink,False,True,,0,,,,,,,,,,,,,unknown,,,,,,,,,,,,,,,
-sf0f726ad,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Home and building,False,True,,0,,,,,,,,,,,,,unknown,,,,,,,,,,,,,,,
-sf2ceccb3,Hinsdale,Hinsdale,Hinsdale,Food and drink,True,False,Squarespace,0,,,,,,,,,,,,,works,True,False,0,False,0,False,False,False,True,True,False,False,,True,True
-sf2ea7edb,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0.003,True,3,False,False,False,True,True,False,True,2026,False,False
-sf6d10b7d,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,Duda,0,,,,,,,,,,,,,works,True,False,0.001,True,1,False,True,False,True,True,False,True,2026,False,False
-sfa2c1f30,Burr Ridge,Neighboring suburbs,Hinsdale,"Events, travel and leisure",False,False,,0,,,,,,,,,,,,,broken,,,,,,,,,,,,,,,
-sfb19995b,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,Wix,0,,,,,,,,,,,,,works,True,False,0,True,1,False,False,False,True,True,False,True,2018,False,False
-sfc94fd1c,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,No builder detected,0,,,,,,,,,,,,,works,True,False,0.003,True,2,False,False,False,True,True,False,True,2026,False,False
-sfce69208,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Events, travel and leisure",True,False,WordPress,0,,,,,,,,,,,,,works,True,False,0.001,True,1,False,False,False,False,True,False,False,,True,False
-sfd16f7ea,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",False,False,,0,,,,,,,,,,,,,downgrades,,,,,,,,,,,,,,,
-sfdb5eb55,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,Squarespace,0,,,,,,,,,,,,,works,True,False,0,False,0,False,False,False,False,False,,False,,True,False
+se509bba1,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,GoDaddy Website Builder,3,2477,55,96,88,92,20.5,7.79,246,0.03,3944,True,False,works,True,False,0,True,1,False,False,False,True,True,False,False,2025,False,False
+se7369f60,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",False,False,,3,2359,56,87,78,92,14.92,10.67,10,0,2498,True,True,downgrades,,,,,,,,,,,,,,,
+se7437ca0,Hinsdale,Hinsdale,Hinsdale,Shops and showrooms,True,False,Squarespace,3,2648,46,94,100,92,7.03,3.77,683,0,2182,True,True,works,True,False,0,True,1,False,False,False,False,True,False,False,2020,True,True
+seb3c4e55,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,WordPress,3,2544,57,86,59,85,14.33,3.62,219,0.001,2175,False,True,works,True,False,0,True,3,False,False,True,True,True,False,False,,True,True
+sec44cd9e,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,No builder detected,3,2628,72,69,100,64,5.15,2.81,162,0.037,2746,True,False,works,True,False,0.345,True,0,True,False,False,False,True,False,False,2026,False,False
+secb15878,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,False,True,,3,2509,58,100,54,100,3.37,3.01,1348,0.034,1813,True,True,unknown,,,,,,,,,,,,,,,
+sed40826a,Oak Brook,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Home and building,True,False,WordPress,3,2405,61,73,37,92,2.69,2.69,974,0,27343,False,False,works,True,False,0.121,True,1,False,False,False,True,True,False,True,,True,False
+see0589bd,Clarendon Hills,Neighboring suburbs,Hinsdale,"Health, wellness and beauty",True,False,WordPress,3,2736,53,88,81,92,11.55,4.64,280,0.008,13295,True,True,works,True,False,0,False,0,False,False,False,False,True,False,True,2026,True,False
+sf02ad199,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,WordPress,3,2512,42,84,59,69,15.1,4.54,484,0.098,4203,False,True,works,True,False,0,True,1,False,False,False,True,True,False,True,2026,True,False
+sf0828905,Hinsdale,Hinsdale,Hinsdale,Food and drink,False,True,,3,2655,26,93,56,92,12.38,7.56,2419,0.054,4254,False,True,unknown,,,,,,,,,,,,,,,
+sf0f726ad,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Home and building,False,True,,3,2650,86,89,81,92,1.76,1.76,228,0,94551,True,True,unknown,,,,,,,,,,,,,,,
+sf2ceccb3,Hinsdale,Hinsdale,Hinsdale,Food and drink,True,False,Squarespace,3,2422,37,89,81,100,22.68,7.84,691,0.041,4165,False,True,works,True,False,0,False,0,False,False,False,True,True,False,False,,True,True
+sf2ea7edb,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,WordPress,3,2514,21,88,56,92,21.02,8.52,1335,0.178,4386,True,True,works,True,False,0.003,True,3,False,False,False,True,True,False,True,2026,False,False
+sf6d10b7d,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,Professional services,True,False,Duda,3,2628,62,76,78,100,5.5,1.83,591,0.001,1448,True,True,works,True,False,0.001,True,1,False,True,False,True,True,False,True,2026,False,False
+sfa2c1f30,Burr Ridge,Neighboring suburbs,Hinsdale,"Events, travel and leisure",False,False,,1,2514,70,63,81,100,4.94,3.33,233,0,9322,True,True,broken,,,,,,,,,,,,,,,
+sfb19995b,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,Wix,3,2739,72,86,81,100,5.96,2.39,203,0,1392,True,True,works,True,False,0,True,1,False,False,False,True,True,False,True,2018,False,False
+sfc94fd1c,Hinsdale,Hinsdale,Hinsdale,Professional services,True,False,No builder detected,3,2778,40,92,56,92,6.84,4.55,1058,0.022,5481,False,True,works,True,False,0.003,True,2,False,False,False,True,True,False,True,2026,False,False
+sfce69208,Oakbrook Terrace,Oak Brook and Oakbrook Terrace,Greater Oak Brook,"Events, travel and leisure",True,False,WordPress,3,2687,31,88,59,92,6.21,4.49,4426,0.013,66307,False,True,works,True,False,0.001,True,1,False,False,False,False,True,False,False,,True,False
+sfd16f7ea,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",False,False,,3,2479,56,70,78,82,8.49,3.98,66,0.15,2113,True,True,downgrades,,,,,,,,,,,,,,,
+sfdb5eb55,Hinsdale,Hinsdale,Hinsdale,"Health, wellness and beauty",True,False,Squarespace,3,2556,49,98,81,100,10.15,6.61,373,0,4403,True,True,works,True,False,0,False,0,False,False,False,False,False,,False,,True,False

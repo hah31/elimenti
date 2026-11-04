@@ -1,20 +1,20 @@
 measure,value,base,unit
 Sites in sample,150,,sites
-Sites measured with Lighthouse,88,150,sites
-Median mobile performance score,46.0,88,score 0-100
-Mobile performance 90 or higher,2.3,88,percent
-Mobile performance under 50,52.3,88,percent
-Median accessibility score,89.0,88,score 0-100
-Median SEO score,92.0,88,score 0-100
-"Median largest contentful paint (lab, mobile)",8.2,88,seconds
-Largest contentful paint within 2.5 s,4.5,88,percent
+Sites measured with Lighthouse,137,150,sites
+Median mobile performance score,46,137,score 0-100
+Mobile performance 90 or higher,1.5,137,percent
+Mobile performance under 50,52.6,137,percent
+Median accessibility score,89,137,score 0-100
+Median SEO score,92,137,score 0-100
+"Median largest contentful paint (lab, mobile)",8.5,137,seconds
+Largest contentful paint within 2.5 s,4.4,137,percent
 Phone number shown on homepage,73.0,122,percent
 Phone shown but not tappable,19.1,89,percent of sites showing a phone
 Contact link that fails to load,3.9,,percent of sites with a contact link
 Copyright year two or more years old,8.2,85,percent of sites showing a year
 HTTPS works,92.6,135,percent of sites that could be checked
 HTTPS broken or downgraded to HTTP,7.4,135,percent of sites that could be checked
-Any mobile usability issue,24.6,122,percent
+Any mobile usability issue,34.4,122,percent
 LocalBusiness structured data,37.7,122,percent
 Platform: WordPress,49.2,122,percent of sites that loaded
 Platform: No builder detected,17.2,122,percent of sites that loaded
@@ -28,5 +28,7 @@ Platform: Showit,1.6,122,percent of sites that loaded
 Platform: Webflow,1.6,122,percent of sites that loaded
 Platform: Hibu or other hosted builder,0.8,122,percent of sites that loaded
 Platform: HubSpot CMS,0.8,122,percent of sites that loaded
-Median performance: WordPress,48.0,46,score 0-100
-Median performance: No builder detected,42.0,14,score 0-100
+Median performance: WordPress,46.0,60,score 0-100
+Median performance: No builder detected,46,21,score 0-100
+Median performance: Squarespace,39.5,10,score 0-100
+Median performance: Shopify,35.5,8,score 0-100

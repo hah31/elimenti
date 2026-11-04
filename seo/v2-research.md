@@ -10,6 +10,14 @@ Date: 2026-11-04. Branch `seo-v2`, cut from `main` at `ca373f8`. Builds on `seo/
 - **The incumbents are weak.** Of 160 top-5 slots, 14 return 404 and 6 redirect away. The #1 result is dead for four of our target questions (designer disappeared, redesign vs refresh, Wix vs Squarespace vs WordPress, custom med spa site in Chicago). Town results for Burr Ridge, Western Springs and Clarendon Hills are BBB listings and a two-sentence 2014 Patch ad.
 - **What wins:** for towns, agency city pages plus BBB; for "high-end/luxury Chicago", agencies with reviews and published price tiers, or directories; for questions, long agency guides with tables, FAQs and bylines. Directories that recur: BBB, Clutch and BrightLocal (8 of 32 queries each), DesignRush and Patch (5 each).
 
+### The study, in numbers (method: `seo/data/README.md`)
+- **Frame and sample:** 759 listings in the Hinsdale and Greater Oak Brook chamber directories → 253 eligible independent business websites → random sample of 150 (seed 20261104). Lighthouse measured 137; the phone-test page checks loaded 122 (10 showed bot checks).
+- **Speed:** median mobile performance 46; 52.6% under 50; 1.5% at 90+. Median lab LCP 8.5 s; median page weight 3.2 MB. CPU benchmark index 1952–2834 across runs.
+- **Basics:** 19.1% of sites showing a phone number didn't link it; another 19.1% linked only some; 8.2% had a malformed tel: link; 37.7% had LocalBusiness markup; 7.4% of checkable sites had broken HTTPS or downgraded to HTTP; 8.2% of sites showing a copyright year showed 2024 or earlier.
+- **Platforms:** WordPress 49.2%, no builder fingerprint 17.2%, Squarespace 8.2%, Shopify 6.6%, Wix 4.9%.
+- **Areas:** Hinsdale median 43 (64 measured); Oak Brook and Oakbrook Terrace 46 (55); neighboring suburbs 62.5 (only 18, too few for town pages).
+- **Method changes during the run, recorded honestly:** the first page-check pass sent plain-HTTP requests the session's proxy refuses (405), so it was discarded and re-run over HTTPS only; Lighthouse was unaffected because Chrome upgrades to HTTPS itself. A retry of bot-checked sites over a different route was considered and not done.
+
 ### Hosting (rule 7), confirmed
 `elimenti.com` is GitHub Pages behind Cloudflare: live responses carry `x-github-request-id`, Fastly `x-served-by`/`via: 1.1 varnish` and `server: cloudflare` with `cf-ray`. `_headers` and `_redirects` only affect the Cloudflare Pages copy at `elimenti.pages.dev` (which correctly sends `x-robots-tag: noindex`). Redirects on elimenti.com are therefore meta refresh plus canonical, which Google treats as permanent when the refresh is instant ([Google, Redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects)).
 
