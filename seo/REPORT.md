@@ -37,11 +37,50 @@ Branch `seo-overhaul` → merged to `main` on 2026-11-04. Research: `seo/researc
 
 ## Lighthouse (local Jekyll build; scores are Performance/Accessibility/Best practices/SEO)
 
-@@LIGHTHOUSE@@
+| Page | Mobile before | Mobile after | Desktop before | Desktop after |
+|---|---|---|---|---|
+| `/` | 99/100/100/100 | 99–100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/custom-websites/` | new | 100/100/100/100 | new | 100/100/100/100 |
+| `/site-care/` | new | 100/100/100/100 | new | 100/100/100/100 |
+| `/pricing/` | new | 100/100/100/100 | new | 100/100/100/100 |
+| `/chicago-suburbs-web-design/` | new | 100/100/100/100 | new | 100/100/100/100 |
+| `/hinsdale-web-design/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/oak-brook-web-design/` | new | 100/100/100/100 | new | 100/100/100/100 |
+| `/glen-ellyn-web-design/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/med-spa-websites/` | 99/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/interior-designer-websites/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/custom-home-builder-websites/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/landscape-design-websites/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/boutique-websites/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/car-club-websites/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/guides/` | new | 100/100/100/100 | new | 100/100/100/100 |
+| `/guides/website-cost-western-suburbs/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/guides/squarespace-vs-custom-website/` | new | 100/100/100/100 | new | 100/100/100/100 |
+| `/guides/what-makes-a-website-look-high-end/` | new | 100/100/100/100 | new | 100/100/100/100 |
+| `/work/` | 99/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/work/1-of-1-car-club/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/work/aamineez-art/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/work/burdi-clothing/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/work/abn-construction-group/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/about/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/faq/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/contact/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/privacy/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/terms/` | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 | 100/100/100/100 |
+| `/404.html` | 100/100/100/63 | 100/100/100/63 | 100/100/100/63 | 100/100/100/63 |
+
+Every page is 100/100/100/100 on both mobile and desktop except: the homepage on mobile varies between 99 and 100 from run to run (its LCP is the hero paragraph at 1.8–2.0 s; the baseline was 99), and the 404 page's SEO score is 63 because it is intentionally `noindex` with a 404 status. Fixes made: `/work/` loaded its first case-study image lazily even though it was the largest paint, and phones downloaded 1200px images where 800px was enough (both fixed, 99 → 100). Lighthouse 12, local Jekyll build. The local server doesn't compress or cache files and GitHub Pages does, so production should score the same or better.
 
 ## Checks (Phase 4)
 
-@@CHECKS@@
+All passed (`seo/tools/check.py`, `seo/tools/validate_schema.py`):
+
+- **Crawl** of the Jekyll-built site: 162 URLs (40 HTML pages, 28 indexable), **0 broken** links or assets; unknown URLs return a real 404; sitemap = exactly the 28 indexable pages; every page has one H1 and a unique title (≤ 58 chars), description (≤ 155) and H1; canonicals and OG tags correct; every image has alt text; all 12 concept pages `noindex`.
+- **Schema:** 30/30 pages, **0 errors, 0 warnings** on the official Schema Markup Validator (validator.schema.org). FAQPage text equals the visible text on all 5 FAQ pages. No `Review`/`AggregateRating`.
+- **Grep** for TODO, TBD, lorem, placeholder, `[`, XX, AI and "hand-coded" in visible copy (including concept pages) and raw HTML/CSS/JS: 0 hits.
+- **Outbound links:** all 200, except Business Wire, which blocks bots; the Clutch release it backs was confirmed via search.
+- **Rules 3/4/5 re-read** of everything written: cut 7 claims that weren't supported ("most of our projects replace something", "every new member starts" at 1 of 1, "no member list", "mostly locally owned", "most customers are referred", "most custom studios", "most people"). Town pages: 3, each with distinct content; the hub covers the rest.
+- **Screenshots** of 18 new and changed pages at 1440 and 390 px, reviewed: on-brand, no horizontal overflow. One copy issue found and fixed.
 
 ## Deploy and IndexNow
 

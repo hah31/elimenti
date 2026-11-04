@@ -303,7 +303,7 @@ PAGES = [
     # Work
     dict(path='/work/', file='work/index.html', lastmod=TODAY, nav='work',
          title='Web Design Work and Case Studies | Elimenti',
-         description='Case studies from Elimenti: a Porsche club website, a calligraphy portfolio, targeted edits for a Hinsdale boutique and site care for a Glen Ellyn contractor.',
+         description='Elimenti case studies: a Porsche club website, a calligraphy portfolio, targeted edits for a Hinsdale boutique and site care for a Glen Ellyn contractor.',
          crumbs=[('Work', '/work/')],
          schema=[{'@type': 'CollectionPage', '@id': f'{SITE}/work/#webpage', 'url': f'{SITE}/work/', 'name': 'Our work',
                   'isPartOf': {'@id': f'{SITE}/#website'},
@@ -355,7 +355,7 @@ PAGES = [
                   'worksFor': PROVIDER}]),
     dict(path='/faq/', file='faq/index.html', lastmod=TODAY, nav='faq',
          title='Web Design FAQ: Cost, Timing, Ownership | Elimenti',
-         description='What a custom website costs, how long it takes, who owns it and how updates work. Straight answers from Elimenti, a Hinsdale and Oak Brook web design studio.',
+         description='What a custom website costs, how long it takes, who owns it and how updates work. Straight answers from Elimenti, a Hinsdale and Oak Brook web studio.',
          crumbs=[('FAQ', '/faq/')], schema=[]),
     dict(path='/contact/', file='contact/index.html', lastmod='2026-09-29',
          title='Start a Project | Elimenti',
