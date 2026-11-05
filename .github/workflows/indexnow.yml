@@ -1,0 +1,34 @@
+# Tell IndexNow (Bing, and through it ChatGPT search, plus Yandex, Seznam and Naver) about
+# every page whose HTML changed in a push to main. Waits for the GitHub Pages build of the
+# pushed commit first, so a search engine that crawls right away sees the new version.
+# The key file is /68d89061c779808cf9a3a0092f52b061.txt at the site root.
+# Push trigger only: no schedule.
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Submit changed pages to IndexNow
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: python3 seo/tools/indexnow.py --changed "$BEFORE" "$AFTER" --wait-for-pages
