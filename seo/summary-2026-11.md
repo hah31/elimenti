@@ -62,7 +62,7 @@ Branch `seo-pass-nov-2026`, November 5, 2026. Baseline audit: `seo/audit-2026-11
 | Report links to Hinsdale and Oak Brook pages | No | Yes |
 | Suburbs hub links to the report | No | Yes |
 | `check.py` crawl (local server) | Pass | Pass |
-| Schema Markup Validator (validator.schema.org) | 37 of 37 valid (v2 report) | 28 of 40 checked so far, 0 errors, 0 warnings, including every page whose JSON-LD changed in this pass; the other 12 have JSON-LD byte-identical to the version already live and were still in the validator's throttled queue when this was written |
+| Schema Markup Validator (validator.schema.org) | 37 of 37 valid (v2 report) | 38 of 40 checked: 0 errors, 0 warnings, including every page whose JSON-LD changed in this pass. The validator throttled requests, and the run stopped at its 2-hour limit before `/404.html` and `/thanks.html`; both are noindex and their JSON-LD is byte-identical to the version live before the merge |
 | New pages other than the car club guide | | None |
 | Banned phrasing in added lines ("hand-coded", AI, knocks on platforms) | | None found |
 
