@@ -325,7 +325,7 @@ PAGES = [
                          area=[{'@type': 'Country', 'name': 'United States'}], audience='Classic and marque car clubs')]),
 
     # Guides
-    dict(path='/guides/', file='guides/index.html', lastmod=TODAY,
+    dict(path='/guides/', file='guides/index.html', lastmod=UPDATED,
          title='Website Guides for Business Owners | Elimenti',
          description='Plain-English website guides for owners of high-end businesses, grouped by question: cost, timing, platforms, hiring, redesigns and local search.',
          crumbs=[('Guides', '/guides/')],
@@ -336,7 +336,8 @@ PAGES = [
                       '/guides/wix-squarespace-wordpress-or-custom/', '/guides/squarespace-vs-custom-website/',
                       '/guides/questions-to-ask-a-web-designer/', '/guides/web-designer-disappeared/',
                       '/guides/website-redesign-vs-refresh/', '/guides/what-makes-a-website-look-high-end/',
-                      '/guides/local-seo-for-boutiques/', '/research/western-suburbs-website-report-2026/')]}]),
+                      '/guides/local-seo-for-boutiques/', '/guides/car-club-website-examples/',
+                      '/research/western-suburbs-website-report-2026/')]}]),
     dict(path='/guides/website-cost-western-suburbs/', file='guides/website-cost-western-suburbs/index.html', lastmod=TODAY, og_type='article',
          title='What a High-End Website Costs in Chicago | Elimenti',
          description='What a custom website costs a high-end business in Chicago and the western suburbs, what each price level gets you and what to ask before you hire.',
@@ -408,6 +409,14 @@ PAGES = [
          schema=[article('/guides/local-seo-for-boutiques/', 'Local SEO for a boutique in the suburbs',
                          'Local SEO for an independent boutique: your Google Business Profile, reviews, the pages worth having and the small website fixes that make the phone ring.',
                          TODAY)]),
+
+    dict(path='/guides/car-club-website-examples/', file='guides/car-club-website-examples/index.html', lastmod=UPDATED, og_type='article',
+         title='Car Club Website Examples: What Works and Why | Elimenti',
+         description='Real car club websites, from marque clubs to invitation-only ones: what each does well, one thing it misses, and what your club\'s site needs.',
+         crumbs=[('Guides', '/guides/'), ('Car club website examples', '/guides/car-club-website-examples/')],
+         schema=[article('/guides/car-club-website-examples/', 'Car club website examples: what real club sites get right',
+                         'Real car club websites, from national marque clubs to local chapters and invitation-based clubs: what each does well, one thing it misses, and what a club site needs.',
+                         UPDATED)]),
 
     # Research
     dict(path='/research/western-suburbs-website-report-2026/', file='research/western-suburbs-website-report-2026/index.html', lastmod=UPDATED, og_type='article',

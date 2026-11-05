@@ -879,6 +879,15 @@ strong {
     margin-top: var(--space-sm);
 }
 
+.prose p + h3,
+.prose ul + h3 {
+    margin-top: var(--space-lg);
+}
+
+.prose h3 + p {
+    margin-top: var(--space-xs);
+}
+
 .prose ul {
     display: grid;
     gap: var(--space-sm);
