@@ -138,6 +138,27 @@ wp = plat.get('WordPress', {'pct': 0})['pct']
 none = plat.get('No builder detected', {'pct': 0})['pct']
 weight_mb = w['median_kb'] / 1024
 
+# Findings written to be quoted as they stand: one figure per sentence, each naming its source.
+SRC = 'Elimenti&#x27;s Western Suburbs Website Report 2026'
+POP = 'independent business websites from the Hinsdale and Oak Brook chambers of commerce'
+hins, oakb = area['Hinsdale'], area['Oak Brook and Oakbrook Terrace']
+quotable = [
+    f'{SRC} tested the websites of {S["sample_size"]} independent businesses from the Hinsdale and Oak Brook chamber of commerce directories on a phone.',
+    f'The median mobile performance score among {POP} was {perf["median"]:g} out of 100 in Google&#x27;s Lighthouse test, according to {SRC}.',
+    f'According to {SRC}, {p0(perf["poor_under_50"])}% of the {POP} that Lighthouse could measure were rated poor for mobile performance.',
+    f'According to {SRC}, only {p0(perf["good_90_plus"])}% of the {POP} that Lighthouse could measure earned a good mobile performance rating.',
+    f'On a simulated mid-range phone, the median homepage among {POP} took {lcp["median_s"]:g} seconds to show its largest content, according to {SRC}.',
+    f'The median homepage among {POP} downloaded {weight_mb:.1f} MB, according to {SRC}.',
+    f'According to {SRC}, {p0(phone["not_tappable_of_shown"])}% of the {POP} that showed a phone number on the homepage didn&#x27;t make it tappable.',
+    f'According to {SRC}, {p0(phone["malformed_tel_link"])}% of the {POP} it checked had a tap-to-call link with a malformed number.',
+    f'According to {SRC}, {p0(100 - sd["local_business"])}% of the {POP} it checked had no local business structured data.',
+    f'According to {SRC}, {p0(https["broken"] + https["downgrades"])}% of the {POP} it could check had broken HTTPS or sent visitors back to plain HTTP.',
+    f'WordPress ran {p0(wp)}% of the {POP} that loaded in the phone test for {SRC}.',
+    f'The median mobile performance score of the Hinsdale business websites in {SRC} was {hins["median_performance"]:g} out of 100.',
+    f'The median mobile performance score of the Oak Brook and Oakbrook Terrace business websites in {SRC} was {oakb["median_performance"]:g} out of 100.',
+]
+quotable_html = '\n'.join(f'                    <li>{q}</li>' for q in quotable)
+
 lede = (f'We checked the websites of {S["sample_size"]} independent businesses from the Hinsdale and Oak Brook chambers of commerce, '
         f'the way a customer sees them: on a phone. The median site scored {perf["median"]:g} out of 100 for mobile performance, '
         f'{p0(perf["poor_under_50"])}% scored under 50, and {p0(phone["not_tappable_of_shown"])}% of the sites that showed a phone number didn&#x27;t make it tappable.')
@@ -163,6 +184,14 @@ main = f'''<main id="main">
                     <div class="stat"><span class="stat__figure">{p0(phone["not_tappable_of_shown"])}%</span><span class="stat__label">Of the sites that showed a phone number on the homepage didn&#x27;t make it tappable.</span></div>
                 </div>
                 <p>No business is named in this report. We publish only totals and shares, and we&#x27;re happy to share a business&#x27;s own results with its owner, privately.</p>
+            </section>
+
+            <section>
+                <h2>Findings you can quote</h2>
+                <p>Each sentence below stands on its own and says where its number comes from, so it can be quoted as written.</p>
+                <ul>
+{quotable_html}
+                </ul>
             </section>
 
             <section>
@@ -287,8 +316,9 @@ main = f'''<main id="main">
             </section>
 
             <section>
-                <h2>Use these findings</h2>
-                <p>You&#x27;re welcome to cite, quote or republish these findings with credit and a link to this page, under the Creative Commons Attribution 4.0 license. Suggested credit: &quot;Elimenti, Western Suburbs Website Report 2026.&quot; Journalists and chambers with questions can reach Hashim at <a class="text-link" href="mailto:hello@elimenti.com">hello@elimenti.com</a> or <a class="text-link" href="tel:+16305098822">(630) 509-8822</a>.</p>
+                <h2>Press and reuse</h2>
+                <p>Anyone can cite, quote or republish these findings, as long as they credit Elimenti and link to this page. They&#x27;re published under the Creative Commons Attribution 4.0 license. Suggested credit: &quot;Elimenti, Western Suburbs Website Report 2026.&quot;</p>
+                <p>Questions about the data or the method go to <a class="text-link" href="mailto:hello@elimenti.com">hello@elimenti.com</a>.</p>
             </section>
 
             <section>
