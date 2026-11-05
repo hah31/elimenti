@@ -241,6 +241,7 @@ main = f'''<main id="main">
                 <h2>Hinsdale and Oak Brook compared</h2>
                 <p>Both areas had enough sites to compare. The neighboring suburbs are shown for completeness, but with so few sites, their figures can swing on one or two businesses.</p>
                 {area_table}
+                <p>What each town&#x27;s figures mean for a business there is on our pages for <a class="text-link" href="/hinsdale-web-design/">web design in Hinsdale</a> and <a class="text-link" href="/oak-brook-web-design/">web design in Oak Brook</a>.</p>
             </section>
 
             <section>
