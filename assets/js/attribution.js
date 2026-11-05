@@ -1,40 +1,59 @@
 /* Lead attribution for the contact form.
  *
- * On the first page a visitor opens in this tab, remember where they came
- * from: the landing page, the referrer, any utm_source / utm_medium /
- * utm_campaign tags and a Google Ads gclid. Later page views never overwrite
- * it. Every form with a landing_page field gets those values, plus the page
- * it was sent from, in hidden inputs. Nothing leaves the browser unless the
+ * First visit (localStorage, kept for 90 days from that visit): the landing
+ * page, the referrer, any utm_source / utm_medium / utm_campaign tags and a
+ * Google Ads gclid. Later visits never overwrite it until it expires, so a
+ * lead who found the site on Google and comes back days later still shows
+ * where they first came from.
+ *
+ * This visit (sessionStorage, cleared when the tab closes): the page the
+ * visit started on and its referrer, sent as last_landing_page and
+ * last_referrer.
+ *
+ * Every form with a landing_page field gets these values, plus the page it
+ * was sent from, in hidden inputs. Nothing leaves the browser unless the
  * form is submitted. No cookies, no libraries, no third parties.
  *
- * sessionStorage can be blocked (private modes, strict settings). Every read
- * and write is wrapped so the form still works without it; it then falls
- * back to the current page's values.
+ * Storage can be blocked (private modes, strict settings). Every read and
+ * write is wrapped so the form still works without it; it then falls back
+ * to the current page's values.
  */
 (function () {
     'use strict';
 
-    var KEY = 'elimenti_first_touch';
+    var FIRST_KEY = 'elimenti_first_touch';
+    var VISIT_KEY = 'elimenti_visit';
+    var MAX_AGE = 90 * 24 * 60 * 60 * 1000;
     var PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'gclid'];
+    var now = new Date().getTime();
 
-    function read() {
+    function store(kind) {
         try {
-            var raw = window.sessionStorage.getItem(KEY);
+            return window[kind];
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function read(kind, key) {
+        try {
+            var s = store(kind);
+            var raw = s ? s.getItem(key) : null;
             return raw ? JSON.parse(raw) : null;
         } catch (e) {
             return null;
         }
     }
 
-    function write(data) {
+    function write(kind, key, data) {
         try {
-            window.sessionStorage.setItem(KEY, JSON.stringify(data));
+            var s = store(kind);
+            if (s) s.setItem(key, JSON.stringify(data));
         } catch (e) { /* storage blocked: fall back to this page's values */ }
     }
 
-    function fromThisPage() {
-        var data = { landing_page: window.location.pathname, referrer: document.referrer || '' };
-        var query = Object.create(null);
+    function query() {
+        var out = Object.create(null);
         window.location.search.replace(/^\?/, '').split('&').forEach(function (pair) {
             if (!pair) return;
             var i = pair.indexOf('=');
@@ -44,26 +63,39 @@
                 k = decodeURIComponent(k.replace(/\+/g, ' '));
                 v = decodeURIComponent(v.replace(/\+/g, ' '));
             } catch (e) { /* keep the raw value */ }
-            if (!(k in query)) query[k] = v;
+            if (!(k in out)) out[k] = v;
         });
-        PARAMS.forEach(function (p) { data[p] = query[p] || ''; });
-        return data;
+        return out;
     }
 
-    var touch = read();
-    if (!touch) {
-        touch = fromThisPage();
-        write(touch);
+    var here = { landing_page: window.location.pathname, referrer: document.referrer || '' };
+
+    // First visit in the last 90 days.
+    var first = read('localStorage', FIRST_KEY);
+    if (!first || typeof first.t !== 'number' || now - first.t > MAX_AGE || now < first.t) {
+        var q = query();
+        first = { t: now, landing_page: here.landing_page, referrer: here.referrer };
+        PARAMS.forEach(function (p) { first[p] = q[p] || ''; });
+        write('localStorage', FIRST_KEY, first);
+    }
+
+    // This visit.
+    var visit = read('sessionStorage', VISIT_KEY);
+    if (!visit) {
+        visit = here;
+        write('sessionStorage', VISIT_KEY, visit);
     }
 
     function fill(form) {
         var values = {
-            landing_page: touch.landing_page,
-            referrer: touch.referrer,
-            utm_source: touch.utm_source,
-            utm_medium: touch.utm_medium,
-            utm_campaign: touch.utm_campaign,
-            gclid: touch.gclid,
+            landing_page: first.landing_page,
+            referrer: first.referrer,
+            utm_source: first.utm_source,
+            utm_medium: first.utm_medium,
+            utm_campaign: first.utm_campaign,
+            gclid: first.gclid,
+            last_landing_page: visit.landing_page,
+            last_referrer: visit.referrer,
             submitted_from: window.location.pathname
         };
         Object.keys(values).forEach(function (name) {

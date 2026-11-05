@@ -26,6 +26,8 @@ from bs4 import BeautifulSoup
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 SITE = 'https://elimenti.com'
 TODAY = '2026-11-04'
+# Pages with real content changes after TODAY get this as lastmod.
+UPDATED = '2026-11-05'
 
 PHONE_DISPLAY = '(630) 509-8822'
 PHONE_TEL = '+16305098822'
@@ -221,13 +223,13 @@ PAGES = [
          crumbs=[('Custom websites', '/custom-websites/')],
          schema=[service('/custom-websites/', 'Custom website design and build',
                          'Websites designed for one business and built one of two ways: on WordPress, so the client can edit it, or custom-coded in HTML, CSS and JavaScript. Copywriting, a basic SEO setup and up to three rounds of revisions are included. The client owns the site after final payment.')]),
-    dict(path='/wordpress-websites/', file='wordpress-websites/index.html', lastmod=TODAY,
+    dict(path='/wordpress-websites/', file='wordpress-websites/index.html', lastmod=UPDATED,
          title='WordPress Website Design for Chicago Businesses | Elimenti',
          description='Custom-designed WordPress websites for high-end businesses in Chicago and the suburbs: your own login, updates and backups through Site Care. From $4,000.',
          crumbs=[('WordPress websites', '/wordpress-websites/')],
          schema=[service('/wordpress-websites/', 'WordPress website design and build',
                          'Custom-designed WordPress websites with copywriting, a basic SEO setup, up to three rounds of revisions, the client\'s own login and a walkthrough of how to edit the site at launch. The client owns the WordPress install, theme, content and plugins after final payment.')]),
-    dict(path='/site-care/', file='site-care/index.html', lastmod=TODAY,
+    dict(path='/site-care/', file='site-care/index.html', lastmod=UPDATED,
          title='Website Care and Maintenance, Chicago Suburbs | Elimenti',
          description='Site Care keeps your website current: $175 a month or $85 an hour, five-business-day turnaround, with WordPress updates and backups on the monthly plan.',
          crumbs=[('Site Care', '/site-care/')],
@@ -240,7 +242,7 @@ PAGES = [
                              {'@type': 'Offer', 'name': 'Site Care hourly', 'priceSpecification': {
                                  '@type': 'UnitPriceSpecification', 'price': 85, 'priceCurrency': 'USD', 'unitCode': 'HUR', 'unitText': 'hour'}},
                          ])]),
-    dict(path='/pricing/', file='pricing/index.html', lastmod=TODAY, nav='pricing',
+    dict(path='/pricing/', file='pricing/index.html', lastmod=UPDATED, nav='pricing',
          title='Web Design Pricing: Projects From $4,000 | Elimenti',
          description='What Elimenti costs and how a project runs: WordPress and custom-coded websites from $4,000, what\'s included, the steps to launch, and Site Care after.',
          crumbs=[('Pricing and process', '/pricing/')],
@@ -333,13 +335,13 @@ PAGES = [
          schema=[article('/guides/website-cost-western-suburbs/', 'What a high-end website costs in Chicago and the suburbs',
                          'What a custom website costs a high-end business in Chicago and the western suburbs, what each price level gets you and what to ask before you hire.',
                          '2026-10-25', TODAY)]),
-    dict(path='/guides/squarespace-vs-custom-website/', file='guides/squarespace-vs-custom-website/index.html', lastmod=TODAY, og_type='article',
-         title='Squarespace vs WordPress vs Custom Website | Elimenti',
-         description='An honest comparison for high-end businesses: what Squarespace does well, when WordPress or custom code fits better, three-year costs and how to choose.',
-         crumbs=[('Guides', '/guides/'), ('Squarespace, WordPress or custom', '/guides/squarespace-vs-custom-website/')],
-         schema=[article('/guides/squarespace-vs-custom-website/', 'Squarespace, WordPress or a custom-coded website: which one fits a high-end business',
-                         'An honest comparison for high-end businesses: what Squarespace does well, when WordPress or custom code fits better, three-year costs and how to choose.',
-                         TODAY)]),
+    dict(path='/guides/squarespace-vs-custom-website/', file='guides/squarespace-vs-custom-website/index.html', lastmod=UPDATED, og_type='article',
+         title='Squarespace vs Custom Website: Which Fits? | Elimenti',
+         description='An honest comparison for high-end businesses: what Squarespace does well, where a custom site pulls ahead, three-year costs and how to choose.',
+         crumbs=[('Guides', '/guides/'), ('Squarespace vs custom', '/guides/squarespace-vs-custom-website/')],
+         schema=[article('/guides/squarespace-vs-custom-website/', 'Squarespace or a custom website: which one fits a high-end business',
+                         'An honest comparison for high-end businesses: what Squarespace does well, where a custom site pulls ahead, three-year costs and how to choose.',
+                         TODAY, UPDATED)]),
     dict(path='/guides/what-makes-a-website-look-high-end/', file='guides/what-makes-a-website-look-high-end/index.html', lastmod=TODAY, og_type='article',
          title='What Makes a Website Look High-End | Elimenti',
          description='The details that make a business website look high-end or cheap: type, photography, restraint, copy, speed and the small things customers notice first.',
@@ -462,7 +464,7 @@ PAGES = [
                   'affiliation': {'@type': 'CollegeOrUniversity', 'name': 'University of Illinois Urbana-Champaign',
                                   'sameAs': 'https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign'},
                   'knowsAbout': ['Web design', 'WordPress', 'Copywriting', 'Website performance']}]),
-    dict(path='/faq/', file='faq/index.html', lastmod=TODAY, nav='faq',
+    dict(path='/faq/', file='faq/index.html', lastmod=UPDATED, nav='faq',
          title='Web Design FAQ: Cost, Timing, Ownership | Elimenti',
          description='What a website costs, WordPress or custom-coded, who owns it and how updates work. Straight answers from Elimenti, a Hinsdale and Oak Brook web studio.',
          crumbs=[('FAQ', '/faq/')], schema=[]),
@@ -472,7 +474,7 @@ PAGES = [
          crumbs=[('Contact', '/contact/')],
          schema=[{'@type': 'ContactPage', '@id': f'{SITE}/contact/#webpage', 'url': f'{SITE}/contact/', 'name': 'Start a project',
                   'about': PROVIDER, 'isPartOf': {'@id': f'{SITE}/#website'}}]),
-    dict(path='/privacy/', file='privacy/index.html', lastmod=TODAY,
+    dict(path='/privacy/', file='privacy/index.html', lastmod=UPDATED,
          title='Privacy Policy | Elimenti',
          description='How Elimenti, a Hinsdale web design studio, handles information from elimenti.com: what we collect, how we use it, who we share it with and your choices.',
          crumbs=[('Privacy Policy', '/privacy/')],
