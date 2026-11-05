@@ -19,27 +19,26 @@ Each one goes in the `SAME_AS` list near the top of `seo/tools/build.py`; then r
 
 `/glen-ellyn-web-design/` redirects with a meta refresh because GitHub Pages can't send a 301. Cloudflare can, because elimenti.com runs through it: on November 5, 2026 the site answered with `server: cloudflare`, so the domain is proxied (orange cloud), which a Redirect Rule needs. Leave the stub file in the repo as a fallback.
 
+**Check first:** `seo/cloudflare-redirects.md` (merged in PR #34 this morning) sets up three redirect rules, and its Rule 2 is this same Glen Ellyn redirect. If you've already followed that file, this is done; don't add it twice. If you're doing that file now, follow it instead of the steps below, because there the rule order matters (first match wins). The steps below are for this one rule on its own, using the same expression as that file.
+
 1. Log in at **dash.cloudflare.com** and click the **elimenti.com** domain.
 2. In the left sidebar, open **Rules** → **Overview**.
 3. Click **Create rule**, then choose **Redirect Rule**.
-4. **Rule name:** `Glen Ellyn page to Chicago suburbs (301)`
+4. **Rule name:** `Glen Ellyn page to suburbs hub`
 5. Under **If incoming requests match…**, choose **Custom filter expression**.
 6. Click **Edit expression** and paste:
    ```
-   http.request.uri.path in {"/glen-ellyn-web-design/" "/glen-ellyn-web-design" "/glen-ellyn-web-design/index.html"}
+   (http.host in {"elimenti.com" "www.elimenti.com"} and http.request.uri.path in {"/glen-ellyn-web-design/" "/glen-ellyn-web-design" "/glen-ellyn-web-design/index.html"})
    ```
-   (Or, in the builder: **Field** `URI Path`, **Operator** `equals`, **Value** `/glen-ellyn-web-design/`.)
 7. Under **Then…**: **Type** `Static`, **URL** `https://elimenti.com/chicago-suburbs-web-design/`, **Status code** `301`. Leave **Preserve query string** off.
-8. Click **Deploy**.
-9. Check it from any terminal:
+8. Click **Deploy**. If you later add other redirect rules, keep this one above any catch-all www/http rule.
+9. Check it from any terminal (on Windows PowerShell, type `curl.exe` instead of `curl`):
    ```
    curl -sI https://elimenti.com/glen-ellyn-web-design/
    ```
    You want `HTTP/2 301` and `location: https://elimenti.com/chicago-suburbs-web-design/`.
 
-Optional, same steps: a second rule for `/portfolio.html` and `/portfolio` → `https://elimenti.com/work/`, which also redirect with a meta refresh today.
-
-These steps follow Cloudflare's "Create a redirect rule in the dashboard" page (last updated May 5, 2026). If a button has been renamed, the flow is the same: Rules → Create rule → Redirect Rule.
+The click path follows Cloudflare's "Create a redirect rule in the dashboard" page (last updated May 5, 2026). `seo/cloudflare-redirects.md` sends this URL to the `#glen-ellyn` section of the same page instead; either target works for search, since Google ignores the part after `#`.
 
 ## 3. Industry pages that need a real project or first-hand detail
 
