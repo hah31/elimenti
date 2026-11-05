@@ -644,6 +644,7 @@ def head_html(p, main_html):
         f'    <meta name="twitter:image:alt" content="{esc(og_alt)}">',
         '',
         '    <meta name="theme-color" content="#FAF8F5">',
+        '    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">',
         '    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png?v=3">',
         '    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png?v=3">',
         '',
