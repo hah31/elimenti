@@ -58,6 +58,12 @@ def city(name, wiki):
     return {'@type': 'City', 'name': f'{name}, IL', 'sameAs': f'https://en.wikipedia.org/wiki/{wiki}'}
 
 
+# Elimenti's own profiles on other sites: Google Business Profile share link, LinkedIn,
+# Instagram, Clutch, Yelp, Bing Places. Add a URL only once it loads to a profile that is
+# clearly Elimenti's; the list goes into the shared LocalBusiness block on every page.
+# Empty means no sameAs is output.
+SAME_AS = []
+
 AREA_SERVED = [city(n, w) for n, w in TOWNS] + [
     {'@type': 'AdministrativeArea', 'name': 'Chicago metropolitan area',
      'sameAs': 'https://en.wikipedia.org/wiki/Chicago_metropolitan_area'},
@@ -92,6 +98,9 @@ BUSINESS = {
         ],
     },
 }
+
+if SAME_AS:
+    BUSINESS['sameAs'] = SAME_AS
 
 WEBSITE = {
     '@type': 'WebSite',
