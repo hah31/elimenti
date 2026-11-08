@@ -32,6 +32,10 @@ python3 seo/tools/llms.py --check                    # fails if llms.txt is out 
 - Scope is exact: 1 of 1 Car Club and Aamineez Art are builds; Burdi Clothing is targeted edits to an existing site; ABN Construction Group is ongoing care of an existing WordPress site. Never call edit or care clients "builds".
 - ABN's own site lists its office in Lombard (not Glen Ellyn). 1of1carclub.com now serves a different site (a Fort Worth development); the case study shows the club site as delivered and doesn't call it live.
 - Public name is "Hashim H." No street address (service-area business).
+- Elimenti is based in Hinsdale, IL. Oak Brook is a town we serve, not where we're based: never "based in", "studio in" or "works out of" Hinsdale and Oak Brook, and the footer, schema, OG cards and PDF say "Hinsdale, IL". Lines about where clients are ("med spas in Hinsdale, Oak Brook and the western suburbs") are fine.
+- No Elimenti prices anywhere: no minimums, rates, ranges or totals in copy, titles, descriptions, schema (no `priceRange`, no priced `offers`), llms.txt, OG cards or the PDF, and no "pro bono". Every project is scoped individually; the exact price and timeline come in the written proposal. Third-party prices with their sources (Squarespace, Wix, GoodFirms, agency tiers) are fine. Never ask "How much...?" and then dodge; phrase questions so the answer fits.
+- "High-end" describes the work ("high-end web design", "what makes a website look high-end"), never the client: no "high-end businesses". Say "independent businesses" or name the trade. No copy asks visitors to decide whether they qualify.
+- `check.py` enforces the last three rules on every non-concept page and llms.txt (`BANNED_SITE`).
 - No town pages that only swap the town name. New town pages need genuinely distinct content; otherwise add a section to `/chicago-suburbs-web-design/`. The Glen Ellyn page was merged into that hub (`#glen-ellyn`) and `glen-ellyn-web-design/index.html` is a meta-refresh stub; keep it out of `PAGES`.
 
 ## Research report (western suburbs website study)

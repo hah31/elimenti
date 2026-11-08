@@ -3,7 +3,8 @@
 
 Every indexable page (the same set that goes into sitemap.xml) is listed once,
 using its registry title and meta description, so the file can't drift from the
-site. The summary and key facts come from the registry's business and offer data.
+site. The summary and key facts come from the registry's business data. No prices: every
+project is scoped individually and priced in a written proposal.
 Format follows https://llmstxt.org/: H1, blockquote summary, notes, then H2 link lists.
 
 Run from the repo root after build.py:
@@ -56,26 +57,9 @@ def line(path, title, desc):
     return f'- [{title}]({SITE}{path}): {desc}'
 
 
-def offer_price(path, unit=None):
-    page = next(p for p in build.PAGES if p['path'] == path)
-    for node in page['schema']:
-        offers = node.get('offers')
-        offers = offers if isinstance(offers, list) else [offers]
-        for o in offers:
-            spec = (o or {}).get('priceSpecification', {})
-            if unit is None and 'minPrice' in spec:
-                return spec['minPrice']
-            if unit and spec.get('unitText') == unit:
-                return spec['price']
-    sys.exit(f'No price found for {path} {unit or ""}')
-
-
 def render():
     pages = indexable()
     biz = build.BUSINESS
-    start = offer_price('/custom-websites/')
-    care_month = offer_price('/site-care/', 'month')
-    care_hour = offer_price('/site-care/', 'hour')
 
     out = [
         f"# {biz['name']}",
@@ -84,8 +68,8 @@ def render():
         '',
         'Key facts:',
         '',
-        f'- Projects on either platform start at ${start:,}, scoped per project with a written proposal.',
-        f'- Site Care: ${care_month} a month or ${care_hour} an hour.',
+        '- Every project, on WordPress or custom-coded, is scoped individually. The exact price and timeline come in a written proposal before any work starts.',
+        '- Site Care: a monthly plan or hourly edits, with a five-business-day turnaround.',
         f"- Founder: {biz['founder']['name']}",
         f'- Contact: {build.PHONE_DISPLAY}, {build.EMAIL}, or {SITE}/contact/',
     ]

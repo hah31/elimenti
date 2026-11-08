@@ -82,7 +82,7 @@ ${plat.map(([k, v]) => bar(k === 'No builder detected' ? 'No builder detected (c
 <p>Businesses listed in the public online member directories of the Hinsdale Chamber of Commerce and the Greater Oak Brook Chamber of Commerce, read on November 4, 2026 (${F.steps.directory_listings} listings). We kept independent businesses with their own website and a listed address in Hinsdale, Oak Brook or a neighboring suburb, leaving out chains, franchises, banks, public bodies, nonprofits and web agencies (${F.steps.unique_websites} websites), and drew a random sample of ${F.steps.sample}. Each homepage was tested with Lighthouse 13.6.0 on mobile settings, three runs per site, median reported, and checked as a phone for phone links, contact links, copyright year, structured data, HTTPS and platform. These are lab tests on one day, not measurements of real visits. No business is named; we publish totals and shares only.</p>
 <h2>Use these findings</h2>
 <p>Free to cite and republish with credit under Creative Commons Attribution 4.0: "Elimenti, Western Suburbs Website Report 2026." The full report, charts and method: elimenti.com/research/western-suburbs-website-report-2026/</p>
-<div class="foot">Elimenti · Custom-coded websites · Hinsdale and Oak Brook, IL · (630) 509-8822 · hello@elimenti.com · elimenti.com</div>
+<div class="foot">Elimenti · WordPress and custom-coded websites · Hinsdale, IL · (630) 509-8822 · hello@elimenti.com · elimenti.com</div>
 </div>
 </body></html>`;
 
