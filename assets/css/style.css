@@ -1676,13 +1676,10 @@ strong {
         min-height: auto;
     }
 
+    /* The logo mark filled about 40% of the first phone screen, so phones skip it
+       (the <picture> in index.html also stops them downloading it). */
     .hero__visual {
-        justify-content: flex-start;
-        order: -1;
-    }
-
-    .hero__visual img {
-        max-width: 180px;
+        display: none;
     }
 
     .services__grid {
