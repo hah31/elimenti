@@ -10,7 +10,8 @@ other pages linking to it; no unfilled {{token}} remains; every sitemap URL is r
 indexable and canonical; every indexable page is in the sitemap; titles,
 descriptions and H1s are present, unique and within length; JSON-LD parses, uses
 no Review/AggregateRating, and FAQPage text matches the visible text; visible copy
-has no banned terms. Exits non-zero on any failure.
+has no banned terms (plus, outside /concepts/, no Elimenti prices, no "high-end" describing
+the client and no "Hinsdale and Oak Brook" location claim). Exits non-zero on any failure.
 """
 import json
 import re
@@ -25,6 +26,11 @@ from bs4 import BeautifulSoup
 BASE = sys.argv[1].rstrip('/')
 SITE = 'https://elimenti.com'
 BANNED = [r'\bTODO\b', r'\bTBD\b', r'(?i)lorem', r'(?i)placeholder', r'\[', r'\bXX\b', r'\bAI\b', r'(?i)hand-coded']
+# Non-concept pages only: the med spa concept legitimately shows a $175 treatment.
+# Elimenti prices live in the written proposal; "high-end" describes the work, never the client;
+# Elimenti is based in Hinsdale, and Oak Brook is a town it serves.
+BANNED_SITE = [r'\$4,000', r'\$175', r'\$85\b', r'(?i)pro bono', r'(?i)high-end (independent )?business',
+               r'(?i)owners of high-end', r'Hinsdale and Oak Brook, IL', r'(?i)(based in|works? out of) Hinsdale and Oak Brook']
 
 failures, notes = [], []
 pages, status, seen = {}, {}, set()
@@ -52,6 +58,12 @@ def local(url):
     return urllib.parse.urljoin('/', url.split('#')[0].split('?')[0])
 
 
+def srcset_urls(srcset):
+    """URLs in a srcset. A candidate's URL runs to the next whitespace, so it may contain
+    commas (a data: URI does); a comma only separates candidates after a URL or descriptor."""
+    return re.findall(r'(\S+?)(?:\s+[\d.]+[wx])?\s*(?:,(?=\s)|,$|$)', srcset.strip())
+
+
 def crawl(start):
     queue = [start]
     while queue:
@@ -69,9 +81,9 @@ def crawl(start):
             refs = [a.get('href') for a in soup.find_all(['a', 'link'], href=True)]
             refs += [t.get('src') for t in soup.find_all(['img', 'script', 'source'], src=True)]
             for t in soup.find_all(['img', 'source'], srcset=True):
-                refs += [c.strip().split(' ')[0] for c in t['srcset'].split(',')]
+                refs += srcset_urls(t['srcset'])
             for t in soup.find_all('link', imagesrcset=True):
-                refs += [c.strip().split(' ')[0] for c in t['imagesrcset'].split(',')]
+                refs += srcset_urls(t['imagesrcset'])
             for r in refs:
                 lp = local(r)
                 if lp and lp != path:
@@ -98,6 +110,16 @@ for p in sitemap:
 for p, c in status.items():
     if c != 200:
         failures.append(f'BROKEN {c}: {p} (linked from {sorted(referrers[p])[:3]})')
+
+# llms.txt carries registry titles and descriptions, so the site-only patterns apply to it too.
+code, body, _ = fetch('/llms.txt')
+if code != 200:
+    failures.append(f'llms.txt returned {code}')
+else:
+    llms = body.decode('utf-8')
+    for pat in BANNED_SITE:
+        for m in re.finditer(pat, llms):
+            failures.append(f'/llms.txt: banned term {pat!r}: ...{llms[max(0, m.start() - 40):m.end() + 40]}...')
 
 code, _, _ = fetch('/no-such-page-check/')
 if code != 404:
@@ -171,6 +193,12 @@ for path, html in pages.items():
     for s in body(['script', 'style']):
         s.decompose()
     visible = ' '.join([body.get_text(' ', strip=True), title, desc] + [i.get('alt', '') for i in body.find_all('img')])
+    # JSON-LD and the social tags are checked for the site-only patterns too (no prices in schema).
+    hay = ' '.join([visible] + [t.get('content', '') for t in soup.find_all('meta')]
+                   + [sc.string or '' for sc in soup.find_all('script', type='application/ld+json')])
+    for pat in BANNED_SITE:
+        for m in re.finditer(pat, hay):
+            failures.append(f'{path}: banned term {pat!r}: ...{hay[max(0, m.start() - 40):m.end() + 40]}...')
     for pat in BANNED:
         for m in re.finditer(pat, visible):
             failures.append(f'{path}: banned term {pat!r}: ...{visible[max(0, m.start() - 40):m.end() + 40]}...')
