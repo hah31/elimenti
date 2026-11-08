@@ -479,22 +479,16 @@ strong {
 
 .services__grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
 }
 
 .service-card {
-    grid-column: span 2;
     padding: var(--space-lg) var(--space-md);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     background-color: var(--color-surface);
     transition: border-color var(--duration-base) var(--ease);
-}
-
-.service-card:nth-child(4),
-.service-card:nth-child(5) {
-    grid-column: span 3;
 }
 
 .service-card:hover {
@@ -654,6 +648,68 @@ strong {
 .work-card p {
     font-size: 15px;
     line-height: 1.6;
+}
+
+/* Concepts: a compact 2-up grid of smaller, image-left cards, so they sit beside the
+   client work without doubling the section. */
+.work-grid--compact {
+    gap: var(--space-sm);
+}
+
+.work-grid--compact .work-card {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.work-grid--compact .work-card img {
+    width: 40%;
+    flex-shrink: 0;
+    border-bottom: 0;
+    border-right: 1px solid var(--color-border);
+}
+
+.work-grid--compact .work-card__body {
+    padding: var(--space-sm) var(--space-md);
+    align-self: center;
+}
+
+.work-grid--compact .work-card h3,
+.work-grid--compact .work-card h4 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-display);
+    color: var(--color-text);
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    margin-bottom: var(--space-xs);
+}
+
+.work-grid--compact .work-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.work-proof {
+    max-width: 60ch;
+    margin: var(--space-lg) auto 0;
+    padding-left: calc(var(--space-md) + 1px);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.work-concepts {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.work-concepts__title {
+    margin-bottom: var(--space-xs);
+}
+
+.work-concepts__intro {
+    max-width: var(--prose-width);
+    margin-bottom: var(--space-md);
 }
 
 /* ---------- Quote ---------- */
@@ -1686,12 +1742,6 @@ strong {
         grid-template-columns: 1fr;
     }
 
-    .service-card,
-    .service-card:nth-child(4),
-    .service-card:nth-child(5) {
-        grid-column: auto;
-    }
-
     .statement > p {
         font-size: var(--size-h3);
     }
@@ -1707,6 +1757,44 @@ strong {
     .work-grid {
         grid-template-columns: 1fr;
         gap: var(--space-md);
+    }
+
+    /* Concepts stay two across on phones, image on top. */
+    .work-grid--compact {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-sm);
+    }
+
+    .work-grid--compact .work-card {
+        flex-direction: column;
+    }
+
+    .work-grid--compact .work-card img {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .work-grid--compact .work-card__body {
+        padding: var(--space-sm);
+        align-self: auto;
+    }
+
+    .work-grid--compact .work-card h3,
+    .work-grid--compact .work-card h4 {
+        font-size: 19px;
+        margin-bottom: 0;
+    }
+
+    /* On phones the name and the label carry the card; the one-line summary is
+       on the concept site itself. */
+    .work-grid--compact .work-card p {
+        display: none;
+    }
+
+    .work-grid--compact .work-card__scope {
+        font-size: 10px;
+        letter-spacing: 0.08em;
     }
 
     .form {
