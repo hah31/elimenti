@@ -171,6 +171,7 @@ def article(path, headline, description, published, modified=None):
 TOWN = {n: city(n, w) for n, w in TOWNS}
 
 RESEARCH_PATH = '/research/western-suburbs-website-report-2026/'
+DATASET_ORG = {'@type': 'Organization', '@id': f'{SITE}/#business', 'name': 'Elimenti', 'url': f'{SITE}/'}
 RESEARCH_SCHEMA = [
     article(RESEARCH_PATH, 'The western suburbs website report, 2026',
             'Lighthouse mobile tests and page checks of 150 independent business websites from the Hinsdale and Oak Brook chambers of commerce: speed, phone links, HTTPS, structured data and platforms.',
@@ -185,8 +186,9 @@ RESEARCH_SCHEMA = [
                         'three runs) and checked as a phone for tappable phone numbers, contact links, copyright year, structured data, '
                         'HTTPS and platform. Businesses are not named; the download contains aggregate figures only.'),
         'url': f'{SITE}{RESEARCH_PATH}',
-        'creator': PROVIDER,
-        'publisher': PROVIDER,
+        # Google's Dataset check reads creator/publisher on their own, so they carry a type, not only an @id.
+        'creator': DATASET_ORG,
+        'publisher': DATASET_ORG,
         'license': 'https://creativecommons.org/licenses/by/4.0/',
         'isAccessibleForFree': True,
         'datePublished': TODAY,
@@ -200,7 +202,7 @@ RESEARCH_SCHEMA = [
                              'Copyright year', 'Local business structured data', 'HTTPS', 'Platform'],
         'distribution': [{'@type': 'DataDownload', 'encodingFormat': 'text/csv',
                           'contentUrl': f'{SITE}{RESEARCH_PATH}western-suburbs-2026-findings.csv'}],
-        'isPartOf': {'@id': f'{SITE}/#website'},
+        # No isPartOf: on a Dataset it must point to a larger Dataset, not the website. The Article above links the page to the site.
     },
 ]
 
