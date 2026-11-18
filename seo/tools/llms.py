@@ -28,7 +28,8 @@ RESEARCH = build.RESEARCH_PATH
 FOOTER = {label: [href for href, _ in links] for label, links in build.FOOTER_GROUPS}
 SECTIONS = [
     ('Services', lambda p: p == '/' or (p in FOOTER['Services'] and not p.startswith('/work/'))),
-    ('Industries', lambda p: p in FOOTER['Industries']),
+    # Industry pages that sit under a hub (e.g. /automotive-websites/) aren't in the footer, so match by slug too.
+    ('Industries', lambda p: p in FOOTER['Industries'] or p.endswith('-websites/')),
     ('Areas', lambda p: p in FOOTER['Areas']),
     ('Work', lambda p: p.startswith('/work/')),
     ('Guides', lambda p: p.startswith('/guides/')),
