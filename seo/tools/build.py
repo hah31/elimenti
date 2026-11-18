@@ -30,6 +30,8 @@ TODAY = '2026-11-04'
 UPDATED = '2026-11-05'
 # Pages changed in the Hinsdale-only, no-prices pass get this as lastmod.
 CHANGED = '2026-11-08'
+# Pages added or changed in the niche-cluster pass get this as lastmod.
+NEW = '2026-11-18'
 
 PHONE_DISPLAY = '(630) 509-8822'
 PHONE_TEL = '+16305098822'
@@ -95,6 +97,7 @@ BUSINESS = {
         'itemListElement': [
             {'@type': 'Offer', 'itemOffered': {'@id': f'{SITE}/wordpress-websites/#service'}},
             {'@type': 'Offer', 'itemOffered': {'@id': f'{SITE}/custom-websites/#service'}},
+            {'@type': 'Offer', 'itemOffered': {'@id': f'{SITE}/website-redesign/#service'}},
             {'@type': 'Offer', 'itemOffered': {'@id': f'{SITE}/site-care/#service'}},
         ],
     },
@@ -108,6 +111,8 @@ WEBSITE = {
     '@id': f'{SITE}/#website',
     'url': f'{SITE}/',
     'name': 'Elimenti',
+    # Backup site names for Google's site-name system (Search Central, "Provide a site name to Google Search").
+    'alternateName': ['Elimenti Web Design', 'elimenti.com'],
     'publisher': {'@id': f'{SITE}/#business'},
     'inLanguage': 'en-US',
 }
@@ -217,7 +222,7 @@ RESEARCH_SCHEMA = [
 IND = '/custom-websites/'
 
 PAGES = [
-    dict(path='/', file='index.html', lastmod=CHANGED,
+    dict(path='/', file='index.html', lastmod=NEW,
          title='High-End Web Design in the Chicago Suburbs | Elimenti',
          description='Websites designed, written and built for independent businesses in Hinsdale and Chicago\'s western suburbs, on WordPress you can edit or custom-coded.',
          crumbs=None,
@@ -225,19 +230,26 @@ PAGES = [
          schema=[]),
 
     # Services
-    dict(path='/custom-websites/', file='custom-websites/index.html', lastmod=CHANGED,
+    dict(path='/custom-websites/', file='custom-websites/index.html', lastmod=NEW,
          title='Custom Website Design for Chicago Businesses | Elimenti',
          description='Custom-designed websites for independent businesses in Chicago and the suburbs, built on WordPress or custom-coded. Copywriting and basic SEO included.',
          crumbs=[('Custom websites', '/custom-websites/')],
          schema=[service('/custom-websites/', 'Custom website design and build',
                          'Websites designed for one business and built one of two ways: on WordPress, so the client can edit it, or custom-coded in HTML, CSS and JavaScript. Copywriting, a basic SEO setup and up to three rounds of revisions are included. The client owns the site after final payment.')]),
-    dict(path='/wordpress-websites/', file='wordpress-websites/index.html', lastmod=CHANGED,
+    dict(path='/wordpress-websites/', file='wordpress-websites/index.html', lastmod=NEW,
          title='WordPress Website Design for Chicago Businesses | Elimenti',
          description='Custom-designed WordPress websites for independent businesses in Chicago and the suburbs: your own login, a launch walkthrough, updates through Site Care.',
          crumbs=[('WordPress websites', '/wordpress-websites/')],
          schema=[service('/wordpress-websites/', 'WordPress website design and build',
                          'Custom-designed WordPress websites with copywriting, a basic SEO setup, up to three rounds of revisions, the client\'s own login and a walkthrough of how to edit the site at launch. The client owns the WordPress install, theme, content and plugins after final payment.')]),
-    dict(path='/site-care/', file='site-care/index.html', lastmod=CHANGED,
+    dict(path='/website-redesign/', file='website-redesign/index.html', lastmod=NEW,
+         title='Website Redesign for Independent Businesses | Elimenti',
+         description='Website redesign for independent businesses, Chicago suburbs and US-wide: new design, rewritten copy, redirects, and a domain and email that keep working.',
+         crumbs=[('Website redesign', '/website-redesign/')],
+         schema=[service('/website-redesign/', 'Website redesign',
+                         'Redesign of an existing business website on the same domain: a review of the current site, new design, rewritten copy and a rebuild on WordPress or custom-coded, with permanent redirects from old page addresses. Copywriting and a basic SEO setup are included.',
+                         audience='Independent businesses with an existing website')]),
+    dict(path='/site-care/', file='site-care/index.html', lastmod=NEW,
          title='Website Care and Maintenance, Chicago Suburbs | Elimenti',
          description='Site Care keeps your website current: a monthly plan or hourly edits, five-business-day turnaround, with WordPress updates and backups on the monthly plan.',
          crumbs=[('Site Care', '/site-care/')],
@@ -253,13 +265,13 @@ PAGES = [
                   'isPartOf': {'@id': f'{SITE}/#website'}}]),
 
     # Locations
-    dict(path='/chicago-suburbs-web-design/', file='chicago-suburbs-web-design/index.html', lastmod=CHANGED,
+    dict(path='/chicago-suburbs-web-design/', file='chicago-suburbs-web-design/index.html', lastmod=NEW,
          title='Web Design for Chicago\'s Western Suburbs | Elimenti',
          description='WordPress and custom-coded sites for independent businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/')],
          schema=[service('/chicago-suburbs-web-design/', 'Web design for Chicago\'s western suburbs',
                          'Websites for independent businesses across Chicago\'s western suburbs, built on WordPress or custom-coded.')]),
-    dict(path='/hinsdale-web-design/', file='hinsdale-web-design/index.html', lastmod=CHANGED,
+    dict(path='/hinsdale-web-design/', file='hinsdale-web-design/index.html', lastmod=NEW,
          title='Web Design in Hinsdale, IL | WordPress & Custom | Elimenti',
          description='Websites for Hinsdale boutiques, clinics, builders and firms, on WordPress or custom-coded, from a studio based in Hinsdale with real work in town.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/'), ('Hinsdale', '/hinsdale-web-design/')],
@@ -296,20 +308,20 @@ PAGES = [
          crumbs=[('Custom websites', IND), ('Landscape design websites', '/landscape-design-websites/')],
          schema=[service('/landscape-design-websites/', 'Landscape design website design',
                          'Websites for landscape design-build firms, built on WordPress or custom-coded: project pages by problem solved, design-build kept separate from maintenance.', audience='Landscape design firms')]),
-    dict(path='/boutique-websites/', file='boutique-websites/index.html', lastmod=CHANGED,
+    dict(path='/boutique-websites/', file='boutique-websites/index.html', lastmod=NEW,
          title='Boutique Website Design for Independent Shops | Elimenti',
          description='Websites for independent boutiques and showrooms in the Chicago suburbs: photo-led, fast on phones and linked to your store.',
          crumbs=[('Custom websites', IND), ('Boutique websites', '/boutique-websites/')],
          schema=[service('/boutique-websites/', 'Boutique website design',
                          'Websites for independent boutiques, showrooms and specialty shops, built on WordPress or custom-coded.', audience='Independent boutiques and showrooms')]),
-    dict(path='/car-club-websites/', file='car-club-websites/index.html', lastmod=CHANGED,
+    dict(path='/car-club-websites/', file='car-club-websites/index.html', lastmod=NEW,
          title='Car Club Website Design | Elimenti',
          description='Websites for private car clubs and automotive groups, from the studio behind 1 of 1 Car Club\'s site. Based in Hinsdale, IL, working US-wide.',
          crumbs=[('Custom websites', IND), ('Car club websites', '/car-club-websites/')],
          schema=[service('/car-club-websites/', 'Car club website design',
                          'Websites for private car clubs and automotive groups, built on WordPress or custom-coded: collection pages that grow, member applications and privacy where it matters.',
                          area=[{'@type': 'Country', 'name': 'United States'}], audience='Car clubs')]),
-    dict(path='/classic-car-club-websites/', file='classic-car-club-websites/index.html', lastmod=CHANGED,
+    dict(path='/classic-car-club-websites/', file='classic-car-club-websites/index.html', lastmod=NEW,
          title='Classic and Marque Car Club Websites | Elimenti',
          description='Websites for classic and marque car clubs: chapters, archives, member directories, magazines and events, and moving off Joomla or Drupal to WordPress.',
          crumbs=[('Custom websites', IND), ('Classic car club websites', '/classic-car-club-websites/')],
@@ -317,8 +329,46 @@ PAGES = [
                          'Websites for established national and regional car clubs devoted to one make or a family of makes, usually built on WordPress: members-only areas, join and renewal with the club\'s membership system, event calendars, chapter pages, a technical library, a newsletter archive and a members-only directory, including moves from Joomla, Drupal or custom-built sites.',
                          area=[{'@type': 'Country', 'name': 'United States'}], audience='Classic and marque car clubs')]),
 
+    # Niche cluster, added 2026-11-18. Google's results for these searches were templates and
+    # galleries with no studios (checked that day); see seo/summary-2026-11-18.md.
+    dict(path='/automotive-websites/', file='automotive-websites/index.html', lastmod=NEW,
+         title='Automotive Website Design for Clubs and Shops | Elimenti',
+         description='Websites for car clubs, car shows, collector car storage and restoration shops, from the studio behind 1 of 1 Car Club\'s site. Hinsdale, IL, US-wide.',
+         crumbs=[('Custom websites', IND), ('Automotive websites', '/automotive-websites/')],
+         schema=[service('/automotive-websites/', 'Automotive website design',
+                         'Websites for car clubs, car shows and concours, collector car storage facilities and restoration and custom shops, built on WordPress or custom-coded. Not inventory-driven dealership sites.',
+                         area=[{'@type': 'Country', 'name': 'United States'}], audience='Car clubs, car event organizers, collector car storage facilities and restoration shops')]),
+    dict(path='/car-show-websites/', file='car-show-websites/index.html', lastmod=NEW,
+         title='Car Show & Concours Website Design | Elimenti',
+         description='Websites for car shows, concours and cars-and-coffee series: entry pages, spectator info, sponsors, results and an archive. Hinsdale, IL, working US-wide.',
+         crumbs=[('Automotive websites', '/automotive-websites/'), ('Car show websites', '/car-show-websites/')],
+         schema=[service('/car-show-websites/', 'Car show and concours website design',
+                         'Website design for car shows, concours d\'elegance, cars-and-coffee series and charity car meets: entry and spectator pages, sponsors, results and a year-by-year archive. Built on WordPress or custom-coded, with registration and ticketing linked to the tool the event already uses.',
+                         area=[{'@type': 'Country', 'name': 'United States'}], audience='Car show, concours and car event organizers')]),
+    dict(path='/collector-car-storage-websites/', file='collector-car-storage-websites/index.html', lastmod=NEW,
+         title='Collector Car Storage Website Design | Elimenti',
+         description='Website design for collector car storage facilities, car condos and garage condos: security and climate pages, unit availability and inquiry forms.',
+         crumbs=[('Automotive websites', '/automotive-websites/'), ('Collector car storage websites', '/collector-car-storage-websites/')],
+         schema=[service('/collector-car-storage-websites/', 'Collector car storage website design',
+                         'Websites for collector car storage facilities, car condos, garage condo communities and motor clubs with storage, built on WordPress or custom-coded: facility and security pages, unit availability, care services and an inquiry form that asks about the car.',
+                         area=[{'@type': 'Country', 'name': 'United States'}], audience='Collector car storage facilities and car condos')]),
+    dict(path='/classic-car-restoration-websites/', file='classic-car-restoration-websites/index.html', lastmod=NEW,
+         title='Classic Car Restoration Shop Website Design | Elimenti',
+         description='Website design for classic car restoration, restomod and hot rod shops: build pages by stage, fast photo galleries and an inquiry form that takes photos.',
+         crumbs=[('Automotive websites', '/automotive-websites/'), ('Restoration shop websites', '/classic-car-restoration-websites/')],
+         schema=[service('/classic-car-restoration-websites/', 'Classic car restoration shop website design',
+                         'Websites for classic car restoration shops, restomod and hot rod builders and marque specialists, built on WordPress or custom-coded: a page for every build documented by stage, services by discipline and an inquiry form that takes photos of the car.',
+                         area=[{'@type': 'Country', 'name': 'United States'}], audience='Classic car restoration and custom shops')]),
+    dict(path='/menswear-store-websites/', file='menswear-store-websites/index.html', lastmod=NEW,
+         title='Menswear Store & Tailor Website Design | Elimenti',
+         description='Website design for independent menswear stores, haberdashers and custom tailors: brands, trunk shows, made-to-measure and appointments. Hinsdale, IL.',
+         crumbs=[('Custom websites', IND), ('Menswear store websites', '/menswear-store-websites/')],
+         schema=[service('/menswear-store-websites/', 'Menswear store website design',
+                         'Websites for independent menswear stores, haberdashers and custom tailors, built on WordPress or custom-coded: brands, trunk shows, made-to-measure and appointment requests, linked to the store\'s existing online shop.',
+                         audience='Independent menswear stores and tailors')]),
+
     # Guides
-    dict(path='/guides/', file='guides/index.html', lastmod=CHANGED,
+    dict(path='/guides/', file='guides/index.html', lastmod=NEW,
          title='Website Guides for Business Owners | Elimenti',
          description='Plain-English website guides for independent business owners, grouped by question: cost, timing, platforms, hiring, redesigns and local search.',
          crumbs=[('Guides', '/guides/')],
@@ -330,6 +380,7 @@ PAGES = [
                       '/guides/questions-to-ask-a-web-designer/', '/guides/web-designer-disappeared/',
                       '/guides/website-redesign-vs-refresh/', '/guides/what-makes-a-website-look-high-end/',
                       '/guides/local-seo-for-boutiques/', '/guides/car-club-website-examples/',
+                      '/guides/car-club-website-builders/', '/guides/car-show-website-examples/',
                       '/research/western-suburbs-website-report-2026/')]}]),
     dict(path='/guides/website-cost-western-suburbs/', file='guides/website-cost-western-suburbs/index.html', lastmod=CHANGED, og_type='article',
          title='What a High-End Website Costs in Chicago | Elimenti',
@@ -353,7 +404,7 @@ PAGES = [
                          'The details that make a business website look high-end or cheap: type, photography, restraint, copy, speed and the small things customers notice first.',
                          TODAY, CHANGED)]),
 
-    dict(path='/guides/wix-squarespace-wordpress-or-custom/', file='guides/wix-squarespace-wordpress-or-custom/index.html', lastmod=CHANGED, og_type='article',
+    dict(path='/guides/wix-squarespace-wordpress-or-custom/', file='guides/wix-squarespace-wordpress-or-custom/index.html', lastmod=NEW, og_type='article',
          title='Wix vs Squarespace vs WordPress vs Custom | Elimenti',
          description='Wix, Squarespace, WordPress or custom code for an independent business: cost, speed, editing and ownership compared, with data from 150 local sites.',
          crumbs=[('Guides', '/guides/'), ('Wix, Squarespace, WordPress or custom', '/guides/wix-squarespace-wordpress-or-custom/')],
@@ -374,7 +425,7 @@ PAGES = [
          schema=[article('/guides/web-designer-disappeared/', 'What to do if your web designer disappears',
                          'Web designer disappeared? Find who holds your domain, hosting and logins, get each one back, and keep the handoff list that stops it happening again.',
                          TODAY, UPDATED)]),
-    dict(path='/guides/website-redesign-vs-refresh/', file='guides/website-redesign-vs-refresh/index.html', lastmod=CHANGED, og_type='article',
+    dict(path='/guides/website-redesign-vs-refresh/', file='guides/website-redesign-vs-refresh/index.html', lastmod=NEW, og_type='article',
          title='Website Redesign or Refresh? How to Tell | Elimenti',
          description='Redesign or refresh? A fifteen-minute scorecard for your own website, what each result means, and how each option is priced and how long it takes.',
          crumbs=[('Guides', '/guides/'), ('Redesign or refresh', '/guides/website-redesign-vs-refresh/')],
@@ -403,13 +454,28 @@ PAGES = [
                          'Local SEO for an independent boutique: your Google Business Profile, reviews, the pages worth having and the small website fixes that make the phone ring.',
                          TODAY)]),
 
-    dict(path='/guides/car-club-website-examples/', file='guides/car-club-website-examples/index.html', lastmod=CHANGED, og_type='article',
+    dict(path='/guides/car-club-website-examples/', file='guides/car-club-website-examples/index.html', lastmod=NEW, og_type='article',
          title='Car Club Website Examples: What Works and Why | Elimenti',
          description='Real car club websites, from marque clubs to invitation-only ones: what each does well, one thing it misses, and what your club\'s site needs.',
          crumbs=[('Guides', '/guides/'), ('Car club website examples', '/guides/car-club-website-examples/')],
          schema=[article('/guides/car-club-website-examples/', 'Car club website examples: what real club sites get right',
                          'Real car club websites, from national marque clubs to local chapters and invitation-based clubs: what each does well, one thing it misses, and what a club site needs.',
                          UPDATED, CHANGED)]),
+
+    dict(path='/guides/car-club-website-builders/', file='guides/car-club-website-builders/index.html', lastmod=NEW, og_type='article',
+         title='Car Club Website Builders & Software Compared | Elimenti',
+         description='Car club website builders and membership software compared: published prices for RumbleSeat, Middletwin, WildApricot and more, and which fits your club.',
+         crumbs=[('Guides', '/guides/'), ('Car club website builders', '/guides/car-club-website-builders/')],
+         schema=[article('/guides/car-club-website-builders/', 'Car club website builders and membership software, compared',
+                         'Ten ways to put a car club online, from club platforms like RumbleSeat and Middletwin to WordPress with a membership plugin: published prices, what each handles, and which kind of club each suits.',
+                         NEW)]),
+    dict(path='/guides/car-show-website-examples/', file='guides/car-show-website-examples/index.html', lastmod=NEW, og_type='article',
+         title='Car Show Website Examples: 7 Real Event Sites | Elimenti',
+         description='Seven real car show and concours websites, from Pebble Beach to a Hinsdale cars-and-coffee: what each does well and one thing it misses. Checked Nov 2026.',
+         crumbs=[('Guides', '/guides/'), ('Car show website examples', '/guides/car-show-website-examples/')],
+         schema=[article('/guides/car-show-website-examples/', 'Car show website examples: what real event sites get right',
+                         'Seven real car show, concours and cars-and-coffee websites, grouped by size, with what each does well and one fair miss. Checked November 18, 2026.',
+                         NEW)]),
 
     # Research
     dict(path='/research/western-suburbs-website-report-2026/', file='research/western-suburbs-website-report-2026/index.html', lastmod=UPDATED, og_type='article',
@@ -443,7 +509,7 @@ PAGES = [
                             'A full build: the custom-coded portfolio site Elimenti designed and built for Aamineez, an Arabic calligraphy artist.',
                             {'@type': 'Person', 'name': 'Aamineez', 'url': 'https://aamineez.art/'},
                             ['/assets/img/work/aamineez-art-desktop-1200.webp', '/assets/img/work/aamineez-art-phone.webp'])]),
-    dict(path='/work/burdi-clothing/', file='work/burdi-clothing/index.html', lastmod=TODAY, nav='work',
+    dict(path='/work/burdi-clothing/', file='work/burdi-clothing/index.html', lastmod=NEW, nav='work',
          title='Burdi Clothing Website Edits, Hinsdale IL | Elimenti',
          description='Elimenti makes targeted edits to the existing website of Burdi Clothing (Burdi European Boutique) in Hinsdale, including event pages for its car shows.',
          crumbs=[('Work', '/work/'), ('Burdi Clothing', '/work/burdi-clothing/')],
@@ -463,9 +529,11 @@ PAGES = [
                             ['/assets/img/work/abn-construction-group-desktop-1200.webp', '/assets/img/work/abn-construction-group-phone.webp'])]),
 
     # Studio
-    dict(path='/about/', file='about/index.html', lastmod=CHANGED, nav='about',
-         title='About Elimenti | Hinsdale Web Design Studio',
-         description='Elimenti is a Hinsdale web design studio run by Hashim H., an Illinois engineering student. WordPress and custom-coded sites for independent businesses.',
+    # Title deliberately avoids "Hinsdale web design": Google was ranking this page for that search
+    # instead of /hinsdale-web-design/ (checked 2026-11-18).
+    dict(path='/about/', file='about/index.html', lastmod=NEW, nav='about',
+         title='About Elimenti | Who Runs the Studio',
+         description='Elimenti is run by Hashim H., an Illinois engineering student from the Hinsdale area. How the studio works, and why it builds on WordPress or custom code.',
          crumbs=[('About', '/about/')],
          schema=[{'@type': 'AboutPage', '@id': f'{SITE}/about/#webpage', 'url': f'{SITE}/about/', 'name': 'About Elimenti',
                   'about': PROVIDER, 'mainEntity': {'@id': f'{SITE}/about/#founder'}, 'isPartOf': {'@id': f'{SITE}/#website'}},
@@ -510,12 +578,13 @@ PAGES = [
 NAV_ITEMS = [('work', '/work/', 'Work'), ('pricing', '/pricing/', 'Process'), ('about', '/about/', 'About'), ('faq', '/faq/', 'FAQ')]
 
 FOOTER_GROUPS = [
-    ('Services', [('/wordpress-websites/', 'WordPress websites'), ('/custom-websites/', 'Custom websites'), ('/site-care/', 'Site Care'),
+    ('Services', [('/wordpress-websites/', 'WordPress websites'), ('/custom-websites/', 'Custom websites'), ('/website-redesign/', 'Redesigns'), ('/site-care/', 'Site Care'),
                   ('/pricing/', 'Process'), ('/work/', 'Work')]),
     ('Industries', [('/med-spa-websites/', 'Med spas'), ('/interior-designer-websites/', 'Interior designers'),
                     ('/custom-home-builder-websites/', 'Home builders'), ('/landscape-design-websites/', 'Landscape firms'),
                     ('/boutique-websites/', 'Boutiques'), ('/car-club-websites/', 'Car clubs'),
-                    ('/classic-car-club-websites/', 'Classic and marque clubs')]),
+                    ('/classic-car-club-websites/', 'Classic and marque clubs'),
+                    ('/automotive-websites/', 'Automotive'), ('/menswear-store-websites/', 'Menswear stores')]),
     ('Areas', [('/chicago-suburbs-web-design/', 'Chicago suburbs'), ('/hinsdale-web-design/', 'Hinsdale'),
                ('/oak-brook-web-design/', 'Oak Brook')]),
     ('Studio', [('/about/', 'About'), ('/faq/', 'FAQ'), ('/guides/', 'Guides'),

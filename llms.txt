@@ -14,6 +14,7 @@ Key facts:
 - [High-End Web Design in the Chicago Suburbs](https://elimenti.com/): Websites designed, written and built for independent businesses in Hinsdale and Chicago's western suburbs, on WordPress you can edit or custom-coded.
 - [Custom Website Design for Chicago Businesses](https://elimenti.com/custom-websites/): Custom-designed websites for independent businesses in Chicago and the suburbs, built on WordPress or custom-coded. Copywriting and basic SEO included.
 - [WordPress Website Design for Chicago Businesses](https://elimenti.com/wordpress-websites/): Custom-designed WordPress websites for independent businesses in Chicago and the suburbs: your own login, a launch walkthrough, updates through Site Care.
+- [Website Redesign for Independent Businesses](https://elimenti.com/website-redesign/): Website redesign for independent businesses, Chicago suburbs and US-wide: new design, rewritten copy, redirects, and a domain and email that keep working.
 - [Website Care and Maintenance, Chicago Suburbs](https://elimenti.com/site-care/): Site Care keeps your website current: a monthly plan or hourly edits, five-business-day turnaround, with WordPress updates and backups on the monthly plan.
 - [How a Web Design Project Works](https://elimenti.com/pricing/): How an Elimenti website project works: what's included, what moves the price, the steps from first call to launch, timing, payment and ownership.
 
@@ -26,6 +27,11 @@ Key facts:
 - [Boutique Website Design for Independent Shops](https://elimenti.com/boutique-websites/): Websites for independent boutiques and showrooms in the Chicago suburbs: photo-led, fast on phones and linked to your store.
 - [Car Club Website Design](https://elimenti.com/car-club-websites/): Websites for private car clubs and automotive groups, from the studio behind 1 of 1 Car Club's site. Based in Hinsdale, IL, working US-wide.
 - [Classic and Marque Car Club Websites](https://elimenti.com/classic-car-club-websites/): Websites for classic and marque car clubs: chapters, archives, member directories, magazines and events, and moving off Joomla or Drupal to WordPress.
+- [Automotive Website Design for Clubs and Shops](https://elimenti.com/automotive-websites/): Websites for car clubs, car shows, collector car storage and restoration shops, from the studio behind 1 of 1 Car Club's site. Hinsdale, IL, US-wide.
+- [Car Show & Concours Website Design](https://elimenti.com/car-show-websites/): Websites for car shows, concours and cars-and-coffee series: entry pages, spectator info, sponsors, results and an archive. Hinsdale, IL, working US-wide.
+- [Collector Car Storage Website Design](https://elimenti.com/collector-car-storage-websites/): Website design for collector car storage facilities, car condos and garage condos: security and climate pages, unit availability and inquiry forms.
+- [Classic Car Restoration Shop Website Design](https://elimenti.com/classic-car-restoration-websites/): Website design for classic car restoration, restomod and hot rod shops: build pages by stage, fast photo galleries and an inquiry form that takes photos.
+- [Menswear Store & Tailor Website Design](https://elimenti.com/menswear-store-websites/): Website design for independent menswear stores, haberdashers and custom tailors: brands, trunk shows, made-to-measure and appointments. Hinsdale, IL.
 
 ## Areas
 
@@ -55,6 +61,8 @@ Key facts:
 - [Med Spa Website Cost: Prices and an Example](https://elimenti.com/guides/med-spa-website-cost/): What a med spa website costs: market prices, what drives the price, a first-year budget line by line and the patient-privacy items to plan for.
 - [Local SEO for Boutiques in the Suburbs](https://elimenti.com/guides/local-seo-for-boutiques/): Local SEO for an independent boutique: your Google Business Profile, reviews, the pages worth having and the small website fixes that make the phone ring.
 - [Car Club Website Examples: What Works and Why](https://elimenti.com/guides/car-club-website-examples/): Real car club websites, from marque clubs to invitation-only ones: what each does well, one thing it misses, and what your club's site needs.
+- [Car Club Website Builders & Software Compared](https://elimenti.com/guides/car-club-website-builders/): Car club website builders and membership software compared: published prices for RumbleSeat, Middletwin, WildApricot and more, and which fits your club.
+- [Car Show Website Examples: 7 Real Event Sites](https://elimenti.com/guides/car-show-website-examples/): Seven real car show and concours websites, from Pebble Beach to a Hinsdale cars-and-coffee: what each does well and one thing it misses. Checked Nov 2026.
 
 ## Research
 
@@ -62,7 +70,7 @@ Key facts:
 
 ## Studio
 
-- [About Elimenti](https://elimenti.com/about/): Elimenti is a Hinsdale web design studio run by Hashim H., an Illinois engineering student. WordPress and custom-coded sites for independent businesses.
+- [About Elimenti](https://elimenti.com/about/): Elimenti is run by Hashim H., an Illinois engineering student from the Hinsdale area. How the studio works, and why it builds on WordPress or custom code.
 - [Web Design FAQ: Cost, Timing, Ownership](https://elimenti.com/faq/): What drives a website's cost, WordPress or custom-coded, who owns it and how updates work. Straight answers from Elimenti, a Hinsdale web design studio.
 - [Start a Project](https://elimenti.com/contact/): Start a project with Elimenti: send a few lines about your business, see what happens next, and where we work. Or call (630) 509-8822.
 
