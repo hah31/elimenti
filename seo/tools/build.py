@@ -51,6 +51,7 @@ TOWNS = [
     ('Clarendon Hills', 'Clarendon_Hills,_Illinois'),
     ('Elmhurst', 'Elmhurst,_Illinois'),
     ('Glen Ellyn', 'Glen_Ellyn,_Illinois'),
+    ('Lombard', 'Lombard,_Illinois'),
     ('Naperville', 'Naperville,_Illinois'),
 ]
 
@@ -279,7 +280,7 @@ PAGES = [
     # Locations
     dict(path='/chicago-suburbs-web-design/', file='chicago-suburbs-web-design/index.html', lastmod=CARE,
          title='Web Design for Chicago\'s Western Suburbs | Elimenti',
-         description='WordPress and custom-coded sites for independent businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville.',
+         description='WordPress and custom-coded sites for independent businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn, Lombard and Naperville.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/')],
          schema=[service('/chicago-suburbs-web-design/', 'Web design for Chicago\'s western suburbs',
                          'Websites for independent businesses across Chicago\'s western suburbs, built on WordPress or custom-coded.')]),
