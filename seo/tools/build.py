@@ -224,7 +224,7 @@ RESEARCH_SCHEMA = [
 IND = '/custom-websites/'
 
 PAGES = [
-    dict(path='/', file='index.html', lastmod=NEW,
+    dict(path='/', file='index.html', lastmod=CARE,
          title='High-End Web Design in the Chicago Suburbs | Elimenti',
          description='Websites designed, written and built for independent businesses in Hinsdale and Chicago\'s western suburbs, on WordPress you can edit or custom-coded.',
          crumbs=None,
@@ -267,19 +267,19 @@ PAGES = [
                   'isPartOf': {'@id': f'{SITE}/#website'}}]),
 
     # Locations
-    dict(path='/chicago-suburbs-web-design/', file='chicago-suburbs-web-design/index.html', lastmod=NEW,
+    dict(path='/chicago-suburbs-web-design/', file='chicago-suburbs-web-design/index.html', lastmod=CARE,
          title='Web Design for Chicago\'s Western Suburbs | Elimenti',
          description='WordPress and custom-coded sites for independent businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/')],
          schema=[service('/chicago-suburbs-web-design/', 'Web design for Chicago\'s western suburbs',
                          'Websites for independent businesses across Chicago\'s western suburbs, built on WordPress or custom-coded.')]),
-    dict(path='/hinsdale-web-design/', file='hinsdale-web-design/index.html', lastmod=NEW,
+    dict(path='/hinsdale-web-design/', file='hinsdale-web-design/index.html', lastmod=CARE,
          title='Web Design in Hinsdale, IL | WordPress & Custom | Elimenti',
          description='Websites for Hinsdale boutiques, clinics, builders and firms, on WordPress or custom-coded, from a studio based in Hinsdale with real work in town.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/'), ('Hinsdale', '/hinsdale-web-design/')],
          schema=[service('/hinsdale-web-design/', 'Web design in Hinsdale, IL',
                          'Websites for Hinsdale boutiques, clinics, builders and professional firms, built on WordPress or custom-coded.', area=[TOWN['Hinsdale']])]),
-    dict(path='/oak-brook-web-design/', file='oak-brook-web-design/index.html', lastmod=CHANGED,
+    dict(path='/oak-brook-web-design/', file='oak-brook-web-design/index.html', lastmod=CARE,
          title='Web Designer in Oak Brook, IL | Elimenti',
          description='Websites for Oak Brook firms, clinics and shops, on WordPress or custom-coded, from a studio next door in Hinsdale.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/'), ('Oak Brook', '/oak-brook-web-design/')],
