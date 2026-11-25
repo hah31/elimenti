@@ -4,7 +4,7 @@ Updated November 25, 2026. Ordered by how much each one moves Google and AI answ
 
 ## 1. Finish and verify the Google Business Profile, then ask for reviews
 
-Google's map results, Gemini and Google's AI answers lean on Business Profile data. On November 25 the Hinsdale and Oak Brook pages sat on page 2 of Google (#14 to #17), every one of those searches showed a map pack without Elimenti, and Gemini named four other firms for "best web designers in Hinsdale". No page change substitutes for a verified profile with reviews.
+Google's map results, Gemini and Google's AI answers lean on Business Profile data. On November 25 the Hinsdale and Oak Brook pages sat on page 2 of Google (#14 to #17), every one of those searches showed a map pack without Elimenti, and Gemini named four other firms for "best web designers in Hinsdale". No page change substitutes for a verified profile with reviews. It's also the strongest fix for the name: on November 25 the search "elimenti web design" didn't return elimenti.com in Google's top 10, because Google reads "elimenti" as a misspelling of "element". A verified profile under the exact name is how Google learns Elimenti is a business, which matters most for referrals who search the name they heard.
 
 - Copy for the profile: `seo/off-site-kit.md` section 1. **It was rewritten on November 25**: the earlier version listed prices and said "high-end businesses" and "no page builders". Use the current file.
 - Review requests: section 2 of the same file, in the order listed.
