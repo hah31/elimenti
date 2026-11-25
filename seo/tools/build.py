@@ -71,6 +71,10 @@ def city(name, wiki):
 SAME_AS = []
 
 AREA_SERVED = [city(n, w) for n, w in TOWNS] + [
+    # Hinsdale, Oak Brook, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville are in DuPage County
+    # (Western Springs is Cook). People ask search engines and AI assistants by county.
+    {'@type': 'AdministrativeArea', 'name': 'DuPage County, Illinois',
+     'sameAs': 'https://en.wikipedia.org/wiki/DuPage_County,_Illinois'},
     {'@type': 'AdministrativeArea', 'name': 'Chicago metropolitan area',
      'sameAs': 'https://en.wikipedia.org/wiki/Chicago_metropolitan_area'},
     {'@type': 'Country', 'name': 'United States'},
@@ -80,6 +84,10 @@ BUSINESS = {
     '@type': 'LocalBusiness',
     '@id': f'{SITE}/#business',
     'name': 'Elimenti',
+    # Google corrects the search "elimenti" to another spelling (checked 2026-11-18 and 2026-11-25).
+    # "Step One Sites" (the name before April 27, 2026) belongs here only once steponesites.com
+    # redirects to elimenti.com; until then it still advertises an offer Elimenti doesn't sell.
+    'alternateName': ['Elimenti Web Design'],
     'url': f'{SITE}/',
     'logo': f'{SITE}/assets/img/logo.png',
     'image': f'{SITE}/assets/img/og/home.png',
@@ -616,8 +624,10 @@ def faq_nodes(main_html, path):
         q = item.find(['h2', 'h3'])
         answer = ' '.join(p.get_text(' ', strip=True) for p in item.find_all('p'))
         if q and answer:
+            # get_text(' ') puts a space before punctuation that follows a link ("the cost guide ."); drop it.
+            text = re.sub(r'\s+([,.;:!?])', r'\1', re.sub(r'\s+', ' ', answer))
             items.append({'@type': 'Question', 'name': q.get_text(' ', strip=True),
-                          'acceptedAnswer': {'@type': 'Answer', 'text': re.sub(r'\s+', ' ', answer)}})
+                          'acceptedAnswer': {'@type': 'Answer', 'text': text}})
     if not items:
         return []
     return [{'@type': 'FAQPage', '@id': f'{SITE}{path}#faq', 'mainEntity': items}]
