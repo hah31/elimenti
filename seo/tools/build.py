@@ -86,9 +86,9 @@ BUSINESS = {
     '@id': f'{SITE}/#business',
     'name': 'Elimenti',
     # Google corrects the search "elimenti" to another spelling (checked 2026-11-18 and 2026-11-25).
-    # "Step One Sites" (the name before April 27, 2026) belongs here only once steponesites.com
-    # redirects to elimenti.com; until then it still advertises an offer Elimenti doesn't sell.
-    'alternateName': ['Elimenti Web Design'],
+    # Step One Sites is the studio's name before April 27, 2026; steponesites.com redirects here
+    # since 2026-11-25 (hah31/steponesites PR #7).
+    'alternateName': ['Elimenti Web Design', 'Step One Sites'],
     'url': f'{SITE}/',
     'logo': f'{SITE}/assets/img/logo.png',
     'image': f'{SITE}/assets/img/og/home.png',
