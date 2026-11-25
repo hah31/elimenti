@@ -32,6 +32,8 @@ UPDATED = '2026-11-05'
 CHANGED = '2026-11-08'
 # Pages added or changed in the niche-cluster pass get this as lastmod.
 NEW = '2026-11-18'
+# Pages added or changed in the WordPress-care and AI-search pass get this as lastmod.
+CARE = '2026-11-25'
 
 PHONE_DISPLAY = '(630) 509-8822'
 PHONE_TEL = '+16305098822'
@@ -69,6 +71,10 @@ def city(name, wiki):
 SAME_AS = []
 
 AREA_SERVED = [city(n, w) for n, w in TOWNS] + [
+    # Hinsdale, Oak Brook, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville are in DuPage County
+    # (Western Springs is Cook). People ask search engines and AI assistants by county.
+    {'@type': 'AdministrativeArea', 'name': 'DuPage County, Illinois',
+     'sameAs': 'https://en.wikipedia.org/wiki/DuPage_County,_Illinois'},
     {'@type': 'AdministrativeArea', 'name': 'Chicago metropolitan area',
      'sameAs': 'https://en.wikipedia.org/wiki/Chicago_metropolitan_area'},
     {'@type': 'Country', 'name': 'United States'},
@@ -78,6 +84,10 @@ BUSINESS = {
     '@type': 'LocalBusiness',
     '@id': f'{SITE}/#business',
     'name': 'Elimenti',
+    # Google corrects the search "elimenti" to another spelling (checked 2026-11-18 and 2026-11-25).
+    # "Step One Sites" (the name before April 27, 2026) belongs here only once steponesites.com
+    # redirects to elimenti.com; until then it still advertises an offer Elimenti doesn't sell.
+    'alternateName': ['Elimenti Web Design'],
     'url': f'{SITE}/',
     'logo': f'{SITE}/assets/img/logo.png',
     'image': f'{SITE}/assets/img/og/home.png',
@@ -222,7 +232,7 @@ RESEARCH_SCHEMA = [
 IND = '/custom-websites/'
 
 PAGES = [
-    dict(path='/', file='index.html', lastmod=NEW,
+    dict(path='/', file='index.html', lastmod=CARE,
          title='High-End Web Design in the Chicago Suburbs | Elimenti',
          description='Websites designed, written and built for independent businesses in Hinsdale and Chicago\'s western suburbs, on WordPress you can edit or custom-coded.',
          crumbs=None,
@@ -236,7 +246,7 @@ PAGES = [
          crumbs=[('Custom websites', '/custom-websites/')],
          schema=[service('/custom-websites/', 'Custom website design and build',
                          'Websites designed for one business and built one of two ways: on WordPress, so the client can edit it, or custom-coded in HTML, CSS and JavaScript. Copywriting, a basic SEO setup and up to three rounds of revisions are included. The client owns the site after final payment.')]),
-    dict(path='/wordpress-websites/', file='wordpress-websites/index.html', lastmod=NEW,
+    dict(path='/wordpress-websites/', file='wordpress-websites/index.html', lastmod=CARE,
          title='WordPress Website Design for Chicago Businesses | Elimenti',
          description='Custom-designed WordPress websites for independent businesses in Chicago and the suburbs: your own login, a launch walkthrough, updates through Site Care.',
          crumbs=[('WordPress websites', '/wordpress-websites/')],
@@ -249,13 +259,15 @@ PAGES = [
          schema=[service('/website-redesign/', 'Website redesign',
                          'Redesign of an existing business website on the same domain: a review of the current site, new design, rewritten copy and a rebuild on WordPress or custom-coded, with permanent redirects from old page addresses. Copywriting and a basic SEO setup are included.',
                          audience='Independent businesses with an existing website')]),
-    dict(path='/site-care/', file='site-care/index.html', lastmod=NEW,
-         title='Website Care and Maintenance, Chicago Suburbs | Elimenti',
-         description='Site Care keeps your website current: a monthly plan or hourly edits, five-business-day turnaround, with WordPress updates and backups on the monthly plan.',
+    # Retitled 2026-11-25 for "WordPress maintenance" searches: ChatGPT left Elimenti out of a DuPage
+    # County WordPress maintenance answer and Bing's results for that search were off-topic (seo/baseline-2026-11-25.md).
+    dict(path='/site-care/', file='site-care/index.html', lastmod=CARE,
+         title='WordPress & Website Maintenance, DuPage County | Elimenti',
+         description='WordPress maintenance and website care for Hinsdale, DuPage County and the Chicago suburbs: monthly plan or hourly edits, five-business-day turnaround.',
          crumbs=[('Site Care', '/site-care/')],
-         schema=[service('/site-care/', 'Site Care: website care and maintenance',
-                         'Updates and changes to a live website, turned around in five business days. Covers WordPress and custom-coded sites built by Elimenti and existing WordPress sites. On WordPress sites, the monthly plan also covers WordPress core, theme and plugin updates and backups.',
-                         service_type='Website maintenance')]),
+         schema=[service('/site-care/', 'Site Care: WordPress maintenance and website care',
+                         'WordPress maintenance and website care: updates and changes to a live website, turned around in five business days. Covers WordPress and custom-coded sites built by Elimenti and existing WordPress sites built by other firms, including page-builder sites made with Elementor. On WordPress sites, the monthly plan also covers WordPress core, theme and plugin updates and backups.',
+                         service_type='WordPress and website maintenance')]),
     dict(path='/pricing/', file='pricing/index.html', lastmod=CHANGED, nav='pricing',
          title='How a Web Design Project Works | Elimenti',
          description='How an Elimenti website project works: what\'s included, what moves the price, the steps from first call to launch, timing, payment and ownership.',
@@ -265,19 +277,19 @@ PAGES = [
                   'isPartOf': {'@id': f'{SITE}/#website'}}]),
 
     # Locations
-    dict(path='/chicago-suburbs-web-design/', file='chicago-suburbs-web-design/index.html', lastmod=NEW,
+    dict(path='/chicago-suburbs-web-design/', file='chicago-suburbs-web-design/index.html', lastmod=CARE,
          title='Web Design for Chicago\'s Western Suburbs | Elimenti',
          description='WordPress and custom-coded sites for independent businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/')],
          schema=[service('/chicago-suburbs-web-design/', 'Web design for Chicago\'s western suburbs',
                          'Websites for independent businesses across Chicago\'s western suburbs, built on WordPress or custom-coded.')]),
-    dict(path='/hinsdale-web-design/', file='hinsdale-web-design/index.html', lastmod=NEW,
+    dict(path='/hinsdale-web-design/', file='hinsdale-web-design/index.html', lastmod=CARE,
          title='Web Design in Hinsdale, IL | WordPress & Custom | Elimenti',
          description='Websites for Hinsdale boutiques, clinics, builders and firms, on WordPress or custom-coded, from a studio based in Hinsdale with real work in town.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/'), ('Hinsdale', '/hinsdale-web-design/')],
          schema=[service('/hinsdale-web-design/', 'Web design in Hinsdale, IL',
                          'Websites for Hinsdale boutiques, clinics, builders and professional firms, built on WordPress or custom-coded.', area=[TOWN['Hinsdale']])]),
-    dict(path='/oak-brook-web-design/', file='oak-brook-web-design/index.html', lastmod=CHANGED,
+    dict(path='/oak-brook-web-design/', file='oak-brook-web-design/index.html', lastmod=CARE,
          title='Web Designer in Oak Brook, IL | Elimenti',
          description='Websites for Oak Brook firms, clinics and shops, on WordPress or custom-coded, from a studio next door in Hinsdale.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/'), ('Oak Brook', '/oak-brook-web-design/')],
@@ -368,7 +380,7 @@ PAGES = [
                          audience='Independent menswear stores and tailors')]),
 
     # Guides
-    dict(path='/guides/', file='guides/index.html', lastmod=NEW,
+    dict(path='/guides/', file='guides/index.html', lastmod=CARE,
          title='Website Guides for Business Owners | Elimenti',
          description='Plain-English website guides for independent business owners, grouped by question: cost, timing, platforms, hiring, redesigns and local search.',
          crumbs=[('Guides', '/guides/')],
@@ -378,7 +390,7 @@ PAGES = [
                       '/guides/website-cost-western-suburbs/', '/guides/med-spa-website-cost/', '/guides/how-long-does-a-website-take/',
                       '/guides/wix-squarespace-wordpress-or-custom/', '/guides/squarespace-vs-custom-website/',
                       '/guides/questions-to-ask-a-web-designer/', '/guides/web-designer-disappeared/',
-                      '/guides/website-redesign-vs-refresh/', '/guides/what-makes-a-website-look-high-end/',
+                      '/guides/taking-over-a-wordpress-site/', '/guides/website-redesign-vs-refresh/', '/guides/what-makes-a-website-look-high-end/',
                       '/guides/local-seo-for-boutiques/', '/guides/car-club-website-examples/',
                       '/guides/car-club-website-builders/', '/guides/car-show-website-examples/',
                       '/research/western-suburbs-website-report-2026/')]}]),
@@ -418,13 +430,22 @@ PAGES = [
          schema=[article('/guides/questions-to-ask-a-web-designer/', 'Questions to ask a web designer before you sign',
                          'Fourteen questions to ask a web designer before you sign, what a good answer sounds like, the red flags, and how Elimenti answers each one.',
                          TODAY, CHANGED)]),
-    dict(path='/guides/web-designer-disappeared/', file='guides/web-designer-disappeared/index.html', lastmod=UPDATED, og_type='article',
+    dict(path='/guides/web-designer-disappeared/', file='guides/web-designer-disappeared/index.html', lastmod=CARE, og_type='article',
          title='What to Do If Your Web Designer Disappears | Elimenti',
          description='Web designer disappeared? Find who holds your domain, hosting and logins, get each one back, and keep the handoff list that stops it happening again.',
          crumbs=[('Guides', '/guides/'), ('If your web designer disappears', '/guides/web-designer-disappeared/')],
          schema=[article('/guides/web-designer-disappeared/', 'What to do if your web designer disappears',
                          'Web designer disappeared? Find who holds your domain, hosting and logins, get each one back, and keep the handoff list that stops it happening again.',
                          TODAY, UPDATED)]),
+    # Added 2026-11-25: ChatGPT named four other providers for "who can take over my WordPress site"
+    # in DuPage County; this answers that question from the ABN takeover. See seo/baseline-2026-11-25.md.
+    dict(path='/guides/taking-over-a-wordpress-site/', file='guides/taking-over-a-wordpress-site/index.html', lastmod=CARE, og_type='article',
+         title='Taking Over a WordPress Site Someone Else Built | Elimenti',
+         description='How a WordPress takeover works: what to hand a new developer, what they check before changing anything, the red flags, and when a rebuild costs less.',
+         crumbs=[('Guides', '/guides/'), ('Taking over a WordPress site', '/guides/taking-over-a-wordpress-site/')],
+         schema=[article('/guides/taking-over-a-wordpress-site/', 'Taking over a WordPress site someone else built',
+                         'What to hand a new WordPress developer, what a careful one checks before changing anything, the first updates, red flags and when a rebuild costs less.',
+                         CARE)]),
     dict(path='/guides/website-redesign-vs-refresh/', file='guides/website-redesign-vs-refresh/index.html', lastmod=NEW, og_type='article',
          title='Website Redesign or Refresh? How to Tell | Elimenti',
          description='Redesign or refresh? A fifteen-minute scorecard for your own website, what each result means, and how each option is priced and how long it takes.',
@@ -518,7 +539,7 @@ PAGES = [
                             {'@type': 'ClothingStore', 'name': 'Burdi Clothing', 'legalName': 'Burdi European Boutique Inc.', 'url': 'https://burdiclothing.com/',
                              'address': {'@type': 'PostalAddress', 'addressLocality': 'Hinsdale', 'addressRegion': 'IL', 'addressCountry': 'US'}},
                             ['/assets/img/work/burdi-clothing-desktop-1200.webp', '/assets/img/work/burdi-clothing-phone.webp'])]),
-    dict(path='/work/abn-construction-group/', file='work/abn-construction-group/index.html', lastmod=TODAY, nav='work',
+    dict(path='/work/abn-construction-group/', file='work/abn-construction-group/index.html', lastmod=CARE, nav='work',
          title='ABN Construction Website Care, Lombard IL | Elimenti',
          description='Elimenti maintains and edits ABN Construction Group\'s existing WordPress site, including a new Automotive section, for the Lombard general contractor.',
          crumbs=[('Work', '/work/'), ('ABN Construction Group', '/work/abn-construction-group/')],
@@ -543,7 +564,7 @@ PAGES = [
                   'affiliation': {'@type': 'CollegeOrUniversity', 'name': 'University of Illinois Urbana-Champaign',
                                   'sameAs': 'https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign'},
                   'knowsAbout': ['Web design', 'WordPress', 'Copywriting', 'Website performance']}]),
-    dict(path='/faq/', file='faq/index.html', lastmod=CHANGED, nav='faq',
+    dict(path='/faq/', file='faq/index.html', lastmod=CARE, nav='faq',
          title='Web Design FAQ: Cost, Timing, Ownership | Elimenti',
          description='What drives a website\'s cost, WordPress or custom-coded, who owns it and how updates work. Straight answers from Elimenti, a Hinsdale web design studio.',
          crumbs=[('FAQ', '/faq/')], schema=[]),
@@ -612,8 +633,10 @@ def faq_nodes(main_html, path):
         q = item.find(['h2', 'h3'])
         answer = ' '.join(p.get_text(' ', strip=True) for p in item.find_all('p'))
         if q and answer:
+            # get_text(' ') puts a space before punctuation that follows a link ("the cost guide ."); drop it.
+            text = re.sub(r'\s+([,.;:!?])', r'\1', re.sub(r'\s+', ' ', answer))
             items.append({'@type': 'Question', 'name': q.get_text(' ', strip=True),
-                          'acceptedAnswer': {'@type': 'Answer', 'text': re.sub(r'\s+', ' ', answer)}})
+                          'acceptedAnswer': {'@type': 'Answer', 'text': text}})
     if not items:
         return []
     return [{'@type': 'FAQPage', '@id': f'{SITE}{path}#faq', 'mainEntity': items}]

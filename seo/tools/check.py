@@ -171,7 +171,8 @@ for path, html in pages.items():
     visible_faq = {}
     for item in soup.select('main .faq-item'):
         q = item.find(['h2', 'h3'])
-        visible_faq[q.get_text(' ', strip=True)] = re.sub(r'\s+', ' ', ' '.join(p.get_text(' ', strip=True) for p in item.find_all('p')))
+        # Same normalization as build.py's faq_nodes: collapse whitespace, no space before punctuation.
+        visible_faq[q.get_text(' ', strip=True)] = re.sub(r'\s+([,.;:!?])', r'\1', re.sub(r'\s+', ' ', ' '.join(p.get_text(' ', strip=True) for p in item.find_all('p'))))
     ld_faq = {}
     for sc in soup.find_all('script', type='application/ld+json'):
         try:

@@ -40,6 +40,13 @@ A monthly hand check of whether AI answer engines mention Elimenti, and which so
 
 | Date | Engine | Prompt | Mentioned | Position | Sources cited |
 |---|---|---|---|---|---|
+| 2026-11-25 | ChatGPT (logged out) | "Who are the best web designers in Hinsdale, IL?" (close to P1) | Yes | 1 | elimenti.com; answer repeated a stale "Projects start at $4,000" and "hand-coded"; not in the map panel |
+| 2026-11-25 | ChatGPT (logged out) | "I run a private car club. Who should build our website?" (close to P2/P6) | Yes | 1 | elimenti.com `/car-club-websites/` |
+| 2026-11-25 | ChatGPT (logged out) | "Who designs websites for med spas in Hinsdale or Oak Brook, Illinois?" (close to P4) | Yes | 1 | elimenti.com `/med-spa-websites/`; stale "$4,000" again |
+| 2026-11-25 | ChatGPT (logged out) | "Who can take over updates and maintenance on my WordPress site? I'm in DuPage County, Illinois." (close to P9) | No | | Named Wheaton Website Services, DuPage Web Design, Zealth Digital, WP Sensi |
+| 2026-11-25 | ChatGPT (logged out) | "I need a web designer for my business in Oak Brook, IL. Who do you recommend?" | No | | Named five firms with Oak Brook addresses and map reviews |
+| 2026-11-25 | Gemini | P1 | No | | Named Straight North, VisualFizz, CyberOptik, Osky Blue |
+| 2026-11-25 | Perplexity | P1 | | | Not tested: asked for a sign-up |
 | | ChatGPT | P1 | | | |
 | | Perplexity | P1 | | | |
 | | Gemini | P1 | | | |

@@ -1,60 +1,74 @@
 # To do: things only Hashim can do
 
-From the November 2026 SEO pass. Each item is something I couldn't do or verify from the repo or the web.
+Updated November 25, 2026. Ordered by how much each one moves Google and AI answers, going by what was measured that day (`seo/baseline-2026-11-25.md`). Items 1, 2 and 5 need accounts only you can create or sign in to.
 
-## 1. Send your profile URLs for `sameAs`
+## 1. Finish and verify the Google Business Profile, then ask for reviews
 
-No Elimenti profile URL appears anywhere in the repo, so the LocalBusiness schema has no `sameAs` yet. Search engines use `sameAs` to connect the website to the same business elsewhere. Send whichever of these exist, as the public URL a stranger would open:
+Google's map results, Gemini and Google's AI answers lean on Business Profile data. On November 25 the Hinsdale and Oak Brook pages sat on page 2 of Google (#14 to #17), every one of those searches showed a map pack without Elimenti, and Gemini named four other firms for "best web designers in Hinsdale". No page change substitutes for a verified profile with reviews.
 
-- [ ] Google Business Profile: in the profile, **Share profile** → copy the link (looks like `https://share.google/...` or `https://maps.app.goo.gl/...`)
-- [ ] LinkedIn company page (`https://www.linkedin.com/company/...`)
-- [ ] Instagram (`https://www.instagram.com/...`)
-- [ ] Clutch (`https://clutch.co/profile/...`)
-- [ ] Yelp (`https://www.yelp.com/biz/...`)
-- [ ] Bing Places (the public Bing Maps link to the listing)
+- Copy for the profile: `seo/off-site-kit.md` section 1. **It was rewritten on November 25**: the earlier version listed prices and said "high-end businesses" and "no page builders". Use the current file.
+- Review requests: section 2 of the same file, in the order listed.
 
-Each one goes in the `SAME_AS` list near the top of `seo/tools/build.py`; then run `python3 seo/tools/build.py`. Only add a profile that's live, public and clearly Elimenti's.
+## 2. The listings ChatGPT reads: Bing Places, Yelp, then Apple
 
-## 2. Turn the Glen Ellyn redirect into a real 301 (Cloudflare)
+On November 25 ChatGPT named Elimenti first for Hinsdale, car clubs and med spas, but its map panel never showed Elimenti, and for Oak Brook it named only firms with map listings and reviews. Yelp now licenses its business data to OpenAI (Axios, July 23, 2026), and Bing's results feed ChatGPT's search.
 
-`/glen-ellyn-web-design/` redirects with a meta refresh because GitHub Pages can't send a 301. Cloudflare can, because elimenti.com runs through it: on November 5, 2026 the site answered with `server: cloudflare`, so the domain is proxied (orange cloud), which a Redirect Rule needs. Leave the stub file in the repo as a fallback.
+Steps are in `seo/off-site-kit.md` section 3: Bing Places (row 1, import from the Business Profile once it's verified), Yelp (row 3, hide the address), Apple Business Connect (conditional row). Add each profile URL to `SAME_AS` in `seo/tools/build.py` when it's live.
 
-**Check first:** `seo/cloudflare-redirects.md` (merged in PR #34 this morning) sets up three redirect rules, and its Rule 2 is this same Glen Ellyn redirect. If you've already followed that file, this is done; don't add it twice. If you're doing that file now, follow it instead of the steps below, because there the rule order matters (first match wins). The steps below are for this one rule on its own, using the same expression as that file.
+## 3. Point steponesites.com at elimenti.com
 
-1. Log in at **dash.cloudflare.com** and click the **elimenti.com** domain.
-2. In the left sidebar, open **Rules** → **Overview**.
-3. Click **Create rule**, then choose **Redirect Rule**.
-4. **Rule name:** `Glen Ellyn page to suburbs hub`
-5. Under **If incoming requests match…**, choose **Custom filter expression**.
-6. Click **Edit expression** and paste:
-   ```
-   (http.host in {"elimenti.com" "www.elimenti.com"} and http.request.uri.path in {"/glen-ellyn-web-design/" "/glen-ellyn-web-design" "/glen-ellyn-web-design/index.html"})
-   ```
-7. Under **Then…**: **Type** `Static`, **URL** `https://elimenti.com/chicago-suburbs-web-design/`, **Status code** `301`. Leave **Preserve query string** off.
-8. Click **Deploy**. If you later add other redirect rules, keep this one above any catch-all www/http rule.
-9. Check it from any terminal (on Windows PowerShell, type `curl.exe` instead of `curl`):
-   ```
-   curl -sI https://elimenti.com/glen-ellyn-web-design/
-   ```
-   You want `HTTP/2 301` and `location: https://elimenti.com/chicago-suburbs-web-design/`.
+steponesites.com is still live and crawlable. Its title is "Step One Sites — Hand-Coded Websites for DuPage County Small Businesses", it sells sites at $175 a month with a two-week launch, an offer Elimenti doesn't have, and its canonical points at stepone.sites, a domain that doesn't exist. Search engines and AI assistants treat it as a separate, current business.
 
-The click path follows Cloudflare's "Create a redirect rule in the dashboard" page (last updated May 5, 2026). `seo/cloudflare-redirects.md` sends this URL to the `#glen-ellyn` section of the same page instead; either target works for search, since Google ignores the part after `#`.
+In the `hah31/steponesites` repo, replace `index.html`, `portfolio.html` and `pricing.html` with the three files below, delete `sitemap.xml` and keep `CNAME`. Each file sends visitors and search engines to the matching elimenti.com page. (Or open a session with that repo attached and ask Claude to do it.)
 
-## 3. Industry pages that need a real project or first-hand detail
+`index.html`:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Step One Sites is now Elimenti</title>
+    <link rel="canonical" href="https://elimenti.com/">
+    <meta http-equiv="refresh" content="0; url=https://elimenti.com/">
+</head>
+<body>
+    <p>Step One Sites is now Elimenti: <a href="https://elimenti.com/">https://elimenti.com/</a></p>
+</body>
+</html>
+```
 
-The brief allowed one sentence from the report on each of these if the report broke results out by business type with at least five businesses of that type. It doesn't: the downloadable CSV has no business-type breakdown, and the site-level data only has broad sectors ("Health, wellness and beauty", "Home and building", "Professional services"), none of which is one of these. So none of these pages changed. Each needs a real project, or something you've seen first-hand working with that kind of business:
+`portfolio.html` and `pricing.html`: the same file with `https://elimenti.com/` replaced by `https://elimenti.com/work/` and `https://elimenti.com/pricing/` (three places each).
 
-- [ ] `/med-spa-websites/`: no med spa client or case study yet
-- [ ] `/interior-designer-websites/`: no interior designer client (it links the Aamineez portfolio case study, which is the closest work)
-- [ ] `/custom-home-builder-websites/`: no home builder client (links ABN Construction Group, a general contractor)
-- [ ] `/landscape-design-websites/`: no landscape client (also links ABN)
+After it's live, add `'Step One Sites'` to `alternateName` in `BUSINESS` in `seo/tools/build.py` (the comment there explains why it waits) and run the build.
 
-The fastest real fix is one project, even small, in any of these, written up the way the 1 of 1 case study is.
+## 4. Change one sentence on hashim-hassan.com
 
-## 4. Ask Google to index the new and changed pages
+On November 25 ChatGPT described Elimenti's sites as "hand-coded". The one public page that still says that is the Elimenti entry on hashim-hassan.com:
 
-Paste each URL in `seo/request-indexing.md` into Search Console's URL Inspection, in order, and click **Request indexing**.
+> I hand-code static websites for local businesses that compete on quality and design, and I maintain existing sites for others.
 
-## 5. Optional
+Suggested replacement:
 
-- [ ] If Bing Webmaster Tools isn't verified yet, verify it (it can import from Search Console). The IndexNow submissions this pass sets up show there under **IndexNow**.
+> I design and build websites for local businesses that compete on quality and design, on WordPress or custom-coded, and I maintain existing WordPress sites for others.
+
+## 5. Give the browser's Google account read access to Search Console
+
+Search Console for elimenti.com is on a different Google account from the one signed in to the Claude desktop app's browser, so the November 25 positions come from live searches, which shift with location. In Search Console, as the owner: **Settings → Users and permissions → Add user**, enter the Google account that's signed in to that browser, choose **Restricted** (view-only), **Add**. Future checks can then read real queries, impressions and positions.
+
+## 6. Request indexing for the pages that changed (optional)
+
+The sitemap's dates and the new internal links will get these recrawled anyway; requesting indexing in Search Console's URL Inspection speeds it up. In this order:
+
+1. https://elimenti.com/site-care/
+2. https://elimenti.com/guides/taking-over-a-wordpress-site/
+3. https://elimenti.com/faq/
+4. https://elimenti.com/
+5. https://elimenti.com/hinsdale-web-design/
+6. https://elimenti.com/chicago-suburbs-web-design/
+7. https://elimenti.com/oak-brook-web-design/
+
+## 7. Still open from earlier passes
+
+- **Glen Ellyn 301 (Cloudflare).** On November 25, `/glen-ellyn-web-design/` still answered 200 (the meta-refresh stub). Steps: `seo/cloudflare-redirects.md`, Rule 2.
+- **Industry pages that need a real project:** `/med-spa-websites/`, `/interior-designer-websites/`, `/custom-home-builder-websites/`, `/landscape-design-websites/`. One real project in any of them, written up like the 1 of 1 case study, is the fix.

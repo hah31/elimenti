@@ -74,7 +74,7 @@ Business Profile → Add update. Paste the text, add the button and link. One a 
 1. **We tested 150 local business websites on a phone.** The median scored 46 out of 100 for mobile speed. The full report, with what to fix first, is free to read. Button: Learn more → `/research/western-suburbs-website-report-2026/`
 2. **Can your customers call you from your website?** 19% of the local sites we checked that showed a phone number didn't make it tappable. It's a two-minute fix. Button: Learn more → `/research/western-suburbs-website-report-2026/`
 3. **Redesign or refresh?** Our 15-minute scorecard tells you which your website needs, and how your site compares with its neighbors. Button: Learn more → `/guides/website-redesign-vs-refresh/`
-4. **Wix, Squarespace, WordPress or custom?** An honest comparison for high-end businesses, with what local businesses actually use. Button: Learn more → `/guides/wix-squarespace-wordpress-or-custom/`
+4. **Wix, Squarespace, WordPress or custom?** An honest comparison for independent businesses, with what local businesses actually use. Button: Learn more → `/guides/wix-squarespace-wordpress-or-custom/`
 5. **Before you sign with a web designer,** ask these fourteen questions, starting with whose name your domain will be in. Button: Learn more → `/guides/questions-to-ask-a-web-designer/`
 6. **Web designer stopped answering?** Your site isn't lost. Here's how to find who holds your domain, hosting and logins, and get each one back. Button: Learn more → `/guides/web-designer-disappeared/`
 7. **How long does a custom website take?** Most of our projects launch four to six weeks after kickoff. Here's what each stage waits on and what to have ready. Button: Learn more → `/guides/how-long-does-a-website-take/`

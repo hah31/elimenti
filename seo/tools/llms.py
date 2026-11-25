@@ -70,7 +70,7 @@ def render():
         'Key facts:',
         '',
         '- Every project, on WordPress or custom-coded, is scoped individually. The exact price and timeline come in a written proposal before any work starts.',
-        '- Site Care: a monthly plan or hourly edits, with a five-business-day turnaround.',
+        '- Site Care: WordPress maintenance and website care, on a monthly plan or hourly edits, with a five-business-day turnaround. It covers sites Elimenti builds and existing WordPress sites built by others, including Elementor sites.',
         f"- Founder: {biz['founder']['name']}",
         f'- Contact: {build.PHONE_DISPLAY}, {build.EMAIL}, or {SITE}/contact/',
     ]

@@ -1,6 +1,8 @@
 # Elimenti off-site kit
 
-Everything here is final copy. Your job is copy, paste, click. Do the sections in the order of `REPORT.md` → "Off-site actions, ranked".
+Everything here is final copy. Your job is copy, paste, click.
+
+**Updated November 25, 2026** to match the November decisions: no Elimenti prices, Hinsdale is the only base, WordPress or custom-coded (page builders decided per project), and "high-end" describes the work, never the client. The order to do things in is now in `seo/todo-hashim.md`.
 
 **Use these values everywhere, character for character** (consistency across listings is what makes Google and Bing trust the business):
 
@@ -11,16 +13,16 @@ Everything here is final copy. Your job is copy, paste, click. Do the sections i
 | Website | https://elimenti.com/ |
 | Email | hello@elimenti.com |
 | Address | **Hidden.** Service-area business, no storefront. Never enter a street address that will be shown publicly. |
-| Service areas | Hinsdale, IL · Oak Brook, IL · Burr Ridge, IL · Western Springs, IL · Clarendon Hills, IL · Elmhurst, IL · Glen Ellyn, IL · Naperville, IL |
+| Service areas | Hinsdale, IL · DuPage County, IL · Oak Brook, IL · Burr Ridge, IL · Western Springs, IL · Clarendon Hills, IL · Elmhurst, IL · Glen Ellyn, IL · Naperville, IL · Lombard, IL |
 | Category | Website designer (where a directory has it); otherwise "Web Design" |
 | Founded by | Hashim H. |
-| Price | Projects from $3,000 |
+| Price | **Not listed.** Every project is scoped individually; the price comes in the written proposal. Leave price fields blank wherever a directory allows it. |
 
-**Short description (147 characters):**
-> Custom-coded websites for high-end independent businesses in Hinsdale, Oak Brook and Chicago's western suburbs. No templates. Projects from $3,000.
+**Short description (145 characters):**
+> Websites for independent businesses in Hinsdale, DuPage County and Chicago's western suburbs, on WordPress or custom-coded. Copywriting included.
 
-**Medium description (288 characters):**
-> Elimenti designs and custom-codes websites for high-end independent businesses in Chicago's western suburbs. Every site is designed from scratch, with copywriting, basic SEO and three revision rounds included. Projects start at $3,000. Site Care after launch: $175 a month or $85 an hour.
+**Medium description (307 characters):**
+> Elimenti designs, writes and builds websites for independent businesses in Hinsdale, DuPage County and Chicago's western suburbs, on WordPress you can edit or custom-coded. Copywriting, basic SEO and up to three revision rounds are included. Site Care handles WordPress maintenance and changes after launch.
 
 ---
 
@@ -33,7 +35,7 @@ Everything here is final copy. Your job is copy, paste, click. Do the sections i
 - **Don't add** "Internet marketing service", "Marketing agency" or "Web hosting company". You do basic SEO setup only and don't host, so those categories would overclaim and can draw a suspension.
 
 ### Service areas
-Add all eight towns from the table above (Google allows up to 20). Keep Hinsdale and Oak Brook first.
+Add every area from the table above (Google allows up to 20). Keep Hinsdale first.
 
 ### Website field
 `https://elimenti.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp`
@@ -43,32 +45,33 @@ Add all eight towns from the table above (Google allows up to 20). Keep Hinsdale
 
 | Service | Description (paste) |
 |---|---|
-| Custom website design | Websites designed from scratch and custom-coded, with copywriting, basic SEO and up to three revision rounds. From $3,000. |
-| Website redesign | Moving off Wix, Squarespace or an aging WordPress theme. Rebuilt from scratch in custom code; your domain comes with you. |
-| Site Care (website maintenance) | Edits and new pages after launch, turned around in five business days. $175 a month or $85 an hour. |
-| WordPress website care | Ongoing care for existing WordPress sites built by other firms. Hourly, with an estimate before each task. |
+| Custom website design | Websites designed around your business, built on WordPress or custom-coded, with copywriting, basic SEO and up to three revision rounds included. |
+| WordPress websites | Custom-designed WordPress sites you can edit yourself, with your own login and a walkthrough at launch. |
+| Website redesign | Moving off Wix, Squarespace, Joomla or an aging WordPress theme. WordPress is the default for a redesign, and your domain and content come with you. |
+| WordPress maintenance (Site Care) | WordPress core, theme and plugin updates, backups and edits, turned around in five business days, on a monthly plan or by the hour. |
+| WordPress website care | Ongoing care for existing WordPress sites built by other firms, including Elementor sites, with an estimate before hourly work. |
 | Website copywriting | Every page written for you from a conversation about your business. Included in every website project. |
 | Basic SEO setup | Titles, descriptions, headings, structured data, sitemap and fast load times, set up at launch. |
 | Visual identity | Logo, typefaces and color system designed alongside your website. Quoted per project. |
-| Website photography | Photos of your space, product and work, shot for the site. $85 an hour. |
+| Website photography | Photos of your space, product and work, shot for the site. Scoped in the same proposal as the website. |
 
-### Business description (743 characters, paste exactly; limit is 750)
+### Business description (740 characters, paste exactly; limit is 750)
 
-> Elimenti designs and custom-codes websites for high-end independent businesses in Hinsdale, Oak Brook and Chicago's western suburbs. Every site is designed from scratch, with no templates or page builders, and written for your customers. Copywriting, a basic SEO setup and up to three rounds of revisions are included. Projects start at $3,000, and the site is yours after the final payment. We work with med spas, interior designers, custom home builders, landscape firms, boutiques, car clubs and professional firms. After launch, Site Care keeps your site current for $175 a month or $85 an hour, with a five-business-day turnaround, including existing WordPress sites. Projects run over video calls, and we take clients anywhere in the US.
+> Elimenti is a web design studio based in Hinsdale, Illinois. We design, write and build websites for independent businesses in Hinsdale, across DuPage County and in Chicago's western suburbs, on WordPress you can edit yourself or custom-coded for maximum speed. Copywriting, a basic SEO setup and up to three rounds of revisions are included. Every project is scoped individually, with the exact price and timeline in a written proposal before any work starts, and the site is yours after the final payment. After launch, Site Care handles WordPress maintenance and edits with a five-business-day turnaround, including existing WordPress sites built by other firms. Projects run over video calls, so we also take clients anywhere in the US.
 
 ### 10 posts (Add update → paste text → button → link). One a week.
 
 **Post 1. Button: Learn more → `https://elimenti.com/pricing/`**
-> Projects start at $3,000. Most land between $3,500 and $4,500. Every Elimenti website is designed from scratch and custom-coded, with copywriting, a basic SEO setup and up to three rounds of revisions included. You get the exact price in writing before any work starts, and the site is yours after the final payment.
+> Every Elimenti website is scoped individually, on WordPress or custom-coded. Copywriting, a basic SEO setup and up to three rounds of revisions are included. You get the exact price and timeline in writing before any work starts, and the site is yours after the final payment.
 
 **Post 2. Button: Learn more → `https://elimenti.com/guides/squarespace-vs-custom-website/`**
-> Squarespace or a custom website? Squarespace is the right call if you want to edit your site every week. A custom-coded site is the right call if your customers judge you on taste and quality. We wrote an honest comparison, including what each costs over three years.
+> Squarespace or a custom website? Squarespace is the right call if you want to build and edit the site yourself on one plan. A custom-designed site, on WordPress or custom-coded, is the right call if your customers judge you on taste and quality. We wrote an honest comparison, including what each costs over three years.
 
 **Post 3. Button: Learn more → `https://elimenti.com/guides/website-cost-western-suburbs/`**
 > What does a high-end website cost in Chicago and the suburbs? DIY builders start around $17 to $19 a month. Chicago agencies publish ranges from $5,000 to $100,000 and up. Our guide breaks down the four ways to get a site, what drives the price and the questions to ask any designer before you sign.
 
 **Post 4. Button: Learn more → `https://elimenti.com/site-care/`**
-> Have a website that works but needs someone to keep it current? Site Care covers edits, new pages, events, prices and photos, turned around in five business days. $175 a month or $85 an hour. It covers sites we build and existing WordPress sites built by someone else.
+> Have a WordPress site that works but needs someone to keep it current? Site Care handles WordPress maintenance: core, theme and plugin updates, backups and edits, turned around in five business days, on a monthly plan or by the hour. It covers existing sites built by other firms, including Elementor sites, across DuPage County and the western suburbs.
 
 **Post 5. Button: Learn more → `https://elimenti.com/med-spa-websites/`**
 > A med spa website needs a page for every treatment, a Book button on every page, providers and credentials stated plainly, and before-and-after photos shown only with written consent. Here's what we'd build for a med spa in Hinsdale or Oak Brook, with a working concept site.
@@ -80,13 +83,13 @@ Add all eight towns from the table above (Google allows up to 20). Keep Hinsdale
 > We designed and custom-coded the website for 1 of 1 Car Club, a private, invitation-only Porsche club based in Chicago and Dallas. The cars do the talking, the copy says what the club is and isn't, and the collection grows from a single data file. Read the case study.
 
 **Post 8. Button: Learn more → `https://elimenti.com/work/aamineez-art/`**
-> A portfolio site has one job: turn a quick look into a conversation. For Aamineez, an Arabic calligraphy artist, we built a fast, image-led gallery with one "Inquire on WhatsApp" button. Pro bono, custom-coded, live at aamineez.art.
+> A portfolio site has one job: turn a quick look into a conversation. For Aamineez, an Arabic calligraphy artist, we built a fast, image-led gallery with one "Inquire on WhatsApp" button. Custom-coded, live at aamineez.art.
 
 **Post 9. Button: Learn more → `https://elimenti.com/guides/what-makes-a-website-look-high-end/`**
 > A five-minute test for your website: open it on your phone on cellular data. Can a stranger tell what you do, where and for whom without scrolling? Does the phone number call when tapped? Does the link preview look like your business? Here's what separates a high-end site from a template.
 
 **Post 10. Button: Learn more → `https://elimenti.com/oak-brook-web-design/`**
-> Oak Brook clients check a firm out before they call: who's behind it, proof of the work and a clear next step. We design and custom-code websites for Oak Brook's professional firms, practices and shops. Projects start at $3,000.
+> Oak Brook clients check a firm out before they call: who's behind it, proof of the work and a clear next step. We design and build websites for Oak Brook's professional firms, practices and shops, on WordPress or custom-coded, from a studio next door in Hinsdale.
 
 ### After the profile is live: add it to the site's schema
 In Business Profile, click **Share** and copy the link. In `seo/tools/build.py`, add this line inside `BUSINESS = { ... }` (for example under `'email': EMAIL,`), with your link between the quotes:
@@ -106,7 +109,7 @@ Google's rules: ask every client, not just the happy ones; offer nothing in retu
 **1. Bruce Hodes, CMI Teamwork** (already wrote a recommendation)
 > Hi Bruce, thank you again for the kind words about Elimenti. They're on the homepage and they've made a real difference. Would you be willing to post a short Google review saying the same thing? It's the first thing new clients see when they search for us, and it takes about a minute. Here's the link:
 
-**2. Aamineez** (pro bono portfolio)
+**2. Aamineez** (portfolio build)
 > Hi! Hope the site is still bringing in commission inquiries. I'm building up Elimenti's Google reviews, and a few honest sentences from you about how the project went would help a lot: what you needed, how it worked and how the site's doing. Here's the link:
 
 **3. 1 of 1 Car Club** (full build)
@@ -129,13 +132,13 @@ Ranked by value. "Fields" means paste these exactly; anything not listed comes f
 | # | Directory | Signup URL | Cost | Notes |
 |---|---|---|---|---|
 | 1 | **Bing Places** | https://www.bingplaces.com (redirects to bing.com/forbusiness) | Free | Choose **Import from Google Business Profile**. Feeds Bing, Copilot and DuckDuckGo maps. |
-| 2 | **Clutch** | https://clutch.co/get-listed | Free basic | Assistants cite Clutch constantly. Fields: Company name Elimenti; Website; Founded 2025; Employees 1 (Freelancer); Min. project size $1,000+ (closest tier to $3,000); Hourly rate **$50–$99/hr** (covers your $85 rate); Service lines Web Design 70%, Web Development 20%, Branding 10%; Location Hinsdale, IL. Description: medium description. Then ask 1 of 1 Car Club and ABN to do Clutch's verified review interview. |
+| 2 | **Clutch** | https://clutch.co/get-listed | Free basic | Assistants cite Clutch constantly. Fields: Company name Elimenti; Website; Founded 2025; Employees 1 (Freelancer); Min. project size and hourly rate (Clutch shows both publicly; you took prices off the site in November, so fill these only if you're fine with them showing here: the true tiers are $1,000+ and $50–$99/hr); Service lines Web Design 70%, Web Development 20%, Branding 10%; Location Hinsdale, IL. Description: medium description. Then ask 1 of 1 Car Club and ABN to do Clutch's verified review interview. |
 | 3 | **Yelp for Business** | https://biz.yelp.com/signup_business/new | Free (decline ads) | Category: Web Design. When asked about an address, choose the option that says you serve customers at their location, so the address is hidden. Add service areas. Description: medium. |
-| 4 | **LinkedIn Company Page** | https://www.linkedin.com/company/setup/new/ | Free | Name Elimenti; URL linkedin.com/company/elimenti (or closest available); Website; Industry: Design Services; Size 0–1; Type: Self-employed; Tagline: "Custom-coded websites for high-end businesses. Chicago suburbs." Add the URL to `sameAs` afterward. |
-| 5 | **Instagram (business account)** | In the Instagram app: Settings → Account type → Switch to professional | Free | Handle @elimenti if free. Bio: "Custom-coded websites for high-end businesses · Hinsdale & Oak Brook, IL · From $3,000". Link: https://elimenti.com/. Your strongest channel; add the URL to `sameAs`. |
+| 4 | **LinkedIn Company Page** | https://www.linkedin.com/company/setup/new/ | Free | Name Elimenti; URL linkedin.com/company/elimenti (or closest available); Website; Industry: Design Services; Size 0–1; Type: Self-employed; Tagline: "Websites for independent businesses, on WordPress or custom-coded. Hinsdale, IL." Add the URL to `sameAs` afterward. |
+| 5 | **Instagram (business account)** | In the Instagram app: Settings → Account type → Switch to professional | Free | Handle @elimenti if free. Bio: "Websites for independent businesses · WordPress or custom-coded · Hinsdale, IL". Link: https://elimenti.com/. Your strongest channel; add the URL to `sameAs`. |
 | 6 | **BBB** | https://www.bbb.org/get-listed | Free listing (accreditation is paid; skip it) | Shows in "web design Hinsdale" results. Category Web Design. Hide address if the form allows; if it requires a public street address, stop. |
 | 7 | **Nextdoor Business** | https://nextdoor.com/create-business | Free | Hyperlocal: Hinsdale and Oak Brook neighbors ask for recommendations here. Category: Web Design. Service area, not address. |
-| 8 | **DesignRush** | https://www.designrush.com/add-listing | Free listing (sponsorship paid; skip) | Agency name Elimenti; Min budget $1,000+; Hourly $50–$99; Team size 1; Services Web Design, Web Development, Branding; Industries: pick the closest matches to retail, health and beauty, construction and automotive. Description: long (GBP) description. |
+| 8 | **DesignRush** | https://www.designrush.com/add-listing | Free listing (sponsorship paid; skip) | Agency name Elimenti; Min budget and hourly rate only if you're fine with them showing publicly (true tiers: $1,000+ and $50–$99); Team size 1; Services Web Design, Web Development, Branding; Industries: pick the closest matches to retail, health and beauty, construction and automotive. Description: long (GBP) description. |
 | 9 | **UpCity** | upcity.com → "For Providers" → free profile (the page blocks automated checks, so the exact form URL couldn't be confirmed) | Free profile | Requires a verified Google Business Profile first. Fields as Clutch. |
 | 10 | **Illinois Startups (UIUC)** | https://forms.illinois.edu/sec/6545911 ("Submit a Company" on entrepreneurship.illinois.edu/startups) | Free | Company Elimenti; Founder affiliation: Student; Founded 2025; Website; Description: short description. Links from illinois.edu carry weight. |
 | 11 | **Hinsdale Chamber of Commerce** | https://business.hinsdalechamber.com/member/newmemberapp | Paid (dues not published; the form shows them) | Member directory link plus local events. Description: medium. Category: Web Design / Marketing. |
@@ -194,7 +197,7 @@ Each pitch is under 100 words. Send from hello@elimenti.com.
 
 **4. Patch Hinsdale: self-published announcement.** Post via https://patch.com/illinois/hinsdale → "Post" (free).
 > Title: Hinsdale studio publishes free guide to what a high-end website costs
-> Elimenti, a Hinsdale and Oak Brook web design studio, has published a plain-English guide for local business owners on what a custom website costs in Chicago and the western suburbs, from DIY builders to agencies, with sources. It also covers the questions to ask any designer before signing. Read it at elimenti.com/guides/website-cost-western-suburbs/.
+> Elimenti, a Hinsdale web design studio, has published a plain-English guide for local business owners on what a custom website costs in Chicago and the western suburbs, from DIY builders to agencies, with sources. It also covers the questions to ask any designer before signing. Read it at elimenti.com/guides/website-cost-western-suburbs/.
 
 **5. The Daily Illini: student entrepreneur story.** Submit via https://www.dailyillini.com/ (Contact / news tips).
 > Subject: Engineering student running a web design studio for Chicago-area businesses
@@ -202,18 +205,18 @@ Each pitch is under 100 words. Send from hello@elimenti.com.
 
 **6. Illinois Technology Entrepreneur Center: newsletter feature.** Contact via https://tec.illinois.edu/
 > Subject: Student venture for the TEC newsletter
-> Hi, I'm Hashim H., an Illinois engineering freshman. I run Elimenti, a web design studio building custom-coded websites for high-end small businesses in the Chicago suburbs, with paying clients since 2025. It's going on the Illinois Startups list, and I'd welcome a mention in TEC's newsletter or student venture spotlights. Glad to share what I've learned selling to local businesses as a student.
+> Hi, I'm Hashim H., an Illinois engineering freshman. I run Elimenti, a Hinsdale web design studio building websites for independent businesses in the Chicago suburbs, on WordPress or custom-coded, with paying clients since 2025. It's going on the Illinois Startups list, and I'd welcome a mention in TEC's newsletter or student venture spotlights. Glad to share what I've learned selling to local businesses as a student.
 
 **7. Illinois Startups list.** Not a pitch: submit via https://forms.illinois.edu/sec/6545911 (fields in section 3).
 
 **8. Mojo Media: "14 Best Web Design Agencies in Chicago."** Page: https://mojo-agency.com/web-design-agencies-in-chicago/ (use its contact form).
 > Subject: Suggestion for your Chicago web design agencies list
-> Hi, your Chicago agencies roundup is useful. One gap: it doesn't cover studios at the entry point of custom work. Elimenti designs and custom-codes websites for high-end small businesses in Chicago's suburbs, publishes its pricing (projects from $3,000) and includes copywriting. If you update the list, I'd be glad to send details or answer questions.
+> Hi, your Chicago agencies roundup is useful. One gap: it doesn't cover small studios that design and write each site themselves. Elimenti, based in Hinsdale, designs websites for independent businesses in Chicago's suburbs, on WordPress or custom-coded, with copywriting included. If you update the list, I'd be glad to send details or answer questions.
 
 **9. Webtonic: "Top 52 Boutique Web Design Agencies."** Page: https://www.webtonic.io/blog/top-boutique-web-design-agencies
 > Subject: A boutique studio for your list
-> Hi, I read your boutique agencies roundup. Elimenti is a one-person studio in the Chicago suburbs that designs and custom-codes websites for high-end independent businesses, with no templates, published pricing from $3,000 and copywriting included. If you refresh the list, I'd be glad to be considered and can send anything you need.
+> Hi, I read your boutique agencies roundup. Elimenti is a one-person studio in Hinsdale that designs websites for independent businesses, on WordPress or custom-coded, with every site designed and written from scratch and copywriting included. If you refresh the list, I'd be glad to be considered and can send anything you need.
 
 **10. Hinsdale Chamber of Commerce: member directory and spotlight.** After joining (section 3):
 > Subject: New member: Elimenti
-> Hello, Elimenti just joined the Chamber. We're a Hinsdale and Oak Brook studio designing custom websites for local businesses, and we've worked with Burdi Clothing on Hinsdale Avenue. Could you confirm our directory listing links to elimenti.com? We'd also be glad to be considered for a new-member spotlight, or to talk at a member event about what makes a small-business website work.
+> Hello, Elimenti just joined the Chamber. We're a Hinsdale studio designing custom websites for local businesses, and we've worked with Burdi Clothing on Hinsdale Avenue. Could you confirm our directory listing links to elimenti.com? We'd also be glad to be considered for a new-member spotlight, or to talk at a member event about what makes a small-business website work.

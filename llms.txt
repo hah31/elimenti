@@ -5,7 +5,7 @@
 Key facts:
 
 - Every project, on WordPress or custom-coded, is scoped individually. The exact price and timeline come in a written proposal before any work starts.
-- Site Care: a monthly plan or hourly edits, with a five-business-day turnaround.
+- Site Care: WordPress maintenance and website care, on a monthly plan or hourly edits, with a five-business-day turnaround. It covers sites Elimenti builds and existing WordPress sites built by others, including Elementor sites.
 - Founder: Hashim H.
 - Contact: (630) 509-8822, hello@elimenti.com, or https://elimenti.com/contact/
 
@@ -15,7 +15,7 @@ Key facts:
 - [Custom Website Design for Chicago Businesses](https://elimenti.com/custom-websites/): Custom-designed websites for independent businesses in Chicago and the suburbs, built on WordPress or custom-coded. Copywriting and basic SEO included.
 - [WordPress Website Design for Chicago Businesses](https://elimenti.com/wordpress-websites/): Custom-designed WordPress websites for independent businesses in Chicago and the suburbs: your own login, a launch walkthrough, updates through Site Care.
 - [Website Redesign for Independent Businesses](https://elimenti.com/website-redesign/): Website redesign for independent businesses, Chicago suburbs and US-wide: new design, rewritten copy, redirects, and a domain and email that keep working.
-- [Website Care and Maintenance, Chicago Suburbs](https://elimenti.com/site-care/): Site Care keeps your website current: a monthly plan or hourly edits, five-business-day turnaround, with WordPress updates and backups on the monthly plan.
+- [WordPress & Website Maintenance, DuPage County](https://elimenti.com/site-care/): WordPress maintenance and website care for Hinsdale, DuPage County and the Chicago suburbs: monthly plan or hourly edits, five-business-day turnaround.
 - [How a Web Design Project Works](https://elimenti.com/pricing/): How an Elimenti website project works: what's included, what moves the price, the steps from first call to launch, timing, payment and ownership.
 
 ## Industries
@@ -56,6 +56,7 @@ Key facts:
 - [Wix vs Squarespace vs WordPress vs Custom](https://elimenti.com/guides/wix-squarespace-wordpress-or-custom/): Wix, Squarespace, WordPress or custom code for an independent business: cost, speed, editing and ownership compared, with data from 150 local sites.
 - [Questions to Ask a Web Designer Before You Sign](https://elimenti.com/guides/questions-to-ask-a-web-designer/): Fourteen questions to ask a web designer before you sign, what a good answer sounds like, the red flags, and how Elimenti answers each one.
 - [What to Do If Your Web Designer Disappears](https://elimenti.com/guides/web-designer-disappeared/): Web designer disappeared? Find who holds your domain, hosting and logins, get each one back, and keep the handoff list that stops it happening again.
+- [Taking Over a WordPress Site Someone Else Built](https://elimenti.com/guides/taking-over-a-wordpress-site/): How a WordPress takeover works: what to hand a new developer, what they check before changing anything, the red flags, and when a rebuild costs less.
 - [Website Redesign or Refresh? How to Tell](https://elimenti.com/guides/website-redesign-vs-refresh/): Redesign or refresh? A fifteen-minute scorecard for your own website, what each result means, and how each option is priced and how long it takes.
 - [How Long Does a Custom Website Take?](https://elimenti.com/guides/how-long-does-a-website-take/): How long a custom website takes, what each stage waits on, what adds weeks and a checklist to get ready. Most of our projects launch in 4 to 6 weeks.
 - [Med Spa Website Cost: Prices and an Example](https://elimenti.com/guides/med-spa-website-cost/): What a med spa website costs: market prices, what drives the price, a first-year budget line by line and the patient-privacy items to plan for.

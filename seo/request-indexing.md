@@ -1,5 +1,7 @@
 # Request indexing: November 5, 2026
 
+> **Superseded on November 25, 2026.** A `site:` check that day found all 46 sitemap URLs on Google. The current list of pages to request is item 6 in `seo/todo-hashim.md`.
+
 Paste each URL into Search Console → **URL Inspection** (search bar at the top), wait for the result, then click **Request indexing**. Go in this order. Search Console limits how many requests a property can make per day; if it says you've hit the limit, carry on from where you stopped the next day.
 
 Bing doesn't need this: the IndexNow workflow submits changed pages to Bing automatically on every push to `main`.
