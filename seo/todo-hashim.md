@@ -15,42 +15,13 @@ On November 25 ChatGPT named Elimenti first for Hinsdale, car clubs and med spas
 
 Steps are in `seo/off-site-kit.md` section 3: Bing Places (row 1, import from the Business Profile once it's verified), Yelp (row 3, hide the address), Apple Business Connect (conditional row). Add each profile URL to `SAME_AS` in `seo/tools/build.py` when it's live.
 
-## 3. Point steponesites.com at elimenti.com
+## 3. Done: steponesites.com points at elimenti.com
 
-steponesites.com is still live and crawlable. Its title is "Step One Sites — Hand-Coded Websites for DuPage County Small Businesses", it sells sites at $175 a month with a two-week launch, an offer Elimenti doesn't have, and its canonical points at stepone.sites, a domain that doesn't exist. Search engines and AI assistants treat it as a separate, current business.
+Done November 25 with Hashim's approval (hah31/steponesites PR #7): `/`, `/portfolio.html` and `/pricing.html` redirect to elimenti.com's home, Work and Pricing pages, the broken sitemap is gone, and `Step One Sites` is now an `alternateName` in the schema. `demos/` was left as is.
 
-In the `hah31/steponesites` repo, replace `index.html`, `portfolio.html` and `pricing.html` with the three files below, delete `sitemap.xml` and keep `CNAME`. Each file sends visitors and search engines to the matching elimenti.com page. (Or open a session with that repo attached and ask Claude to do it.)
+## 4. Done: hashim-hassan.com describes Elimenti correctly
 
-`index.html`:
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Step One Sites is now Elimenti</title>
-    <link rel="canonical" href="https://elimenti.com/">
-    <meta http-equiv="refresh" content="0; url=https://elimenti.com/">
-</head>
-<body>
-    <p>Step One Sites is now Elimenti: <a href="https://elimenti.com/">https://elimenti.com/</a></p>
-</body>
-</html>
-```
-
-`portfolio.html` and `pricing.html`: the same file with `https://elimenti.com/` replaced by `https://elimenti.com/work/` and `https://elimenti.com/pricing/` (three places each).
-
-After it's live, add `'Step One Sites'` to `alternateName` in `BUSINESS` in `seo/tools/build.py` (the comment there explains why it waits) and run the build.
-
-## 4. Change one sentence on hashim-hassan.com
-
-On November 25 ChatGPT described Elimenti's sites as "hand-coded". The one public page that still says that is the Elimenti entry on hashim-hassan.com:
-
-> I hand-code static websites for local businesses that compete on quality and design, and I maintain existing sites for others.
-
-Suggested replacement:
-
-> I design and build websites for local businesses that compete on quality and design, on WordPress or custom-coded, and I maintain existing WordPress sites for others.
+Done November 25 (hah31/hashim-hassan.com PR #3): the Elimenti entry now says "I design and build websites for local businesses that compete on quality and design, on WordPress or custom-coded, and I maintain existing WordPress sites for others."
 
 ## 5. Give the browser's Google account read access to Search Console
 
