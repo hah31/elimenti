@@ -1,6 +1,8 @@
 # To do: things only Hashim can do
 
-Updated November 25, 2026. Ordered by how much each one moves Google and AI answers, going by what was measured that day (`seo/baseline-2026-11-25.md`). Items 1, 2 and 5 need accounts only you can create or sign in to.
+Updated November 25, 2026 (evening). Ordered by how much each one moves Google and AI answers, going by what was measured that day (`seo/baseline-2026-11-25.md`). Items 1, 2 and 5 need accounts only you can create or sign in to.
+
+**Listing city.** Bing Places, Yelp and Clutch list the city as **Oak Brook, IL 60523**, the business's mailing address, with the street hidden or not shown. The site, schema and OG cards say Hinsdale, IL. Use Oak Brook on every new listing (Google, Apple) so the directories agree with each other, and decide separately whether the site should change.
 
 ## 1. Finish and verify the Google Business Profile, then ask for reviews
 
@@ -9,11 +11,32 @@ Google's map results, Gemini and Google's AI answers lean on Business Profile da
 - Copy for the profile: `seo/off-site-kit.md` section 1. **It was rewritten on November 25**: the earlier version listed prices and said "high-end businesses" and "no page builders". Use the current file.
 - Review requests: section 2 of the same file, in the order listed.
 
-## 2. The listings ChatGPT reads: Bing Places, Yelp, then Apple
+## 2. The listings ChatGPT reads: Bing Places, Yelp, Clutch, then Apple
 
 On November 25 ChatGPT named Elimenti first for Hinsdale, car clubs and med spas, but its map panel never showed Elimenti, and for Oak Brook it named only firms with map listings and reviews. Yelp now licenses its business data to OpenAI (Axios, July 23, 2026), and Bing's results feed ChatGPT's search.
 
-Steps are in `seo/off-site-kit.md` section 3: Bing Places (row 1, import from the Business Profile once it's verified), Yelp (row 3, hide the address), Apple Business Connect (conditional row). Add each profile URL to `SAME_AS` in `seo/tools/build.py` when it's live.
+Where each one stands (November 25, evening):
+
+- **Bing Places: created, not verified, not published.** Bing only offers a mailed postcard PIN. Sign in at bing.com/forbusiness, open the Elimenti listing, **Verify now → Mail**, and enter the PIN when it arrives. Every field stays locked until then. Right after verifying, open **Basic details**: set "Do you deliver goods and services to your customers at their location?" to **Yes**, add the service areas from `seo/off-site-kit.md`, hide the street address, and add the email, description (medium, from the kit) and hours. Bing may show the street briefly before that edit goes through.
+- **Yelp: claimed, waiting for Yelp's moderators.** Done: category Web Design with services web design, website development and website maintenance (hosting removed), specialties, history (established 2025), owner bio ("Hashim H."). The page shows "Oak Brook, IL 60523" with no street. Still yours: photos, logo and hours. Square photos for the page and the ad were made on November 25 (1 of 1 Car Club, Aamineez Art and elimenti.com, each a desktop and phone view).
+- **Yelp Ads free trial: live until 12/25/26.** The trial covers $13/day of ads plus the $4/day Upgrade Package. After it ends, billing is about $17/day, monthly, until you cancel. **Cancel both products (Yelp Ads and the Upgrade Package) before 12/25, on the desktop site under Billing.** Yelp's confirmation also says the first monthly bill is 12/01/26, so check that it shows $0. Done on November 25: boosted keywords trimmed to web design, website design, web designer, website redesign, web development, WordPress developer, small business website and website maintenance; irrelevant searches blocked (digitizing, printing, app and software development, PR, video, hosting, e-commerce, ad agencies); ad text rewritten. Not saved because Yelp signed out mid-session: the custom call to action ("Free call and written proposal", Learn more, to `/contact/?utm_source=yelp&utm_medium=referral&utm_campaign=yelp-cta`) and the ad goal "Get more website clicks" (to the homepage with `utm_source=yelp&utm_medium=cpc`). Don't raise the budget: anything above the trial's amount is billed.
+- **Clutch: profile created, under Clutch's review (clutch.co/profile/elimenti).** Service lines Web Design 70%, Web Development 20%, Branding 10%. Minimum project size and hourly rate are set to N/A, so no prices show. Location Oak Brook, IL; Clutch takes 7–10 business days to validate a location, and its help pages don't say whether the street line appears on the public profile, so check once it's published. Still yours: logo and portfolio items (they need image uploads).
+- **Apple Business Connect: not started.** Needs your Apple ID. Stop if Apple insists on showing the street address.
+
+Add each profile URL to `SAME_AS` in `seo/tools/build.py` once it's live and loads to a page that's clearly Elimenti's.
+
+## 2a. Reviews: Clutch first, Google once the profile exists
+
+Clutch review link: https://review.clutch.co/review?provider_id=2779047 (clients write the review themselves and confirm their email). Three drafts are in Gmail with no recipient. Add the address and paste the link where it says `[PASTE CLUTCH LINK]`: the Gmail connector rewrites links into google.com redirects, so the link isn't in the drafts. Send them once Clutch publishes the profile.
+
+- **ABN (Aldo):** send after invoice ELM-003 is paid, not in the same week as the invoice.
+- **Burdi:** mentions the Father's Day and Toys for Tots event pages.
+- **Aamineez Art:** add her name to the greeting.
+- **Not drafted:** 1 of 1 Car Club (the project is paused with a balance open) and Bruce Hodes (not a client, so not eligible on Clutch; ask him for a Google review once the Business Profile is verified). Yelp forbids asking for reviews, so don't send anyone to Yelp.
+
+## 2b. Press and chamber pitches about the western suburbs study
+
+Five drafts in Gmail (hashim@elimenti.com), each under 100 words, no links, ending with one question: The Hinsdalean (Pamela Lannom, editor), Hinsdale Patch (David Giuliani), Hinsdale Magazine (its published story address), the Hinsdale Chamber (Amanda Wagner, President & CEO) and the Greater Oak Brook Chamber (David Carlin, President & CEO). Every address is published by the outlet or chamber. They're signed "Hashim H."; a reporter will likely ask for your full name. The Daily Herald wasn't drafted because no published business-news address was confirmed.
 
 ## 3. Done: steponesites.com points at elimenti.com
 

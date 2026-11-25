@@ -13,6 +13,7 @@ Everything here is final copy. Your job is copy, paste, click.
 | Website | https://elimenti.com/ |
 | Email | hello@elimenti.com |
 | Address | **Hidden.** Service-area business, no storefront. Never enter a street address that will be shown publicly. |
+| City on listings | **Oak Brook, IL 60523**, the mailing address (Bing, Yelp and Clutch use it as of November 25). The site says Hinsdale; keep listings matching each other. |
 | Service areas | Hinsdale, IL · DuPage County, IL · Oak Brook, IL · Burr Ridge, IL · Western Springs, IL · Clarendon Hills, IL · Elmhurst, IL · Glen Ellyn, IL · Naperville, IL · Lombard, IL |
 | Category | Website designer (where a directory has it); otherwise "Web Design" |
 | Founded by | Hashim H. |
@@ -131,9 +132,9 @@ Ranked by value. "Fields" means paste these exactly; anything not listed comes f
 
 | # | Directory | Signup URL | Cost | Notes |
 |---|---|---|---|---|
-| 1 | **Bing Places** | https://www.bingplaces.com (redirects to bing.com/forbusiness) | Free | Choose **Import from Google Business Profile**. Feeds Bing, Copilot and DuckDuckGo maps. |
-| 2 | **Clutch** | https://clutch.co/get-listed | Free basic | Assistants cite Clutch constantly. Fields: Company name Elimenti; Website; Founded 2025; Employees 1 (Freelancer); Min. project size and hourly rate (Clutch shows both publicly; you took prices off the site in November, so fill these only if you're fine with them showing here: the true tiers are $1,000+ and $50–$99/hr); Service lines Web Design 70%, Web Development 20%, Branding 10%; Location Hinsdale, IL. Description: medium description. Then ask 1 of 1 Car Club and ABN to do Clutch's verified review interview. |
-| 3 | **Yelp for Business** | https://biz.yelp.com/signup_business/new | Free (decline ads) | Category: Web Design. When asked about an address, choose the option that says you serve customers at their location, so the address is hidden. Add service areas. Description: medium. |
+| 1 | **Bing Places** | https://www.bingplaces.com (redirects to bing.com/forbusiness) | Free | **Created November 25, waiting on the postcard PIN** (`seo/todo-hashim.md` item 2). Feeds Bing, Copilot and DuckDuckGo maps. |
+| 2 | **Clutch** | https://clutch.co/get-listed | Free basic | **Created November 25, under review** (clutch.co/profile/elimenti). Minimum project size and hourly rate set to N/A, service lines Web Design 70%, Web Development 20%, Branding 10%, location Oak Brook, IL. Review link: https://review.clutch.co/review?provider_id=2779047. Still to add: logo, portfolio items. |
+| 3 | **Yelp for Business** | https://biz.yelp.com/signup_business/new | Free (ads optional) | **Claimed November 25, waiting on moderation.** Category Web Design (services: web design, website development, website maintenance). No street address entered, so the page shows city and ZIP only. Specialties, history and owner bio filled. A 30-day Yelp Ads trial runs to 12/25/26: cancel before then (`seo/todo-hashim.md` item 2). Yelp forbids asking for reviews. |
 | 4 | **LinkedIn Company Page** | https://www.linkedin.com/company/setup/new/ | Free | Name Elimenti; URL linkedin.com/company/elimenti (or closest available); Website; Industry: Design Services; Size 0–1; Type: Self-employed; Tagline: "Websites for independent businesses, on WordPress or custom-coded. Hinsdale, IL." Add the URL to `sameAs` afterward. |
 | 5 | **Instagram (business account)** | In the Instagram app: Settings → Account type → Switch to professional | Free | Handle @elimenti if free. Bio: "Websites for independent businesses · WordPress or custom-coded · Hinsdale, IL". Link: https://elimenti.com/. Your strongest channel; add the URL to `sameAs`. |
 | 6 | **BBB** | https://www.bbb.org/get-listed | Free listing (accreditation is paid; skip it) | Shows in "web design Hinsdale" results. Category Web Design. Hide address if the form allows; if it requires a public street address, stop. |
