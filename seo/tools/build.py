@@ -51,6 +51,7 @@ TOWNS = [
     ('Clarendon Hills', 'Clarendon_Hills,_Illinois'),
     ('Elmhurst', 'Elmhurst,_Illinois'),
     ('Glen Ellyn', 'Glen_Ellyn,_Illinois'),
+    ('Lombard', 'Lombard,_Illinois'),
     ('Naperville', 'Naperville,_Illinois'),
 ]
 
@@ -279,7 +280,7 @@ PAGES = [
     # Locations
     dict(path='/chicago-suburbs-web-design/', file='chicago-suburbs-web-design/index.html', lastmod=CARE,
          title='Web Design for Chicago\'s Western Suburbs | Elimenti',
-         description='WordPress and custom-coded sites for independent businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville.',
+         description='WordPress and custom-coded sites for independent businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn, Lombard and Naperville.',
          crumbs=[('Chicago suburbs', '/chicago-suburbs-web-design/')],
          schema=[service('/chicago-suburbs-web-design/', 'Web design for Chicago\'s western suburbs',
                          'Websites for independent businesses across Chicago\'s western suburbs, built on WordPress or custom-coded.')]),
@@ -387,14 +388,14 @@ PAGES = [
          schema=[{'@type': 'CollectionPage', '@id': f'{SITE}/guides/#webpage', 'url': f'{SITE}/guides/', 'name': 'Website guides',
                   'isPartOf': {'@id': f'{SITE}/#website'},
                   'hasPart': [{'@id': f'{SITE}{g}#article'} for g in (
-                      '/guides/website-cost-western-suburbs/', '/guides/med-spa-website-cost/', '/guides/how-long-does-a-website-take/',
+                      '/guides/website-cost-western-suburbs/', '/guides/med-spa-website-cost/', '/guides/wordpress-maintenance-cost/', '/guides/how-long-does-a-website-take/',
                       '/guides/wix-squarespace-wordpress-or-custom/', '/guides/squarespace-vs-custom-website/',
                       '/guides/questions-to-ask-a-web-designer/', '/guides/web-designer-disappeared/',
                       '/guides/taking-over-a-wordpress-site/', '/guides/website-redesign-vs-refresh/', '/guides/what-makes-a-website-look-high-end/',
                       '/guides/local-seo-for-boutiques/', '/guides/car-club-website-examples/',
                       '/guides/car-club-website-builders/', '/guides/car-show-website-examples/',
                       '/research/western-suburbs-website-report-2026/')]}]),
-    dict(path='/guides/website-cost-western-suburbs/', file='guides/website-cost-western-suburbs/index.html', lastmod=CHANGED, og_type='article',
+    dict(path='/guides/website-cost-western-suburbs/', file='guides/website-cost-western-suburbs/index.html', lastmod=CARE, og_type='article',
          title='What a High-End Website Costs in Chicago | Elimenti',
          description='What a custom website costs an independent business in Chicago and the western suburbs, what each price level gets you and what to ask before you hire.',
          crumbs=[('Guides', '/guides/'), ('Website cost guide', '/guides/website-cost-western-suburbs/')],
@@ -445,6 +446,15 @@ PAGES = [
          crumbs=[('Guides', '/guides/'), ('Taking over a WordPress site', '/guides/taking-over-a-wordpress-site/')],
          schema=[article('/guides/taking-over-a-wordpress-site/', 'Taking over a WordPress site someone else built',
                          'What to hand a new WordPress developer, what a careful one checks before changing anything, the first updates, red flags and when a rebuild costs less.',
+                         CARE)]),
+    # Added 2026-11-25: answers the cost question for the WordPress-care cluster with sourced third-party
+    # prices (no Elimenti prices). /site-care/ reached #7 for "wordpress maintenance dupage county" the same day.
+    dict(path='/guides/wordpress-maintenance-cost/', file='guides/wordpress-maintenance-cost/index.html', lastmod=CARE, og_type='article',
+         title='How Much Does WordPress Maintenance Cost? | Elimenti',
+         description='What WordPress maintenance costs: published monthly plans and hourly rates with sources, what plans leave out, red flags and what to ask a provider.',
+         crumbs=[('Guides', '/guides/'), ('WordPress maintenance cost', '/guides/wordpress-maintenance-cost/')],
+         schema=[article('/guides/wordpress-maintenance-cost/', 'What WordPress maintenance costs, and what each price gets you',
+                         'Published WordPress maintenance plans and hourly rates with sources, what plans include and leave out, what drives the price and what to ask a provider.',
                          CARE)]),
     dict(path='/guides/website-redesign-vs-refresh/', file='guides/website-redesign-vs-refresh/index.html', lastmod=NEW, og_type='article',
          title='Website Redesign or Refresh? How to Tell | Elimenti',

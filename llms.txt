@@ -35,7 +35,7 @@ Key facts:
 
 ## Areas
 
-- [Web Design for Chicago's Western Suburbs](https://elimenti.com/chicago-suburbs-web-design/): WordPress and custom-coded sites for independent businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville.
+- [Web Design for Chicago's Western Suburbs](https://elimenti.com/chicago-suburbs-web-design/): WordPress and custom-coded sites for independent businesses in Burr Ridge, Western Springs, Clarendon Hills, Elmhurst, Glen Ellyn, Lombard and Naperville.
 - [Web Design in Hinsdale, IL](https://elimenti.com/hinsdale-web-design/): Websites for Hinsdale boutiques, clinics, builders and firms, on WordPress or custom-coded, from a studio based in Hinsdale with real work in town.
 - [Web Designer in Oak Brook, IL](https://elimenti.com/oak-brook-web-design/): Websites for Oak Brook firms, clinics and shops, on WordPress or custom-coded, from a studio next door in Hinsdale.
 
@@ -57,6 +57,7 @@ Key facts:
 - [Questions to Ask a Web Designer Before You Sign](https://elimenti.com/guides/questions-to-ask-a-web-designer/): Fourteen questions to ask a web designer before you sign, what a good answer sounds like, the red flags, and how Elimenti answers each one.
 - [What to Do If Your Web Designer Disappears](https://elimenti.com/guides/web-designer-disappeared/): Web designer disappeared? Find who holds your domain, hosting and logins, get each one back, and keep the handoff list that stops it happening again.
 - [Taking Over a WordPress Site Someone Else Built](https://elimenti.com/guides/taking-over-a-wordpress-site/): How a WordPress takeover works: what to hand a new developer, what they check before changing anything, the red flags, and when a rebuild costs less.
+- [How Much Does WordPress Maintenance Cost?](https://elimenti.com/guides/wordpress-maintenance-cost/): What WordPress maintenance costs: published monthly plans and hourly rates with sources, what plans leave out, red flags and what to ask a provider.
 - [Website Redesign or Refresh? How to Tell](https://elimenti.com/guides/website-redesign-vs-refresh/): Redesign or refresh? A fifteen-minute scorecard for your own website, what each result means, and how each option is priced and how long it takes.
 - [How Long Does a Custom Website Take?](https://elimenti.com/guides/how-long-does-a-website-take/): How long a custom website takes, what each stage waits on, what adds weeks and a checklist to get ready. Most of our projects launch in 4 to 6 weeks.
 - [Med Spa Website Cost: Prices and an Example](https://elimenti.com/guides/med-spa-website-cost/): What a med spa website costs: market prices, what drives the price, a first-year budget line by line and the patient-privacy items to plan for.
