@@ -32,6 +32,8 @@ UPDATED = '2026-11-05'
 CHANGED = '2026-11-08'
 # Pages added or changed in the niche-cluster pass get this as lastmod.
 NEW = '2026-11-18'
+# Pages added or changed in the WordPress-care and AI-search pass get this as lastmod.
+CARE = '2026-11-25'
 
 PHONE_DISPLAY = '(630) 509-8822'
 PHONE_TEL = '+16305098822'
