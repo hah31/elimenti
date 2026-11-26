@@ -69,7 +69,9 @@ def city(name, wiki):
 # Instagram, Clutch, Yelp, Bing Places. Add a URL only once it loads to a profile that is
 # clearly Elimenti's; the list goes into the shared LocalBusiness block on every page.
 # Empty means no sameAs is output.
-SAME_AS = []
+SAME_AS = [
+    'https://www.yelp.com/biz/elimenti-oak-brook',  # live November 25, 2026
+]
 
 AREA_SERVED = [city(n, w) for n, w in TOWNS] + [
     # Hinsdale, Oak Brook, Clarendon Hills, Elmhurst, Glen Ellyn and Naperville are in DuPage County
