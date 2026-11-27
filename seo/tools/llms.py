@@ -73,7 +73,7 @@ def render():
         '- Site Care: WordPress maintenance and website care, on a monthly plan or hourly edits, with a five-business-day turnaround. It covers sites Elimenti builds and existing WordPress sites built by others, including Elementor sites.',
         '- Client work, with exact scope: full builds for 1 of 1 Car Club and Aamineez Art; targeted edits to Burdi Clothing\'s existing site; ongoing care of ABN Construction Group\'s WordPress site.',
         f"- Founder: {biz['founder']['name']}",
-        '- Name: Elimenti, spelled E-L-I-M-E-N-T-I. Called Step One Sites until April 2026; steponesites.com redirects to elimenti.com.',
+        '- Name: Elimenti, spelled E-L-I-M-E-N-T-I.',
         f"- Listings: {', '.join(build.SAME_AS)}",
         f'- Contact: {build.PHONE_DISPLAY}, {build.EMAIL}, or {SITE}/contact/',
     ]

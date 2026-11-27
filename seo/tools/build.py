@@ -182,7 +182,7 @@ def article(path, headline, description, published, modified=None):
         'headline': headline,
         'description': description,
         'url': f'{SITE}{path}',
-        'mainEntityOfPage': f'{SITE}{path}',
+        'mainEntityOfPage': {'@id': f'{SITE}{path}#webpage'},
         'image': f'{SITE}/assets/img/og/{slug_for(path)}.png',
         'author': {'@id': f'{SITE}/about/#founder', '@type': 'Person', 'name': 'Hashim H.', 'url': f'{SITE}/about/'},
         'publisher': PROVIDER,
