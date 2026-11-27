@@ -34,6 +34,9 @@ CHANGED = '2026-11-08'
 NEW = '2026-11-18'
 # Pages added or changed in the WordPress-care and AI-search pass get this as lastmod.
 CARE = '2026-11-25'
+# Pages whose content changed in the entity, trust and internal-linking pass get this as lastmod.
+# (Head-only changes, like the robots meta and WebPage nodes added the same day, don't count.)
+AEO = '2026-11-27'
 
 PHONE_DISPLAY = '(630) 509-8822'
 PHONE_TEL = '+16305098822'
@@ -71,6 +74,10 @@ def city(name, wiki):
 # Empty means no sameAs is output.
 SAME_AS = [
     'https://www.yelp.com/biz/elimenti-oak-brook',  # live November 25, 2026
+    'https://clutch.co/profile/elimenti',  # published by November 27, 2026 (no reviews yet)
+    # Clutch's sister directory publishes the same profile; ChatGPT cited it on November 27, 2026
+    # as an independent listing when asked whether Elimenti is legitimate.
+    'https://themanifest.com/company/elimenti',
 ]
 
 AREA_SERVED = [city(n, w) for n, w in TOWNS] + [
@@ -175,7 +182,7 @@ def article(path, headline, description, published, modified=None):
         'headline': headline,
         'description': description,
         'url': f'{SITE}{path}',
-        'mainEntityOfPage': f'{SITE}{path}',
+        'mainEntityOfPage': {'@id': f'{SITE}{path}#webpage'},
         'image': f'{SITE}/assets/img/og/{slug_for(path)}.png',
         'author': {'@id': f'{SITE}/about/#founder', '@type': 'Person', 'name': 'Hashim H.', 'url': f'{SITE}/about/'},
         'publisher': PROVIDER,
@@ -243,7 +250,7 @@ PAGES = [
          schema=[]),
 
     # Services
-    dict(path='/custom-websites/', file='custom-websites/index.html', lastmod=NEW,
+    dict(path='/custom-websites/', file='custom-websites/index.html', lastmod=AEO,
          title='Custom Website Design for Chicago Businesses | Elimenti',
          description='Custom-designed websites for independent businesses in Chicago and the suburbs, built on WordPress or custom-coded. Copywriting and basic SEO included.',
          crumbs=[('Custom websites', '/custom-websites/')],
@@ -329,14 +336,14 @@ PAGES = [
          crumbs=[('Custom websites', IND), ('Boutique websites', '/boutique-websites/')],
          schema=[service('/boutique-websites/', 'Boutique website design',
                          'Websites for independent boutiques, showrooms and specialty shops, built on WordPress or custom-coded.', audience='Independent boutiques and showrooms')]),
-    dict(path='/car-club-websites/', file='car-club-websites/index.html', lastmod=NEW,
+    dict(path='/car-club-websites/', file='car-club-websites/index.html', lastmod=AEO,
          title='Car Club Website Design | Elimenti',
          description='Websites for private car clubs and automotive groups, from the studio behind 1 of 1 Car Club\'s site. Based in Hinsdale, IL, working US-wide.',
          crumbs=[('Custom websites', IND), ('Car club websites', '/car-club-websites/')],
          schema=[service('/car-club-websites/', 'Car club website design',
                          'Websites for private car clubs and automotive groups, built on WordPress or custom-coded: collection pages that grow, member applications and privacy where it matters.',
                          area=[{'@type': 'Country', 'name': 'United States'}], audience='Car clubs')]),
-    dict(path='/classic-car-club-websites/', file='classic-car-club-websites/index.html', lastmod=NEW,
+    dict(path='/classic-car-club-websites/', file='classic-car-club-websites/index.html', lastmod=AEO,
          title='Classic and Marque Car Club Websites | Elimenti',
          description='Websites for classic and marque car clubs: chapters, archives, member directories, magazines and events, and moving off Joomla or Drupal to WordPress.',
          crumbs=[('Custom websites', IND), ('Classic car club websites', '/classic-car-club-websites/')],
@@ -353,14 +360,14 @@ PAGES = [
          schema=[service('/automotive-websites/', 'Automotive website design',
                          'Websites for car clubs, car shows and concours, collector car storage facilities and restoration and custom shops, built on WordPress or custom-coded. Not inventory-driven dealership sites.',
                          area=[{'@type': 'Country', 'name': 'United States'}], audience='Car clubs, car event organizers, collector car storage facilities and restoration shops')]),
-    dict(path='/car-show-websites/', file='car-show-websites/index.html', lastmod=NEW,
+    dict(path='/car-show-websites/', file='car-show-websites/index.html', lastmod=AEO,
          title='Car Show & Concours Website Design | Elimenti',
          description='Websites for car shows, concours and cars-and-coffee series: entry pages, spectator info, sponsors, results and an archive. Hinsdale, IL, working US-wide.',
          crumbs=[('Automotive websites', '/automotive-websites/'), ('Car show websites', '/car-show-websites/')],
          schema=[service('/car-show-websites/', 'Car show and concours website design',
                          'Website design for car shows, concours d\'elegance, cars-and-coffee series and charity car meets: entry and spectator pages, sponsors, results and a year-by-year archive. Built on WordPress or custom-coded, with registration and ticketing linked to the tool the event already uses.',
                          area=[{'@type': 'Country', 'name': 'United States'}], audience='Car show, concours and car event organizers')]),
-    dict(path='/collector-car-storage-websites/', file='collector-car-storage-websites/index.html', lastmod=NEW,
+    dict(path='/collector-car-storage-websites/', file='collector-car-storage-websites/index.html', lastmod=AEO,
          title='Collector Car Storage Website Design | Elimenti',
          description='Website design for collector car storage facilities, car condos and garage condos: security and climate pages, unit availability and inquiry forms.',
          crumbs=[('Automotive websites', '/automotive-websites/'), ('Collector car storage websites', '/collector-car-storage-websites/')],
@@ -397,14 +404,14 @@ PAGES = [
                       '/guides/local-seo-for-boutiques/', '/guides/car-club-website-examples/',
                       '/guides/car-club-website-builders/', '/guides/car-show-website-examples/',
                       '/research/western-suburbs-website-report-2026/')]}]),
-    dict(path='/guides/website-cost-western-suburbs/', file='guides/website-cost-western-suburbs/index.html', lastmod=CARE, og_type='article',
+    dict(path='/guides/website-cost-western-suburbs/', file='guides/website-cost-western-suburbs/index.html', lastmod=AEO, og_type='article',
          title='What a High-End Website Costs in Chicago | Elimenti',
          description='What a custom website costs an independent business in Chicago and the western suburbs, what each price level gets you and what to ask before you hire.',
          crumbs=[('Guides', '/guides/'), ('Website cost guide', '/guides/website-cost-western-suburbs/')],
          schema=[article('/guides/website-cost-western-suburbs/', 'What a high-end website costs in Chicago and the suburbs',
                          'What a custom website costs an independent business in Chicago and the western suburbs, what each price level gets you and what to ask before you hire.',
-                         '2026-10-25', CHANGED)]),
-    dict(path='/guides/squarespace-vs-custom-website/', file='guides/squarespace-vs-custom-website/index.html', lastmod=CHANGED, og_type='article',
+                         '2026-10-25', AEO)]),
+    dict(path='/guides/squarespace-vs-custom-website/', file='guides/squarespace-vs-custom-website/index.html', lastmod=AEO, og_type='article',
          title='Squarespace vs Custom Website: Which Fits? | Elimenti',
          description='An honest comparison for independent businesses: what Squarespace does well, where a custom site pulls ahead, three-year costs and how to choose.',
          crumbs=[('Guides', '/guides/'), ('Squarespace vs custom', '/guides/squarespace-vs-custom-website/')],
@@ -458,14 +465,14 @@ PAGES = [
          schema=[article('/guides/wordpress-maintenance-cost/', 'What WordPress maintenance costs, and what each price gets you',
                          'Published WordPress maintenance plans and hourly rates with sources, what plans include and leave out, what drives the price and what to ask a provider.',
                          CARE)]),
-    dict(path='/guides/website-redesign-vs-refresh/', file='guides/website-redesign-vs-refresh/index.html', lastmod=NEW, og_type='article',
+    dict(path='/guides/website-redesign-vs-refresh/', file='guides/website-redesign-vs-refresh/index.html', lastmod=AEO, og_type='article',
          title='Website Redesign or Refresh? How to Tell | Elimenti',
          description='Redesign or refresh? A fifteen-minute scorecard for your own website, what each result means, and how each option is priced and how long it takes.',
          crumbs=[('Guides', '/guides/'), ('Redesign or refresh', '/guides/website-redesign-vs-refresh/')],
          schema=[article('/guides/website-redesign-vs-refresh/', 'Website redesign or refresh: how to tell which you need',
                          'Redesign or refresh? A fifteen-minute scorecard for your own website, what each result means, and how each option is priced and how long it takes.',
                          TODAY, CHANGED)]),
-    dict(path='/guides/how-long-does-a-website-take/', file='guides/how-long-does-a-website-take/index.html', lastmod=CHANGED, og_type='article',
+    dict(path='/guides/how-long-does-a-website-take/', file='guides/how-long-does-a-website-take/index.html', lastmod=AEO, og_type='article',
          title='How Long Does a Custom Website Take? | Elimenti',
          description='How long a custom website takes, what each stage waits on, what adds weeks and a checklist to get ready. Most of our projects launch in 4 to 6 weeks.',
          crumbs=[('Guides', '/guides/'), ('How long a website takes', '/guides/how-long-does-a-website-take/')],
@@ -487,7 +494,7 @@ PAGES = [
                          'Local SEO for an independent boutique: your Google Business Profile, reviews, the pages worth having and the small website fixes that make the phone ring.',
                          TODAY)]),
 
-    dict(path='/guides/car-club-website-examples/', file='guides/car-club-website-examples/index.html', lastmod=NEW, og_type='article',
+    dict(path='/guides/car-club-website-examples/', file='guides/car-club-website-examples/index.html', lastmod=AEO, og_type='article',
          title='Car Club Website Examples: What Works and Why | Elimenti',
          description='Real car club websites, from marque clubs to invitation-only ones: what each does well, one thing it misses, and what your club\'s site needs.',
          crumbs=[('Guides', '/guides/'), ('Car club website examples', '/guides/car-club-website-examples/')],
@@ -495,14 +502,14 @@ PAGES = [
                          'Real car club websites, from national marque clubs to local chapters and invitation-based clubs: what each does well, one thing it misses, and what a club site needs.',
                          UPDATED, CHANGED)]),
 
-    dict(path='/guides/car-club-website-builders/', file='guides/car-club-website-builders/index.html', lastmod=NEW, og_type='article',
+    dict(path='/guides/car-club-website-builders/', file='guides/car-club-website-builders/index.html', lastmod=AEO, og_type='article',
          title='Car Club Website Builders & Software Compared | Elimenti',
          description='Car club website builders and membership software compared: published prices for RumbleSeat, Middletwin, WildApricot and more, and which fits your club.',
          crumbs=[('Guides', '/guides/'), ('Car club website builders', '/guides/car-club-website-builders/')],
          schema=[article('/guides/car-club-website-builders/', 'Car club website builders and membership software, compared',
                          'Ten ways to put a car club online, from club platforms like RumbleSeat and Middletwin to WordPress with a membership plugin: published prices, what each handles, and which kind of club each suits.',
                          NEW)]),
-    dict(path='/guides/car-show-website-examples/', file='guides/car-show-website-examples/index.html', lastmod=NEW, og_type='article',
+    dict(path='/guides/car-show-website-examples/', file='guides/car-show-website-examples/index.html', lastmod=AEO, og_type='article',
          title='Car Show Website Examples: 7 Real Event Sites | Elimenti',
          description='Seven real car show and concours websites, from Pebble Beach to a Hinsdale cars-and-coffee: what each does well and one thing it misses. Checked Nov 2026.',
          crumbs=[('Guides', '/guides/'), ('Car show website examples', '/guides/car-show-website-examples/')],
@@ -564,7 +571,7 @@ PAGES = [
     # Studio
     # Title deliberately avoids "Hinsdale web design": Google was ranking this page for that search
     # instead of /hinsdale-web-design/ (checked 2026-11-18).
-    dict(path='/about/', file='about/index.html', lastmod=NEW, nav='about',
+    dict(path='/about/', file='about/index.html', lastmod=AEO, nav='about',
          title='About Elimenti | Who Runs the Studio',
          description='Elimenti is run by Hashim H., an Illinois engineering student from the Hinsdale area. How the studio works, and why it builds on WordPress or custom code.',
          crumbs=[('About', '/about/')],
@@ -576,7 +583,7 @@ PAGES = [
                   'affiliation': {'@type': 'CollegeOrUniversity', 'name': 'University of Illinois Urbana-Champaign',
                                   'sameAs': 'https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign'},
                   'knowsAbout': ['Web design', 'WordPress', 'Copywriting', 'Website performance']}]),
-    dict(path='/faq/', file='faq/index.html', lastmod=CARE, nav='faq',
+    dict(path='/faq/', file='faq/index.html', lastmod=AEO, nav='faq',
          title='Web Design FAQ: Cost, Timing, Ownership | Elimenti',
          description='What drives a website\'s cost, WordPress or custom-coded, who owns it and how updates work. Straight answers from Elimenti, a Hinsdale web design studio.',
          crumbs=[('FAQ', '/faq/')], schema=[]),
@@ -656,8 +663,42 @@ def faq_nodes(main_html, path):
 
 def breadcrumb_ld(crumbs):
     trail = [('Home', '/')] + crumbs
-    return {'@type': 'BreadcrumbList', 'itemListElement': [
+    # The last crumb is the current page, so the list's @id hangs off that page's URL.
+    return {'@type': 'BreadcrumbList', '@id': f'{SITE}{crumbs[-1][1]}#breadcrumb', 'itemListElement': [
         {'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': f'{SITE}{p}'} for i, (n, p) in enumerate(trail)]}
+
+
+# Page-level node types already used in PAGES schema. A page that has one gets it filled in;
+# every other page gets a plain WebPage, so each URL has one node that ties the page to the
+# site, its date, its image, its breadcrumb and the thing it's about.
+PAGE_TYPES = ('WebPage', 'AboutPage', 'ContactPage', 'CollectionPage')
+# What a page is mainly about, by the @id suffixes the helpers above give their nodes.
+MAIN_ENTITY_SUFFIXES = ('#service', '#article', '#case-study')
+
+
+def webpage_ld(p, og_img, schema):
+    """Return (page node, index of the existing node it replaces or None)."""
+    url = f"{SITE}{p['path']}"
+    idx = next((i for i, n in enumerate(schema) if n.get('@type') in PAGE_TYPES), None)
+    node = dict(schema[idx]) if idx is not None else {'@type': 'WebPage', '@id': f'{url}#webpage', 'url': url,
+                                                        'name': p['title']}
+    node.setdefault('description', p['description'])
+    node.setdefault('isPartOf', {'@id': f'{SITE}/#website'})
+    node.setdefault('inLanguage', 'en-US')
+    # A page with an Article keeps the article's own date (the one in its byline); sitemap lastmod can be
+    # later when only links changed.
+    article_date = next((n.get('dateModified') for n in schema if n.get('@type') == 'Article'), None)
+    if article_date or p.get('lastmod'):
+        node.setdefault('dateModified', article_date or p['lastmod'])
+    node.setdefault('primaryImageOfPage', {'@type': 'ImageObject', 'url': og_img, 'width': 1200, 'height': 630})
+    if p.get('crumbs'):
+        node.setdefault('breadcrumb', {'@id': f"{SITE}{p['crumbs'][-1][1]}#breadcrumb"})
+    if p['path'] == '/':
+        node.setdefault('about', {'@id': f'{SITE}/#business'})
+    main = next((n['@id'] for n in schema if str(n.get('@id', '')).endswith(MAIN_ENTITY_SUFFIXES)), None)
+    if main:
+        node.setdefault('mainEntity', {'@id': main})
+    return node, idx
 
 
 def breadcrumb_html(crumbs):
@@ -735,6 +776,10 @@ def head_html(p, main_html):
     ]
     if p.get('robots'):
         lines.append(f'    <meta name="robots" content="{p["robots"]}">')
+    else:
+        # Indexable pages: let Google show large image previews and full-length snippets,
+        # including in AI Overviews and AI Mode, which follow the same snippet controls.
+        lines.append('    <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">')
     if p.get('canonical', True):
         lines.append(f'    <link rel="canonical" href="{url}">')
     lines += [
@@ -776,7 +821,14 @@ def head_html(p, main_html):
         '',
         ld({'@context': 'https://schema.org', '@graph': [BUSINESS, WEBSITE]}),
     ]
-    page_graph = list(p.get('schema') or []) + faq_nodes(main_html, p['path'])
+    schema = list(p.get('schema') or [])
+    if p.get('canonical', True) and not p.get('robots'):
+        page_node, idx = webpage_ld(p, og_img, schema)
+        if idx is None:
+            schema.insert(0, page_node)
+        else:
+            schema[idx] = page_node
+    page_graph = schema + faq_nodes(main_html, p['path'])
     if p.get('crumbs'):
         page_graph.append(breadcrumb_ld(p['crumbs']))
     if page_graph:
