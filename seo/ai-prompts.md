@@ -35,6 +35,7 @@ A monthly hand check of whether AI answer engines mention Elimenti, and which so
 | P14 | How fast are small business websites in Hinsdale and Oak Brook? | Whether the report gets cited |
 | P15 | Should my business use Wix, Squarespace, WordPress or a custom website? | Platform guide |
 | P16 | Landscape design firm in Burr Ridge needs a new website. Who's good? | `/landscape-design-websites/` |
+| P17 | What is Elimenti? I got an email from them about redoing my business's website. Are they legit? | What a cold-email recipient sees: About, FAQ, listings, reviews |
 
 ## Log
 
@@ -47,6 +48,12 @@ A monthly hand check of whether AI answer engines mention Elimenti, and which so
 | 2026-11-25 | ChatGPT (logged out) | "I need a web designer for my business in Oak Brook, IL. Who do you recommend?" | No | | Named five firms with Oak Brook addresses and map reviews |
 | 2026-11-25 | Gemini | P1 | No | | Named Straight North, VisualFizz, CyberOptik, Osky Blue |
 | 2026-11-25 | Perplexity | P1 | | | Not tested: asked for a sign-up |
+| 2026-11-27 | ChatGPT (logged out, temporary chat) | "What is Elimenti? I got an email from them about redoing my business's website. Are they legit?" (P17) | Yes | 1 (only business) | elimenti.com homepage, from a stale copy: "Based in Hinsdale and Oak Brook", "projects start at $4,000", "$175/month", and an old About title; themanifest.com (Clutch's mirror). Verdict: real small studio, no scam red flags, "couldn't establish a substantial independent track record of customer reviews" |
+| 2026-11-27 | Google AI Mode | "who designs websites for private car clubs" (close to P2) | Yes | 1 | elimenti.com `/car-club-websites/` first source; described Elimenti as building "custom WordPress and hand-coded sites" (not the site's wording; an old copy somewhere) |
+| 2026-11-27 | Google AI Overview | "car club website builder" | Cited | | elimenti.com `/car-club-websites/` (also #3 organic) |
+| 2026-11-27 | Google AI Overview | "web design hinsdale il" | No | | Written only from the map pack: Rankify, Chris Depa Web Design + Branding, Light Vision Group |
+| 2026-11-27 | Google AI Overview | "how much does a website cost in the chicago suburbs" (close to P8) | No | | Rawcut Creative +3, with a range-by-site-type table; the cost guide is #5 organic |
+| 2026-11-27 | Perplexity, Copilot | P17 | | | Not tested: Perplexity asked for a sign-up, Copilot for a sign-in |
 | | ChatGPT | P1 | | | |
 | | Perplexity | P1 | | | |
 | | Gemini | P1 | | | |

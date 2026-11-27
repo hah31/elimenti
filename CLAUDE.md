@@ -22,6 +22,7 @@ New page: create `<slug>/index.html` containing only its `<main>` block, add a `
 ```
 python3 seo/tools/check.py http://127.0.0.1:<port>   # against a local server of the built site
 python3 seo/tools/validate_schema.py                 # official Schema Markup Validator
+python3 seo/tools/schema_vocab_check.py              # offline schema.org check, if the validator refuses (HTTP 405 on Nov 27, 2026)
 python3 seo/tools/llms.py --check                    # fails if llms.txt is out of date
 ```
 

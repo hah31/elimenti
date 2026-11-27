@@ -1,6 +1,8 @@
 # To do: things only Hashim can do
 
-Updated November 25, 2026 (late evening). Ordered by how much each one moves Google and AI answers, going by what was measured that day (`seo/baseline-2026-11-25.md`). Items 1, 2 and 5 need accounts only you can create or sign in to.
+Updated November 27, 2026. Ordered by how much each one moves Google and AI answers, going by what was measured on November 25 (`seo/baseline-2026-11-25.md`) and November 27 (`seo/summary-2026-11-27.md`). Items 1, 2 and 5 need accounts only you can create or sign in to.
+
+**What November 27 added.** Google's AI Overview for "web design hinsdale il" is now written entirely from the three map-pack businesses (Rankify, Chris Depa, Light Vision Group), so without a Business Profile Elimenti can't appear in Google's AI answer for its own town, whatever the page says. And when a cold-email recipient asks ChatGPT "What is Elimenti? Are they legit?", it calls Elimenti a real studio but leans on two gaps only you can close: no independent reviews anywhere, and a stale copy of the homepage ("projects start at $4,000", "$175/month") that the site hasn't shown since November 8. Items 1 and 2a fix the first; recrawls fix the second.
 
 **Listing city.** Bing Places, Yelp and Clutch list the city as **Oak Brook, IL 60523**, the business's mailing address, with the street hidden or not shown. The site, schema and OG cards say Hinsdale, IL. Use Oak Brook on every new listing (Google, Apple) so the directories agree with each other, and decide separately whether the site should change.
 
@@ -30,11 +32,13 @@ Where each one stands (November 25, late evening):
 - **Clutch: profile created, under Clutch's review (clutch.co/profile/elimenti).** Service lines Web Design 70%, Web Development 20%, Branding 10%. Minimum project size and hourly rate are set to N/A, so no prices show. Location Oak Brook, IL; Clutch takes 7–10 business days to validate a location, and its help pages don't say whether the street line appears on the public profile, so check once it's published. Logo and description were added on November 25. Portfolio items now come from Clutch's Projects, and adding one sends that client a review request, so add them when you send the review emails (2a). Clutch's edit page can show the Description box empty (0/2000) after a reload even though it's saved; reload until the text shows before pressing Save Changes on that page, because saving with an empty box may clear it.
 - **Apple Business Connect: not started.** Needs your Apple ID. Stop if Apple insists on showing the street address.
 
-Add each profile URL to `SAME_AS` in `seo/tools/build.py` once it's live and loads to a page that's clearly Elimenti's. Yelp was added on November 25. Listing images (square logo, work photos, desktop and phone screenshots) are in `seo/off-site-assets/` for Bing, Apple and Google.
+Add each profile URL to `SAME_AS` in `seo/tools/build.py` once it's live and loads to a page that's clearly Elimenti's. Yelp was added on November 25; Clutch and its sister directory The Manifest (https://themanifest.com/company/elimenti, which mirrors the Clutch profile and lists Oak Brook, IL) on November 27. Listing images (square logo, work photos, desktop and phone screenshots) are in `seo/off-site-assets/` for Bing, Apple and Google.
 
 ## 2a. Reviews: Clutch first, Google once the profile exists
 
-Clutch review link: https://review.clutch.co/review?provider_id=2779047 (clients write the review themselves and confirm their email). Three drafts are in Gmail with no recipient. Add the address and paste the link where it says `[PASTE CLUTCH LINK]`: the Gmail connector rewrites links into google.com redirects, so the link isn't in the drafts. Send them once Clutch publishes the profile.
+**Clutch published the profile by November 27** (https://clutch.co/profile/elimenti, "Not yet reviewed"), so the review emails can go out now. On November 27 ChatGPT, asked whether Elimenti is legit, said it "couldn't establish a substantial independent track record of customer reviews" and pointed at The Manifest's mirror of this profile, so the first Clutch reviews are what that answer is waiting for.
+
+Clutch review link: https://review.clutch.co/review?provider_id=2779047 (clients write the review themselves and confirm their email). Three drafts are in Gmail with no recipient. Add the address and paste the link where it says `[PASTE CLUTCH LINK]`: the Gmail connector rewrites links into google.com redirects, so the link isn't in the drafts.
 
 - **ABN (Aldo):** send after invoice ELM-003 is paid, not in the same week as the invoice.
 - **Burdi:** mentions the Father's Day and Toys for Tots event pages.
